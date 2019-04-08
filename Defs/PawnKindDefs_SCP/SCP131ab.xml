@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BasePawn">
+    <defName>SCP_ONE_THREE_ONE_RACE</defName>
+    <label>SCP 131</label>
+    <description>.</description>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <statBases>
+      <MoveSpeed>3.1</MoveSpeed>
+      <MarketValue>100</MarketValue>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <ToxicSensitivity>0</ToxicSensitivity>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>250</ComfyTemperatureMax>
+      <MeatAmount>0</MeatAmount>
+    </statBases>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>9999</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+    <race>
+      <body>TurtleLike</body>      
+      <fleshType>Mechanoid</fleshType>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <foodType>None</foodType>
+      <lifeExpectancy>2500</lifeExpectancy>
+      <petness>1</petness>
+      <baseBodySize>0.3</baseBodySize>
+      <baseHungerRate>0.00001</baseHungerRate>
+      <baseHealthScale>0.4</baseHealthScale>
+      <nameOnTameChance>1</nameOnTameChance>
+      <trainability>Intermediate</trainability>
+      <wildness>0</wildness>
+      <nuzzleMtbHours>24</nuzzleMtbHours>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+          <soundCall>Pawn_Mech_Centipede_Call</soundCall>
+        </li>      
+      </lifeStageAges>
+      <soundCallIntervalRange>
+          <min>1000</min>
+          <max>2000</max>
+      </soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <butcherProducts>
+        <Steel>50</Steel>
+        <Plasteel>10</Plasteel>
+        <ComponentIndustrial>2</ComponentIndustrial>
+      </butcherProducts>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef Name="SCP_ONE_THREE_ONE" ParentName="AnimalKindBase">
+    <defName>SCP_ONE_THREE_ONE_A</defName>
+    <label>SCP 131-A</label>
+    <race>SCP_ONE_THREE_ONE_RACE</race>
+    <combatPower>30</combatPower>
+    <ecoSystemWeight>0.0</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/SCP/SCP131A</texPath>
+          <drawSize>1</drawSize>
+          <shadowData>
+            <volume>(0.20, 0.3, 0.20)</volume>
+            <offset>(0,0,-0.08)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SCP_ONE_THREE_ONE">
+    <defName>SCP_ONE_THREE_ONE_B</defName>
+    <label>SCP 131-B</label>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/SCP/SCP131B</texPath>
+          <drawSize>1</drawSize>
+          <shadowData>
+            <volume>(0.20, 0.3, 0.20)</volume>
+            <offset>(0,0,-0.08)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+  </Defs>
