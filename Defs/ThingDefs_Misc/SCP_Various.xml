@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+           	<!-- ==================================== SCP RCF T shirt =====================================-->
+			
+	<ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_ScpRcfTShirt</defName>
+    <description>A Shirt and camo pants worn by the Rapid Containment Force.</description>
+    <label>RCF T-Shirt (SCP) </label>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/Display/RapidContainmentForceTShirt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>85</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>SCP_Clothing</li>
+    </thingCategories>
+    <statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+      <Mass>0.35</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.12</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.12</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.0</EquipDelay>
+    </statBases>
+	
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.02</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.01</ShootingAccuracyPawn>
+	  <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+	  <ForagedNutritionPerDay>0.20</ForagedNutritionPerDay>
+    </equippedStatOffsets>
+	
+		<apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+		<li>Shoulders</li>
+		<li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Clothing/RapidContainmentForceTShirt</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>SCP_RCFUniforms</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+    <!-- ====================================== SCP RCF Jacket =========================================== -->
+  
+	<ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_ScpRcfJacket</defName>
+    <description>A Jacket worn by the Rapid Containment Force.</description>
+    <label>RCF Jacket (SCP) </label>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/Display/RapidContainmentForceJacket</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>95</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>SCP_Clothing</li>
+    </thingCategories>
+    <statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+      <Mass>0.35</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.32</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.7</EquipDelay>
+    </statBases>
+	
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.02</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.01</ShootingAccuracyPawn>
+	  <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+	  <ForagedNutritionPerDay>0.20</ForagedNutritionPerDay>
+    </equippedStatOffsets>
+	
+		<apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+		<li>Shoulders</li>
+        <li>Arms</li>
+		<li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Clothing/RapidContainmentForceJacket</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+	  <li>SCP_RCFUniforms</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+                           	<!-- ====================================== SCP MTF Fatigues =========================================== -->
+			
+	<ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_ScpMtfFatigues</defName>
+    <description>Black Fatigues Utilized by the foundations Elite [REDACTED]</description>
+    <label>MTF Fatigues (SCP) </label>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/Display/MobileTaskForceFatigues_black</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>95</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+     <li>SCP_Clothing</li>
+    </thingCategories>
+    <statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+      <Mass>0.35</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.26</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.12</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+	
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.02</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.01</ShootingAccuracyPawn>
+	  <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+	  <ForagedNutritionPerDay>0.20</ForagedNutritionPerDay>
+    </equippedStatOffsets>
+	
+		<apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+		<li>Shoulders</li>
+        <li>Arms</li>
+		<li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Clothing/MobileTaskForceFatigues_black</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+       	 <li>SCP_MTFUniforms</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+        <!-- ======================================= SCP RCF Body Armor =======================================-->
+  
+ <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_ScpRcfBodyArmor</defName>
+    <label>RCF Body Armor (SCP) </label>
+    <description>A light armored vest utilized by the Rapid Containment Force.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <researchPrerequisite>FlakArmor</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/Display/RCFArmoredVest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>0.90</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>8900</WorkToMake>
+      <MaxHitPoints>235</MaxHitPoints>
+      <Mass>3.0</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>1.01</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.27</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.27</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>4.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.06</MoveSpeed>
+	  <AimingDelayFactor>-0.9</AimingDelayFactor>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>SCP_Armor</li>
+    </thingCategories>
+    <costList>
+      <Cloth>20</Cloth>
+      <Steel>45</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <apparel>
+	<careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Armor/RCFArmoredVest</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+	    <li>SCP_RCFUniforms</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+          <!-- ======================================= SCP MTF Body Armor =======================================-->
+  
+ <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_ScpMtfBodyArmor</defName>
+    <label>MTF Body Armor (SCP) </label>
+    <description>A light armored vest utilized by the elite [REDACTED].</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <researchPrerequisite>FlakArmor</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/Display/MTFArmor1_black</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>0.90</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>9000</WorkToMake>
+      <MaxHitPoints>245</MaxHitPoints>
+      <Mass>3.0</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>1.01</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.37</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.27</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>4.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.06</MoveSpeed>
+	  <AimingDelayFactor>-0.9</AimingDelayFactor>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>SCP_Armor</li>
+    </thingCategories>
+    <costList>
+      <Cloth>23</Cloth>
+      <Steel>48</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <apparel>
+	<careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Armor/MTFArmor1_black</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+	    <li>SCP_MTFUniforms</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  </Defs>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+		  <!-- Clothing Categories -->
+
+	  <ThingCategoryDef>
+	    <defName>SCPCats</defName>
+	    <label>SCP Apparel kit</label>
+	    <parent>Apparel</parent>
+	  </ThingCategoryDef>
+		  
+		  		  		  <!-- PMC submenu -->
+		  
+		  		  		  <ThingCategoryDef>
+		    <defName>SCP_Clothing</defName>
+		    <label>SCP suits</label>
+		    <parent>SCPCats</parent>
+		  </ThingCategoryDef>
+
+		  <ThingCategoryDef>
+		    <defName>SCP_Armor</defName>
+		    <label>SCP Body Armor</label>
+		    <parent>SCPCats</parent>
+		  </ThingCategoryDef>
+		  
+		  <ThingCategoryDef>
+		    <defName>SCP_PowerArmor</defName>
+		    <label>SCP PowerArmor</label>
+		    <parent>SCPCats</parent>
+		  </ThingCategoryDef>
+
+
+<!-- Hat main -->
+
+
+      <ThingCategoryDef>
+	    <defName>SCP_Hats</defName>
+	    <label>SCP headgear</label>
+	    <parent>Headgear</parent>
+	  </ThingCategoryDef>
+	  
+ 
+</Defs>
+
+
