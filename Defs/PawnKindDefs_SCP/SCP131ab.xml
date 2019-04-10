@@ -41,7 +41,7 @@
       <baseBodySize>0.3</baseBodySize>
       <baseHungerRate>0.00001</baseHungerRate>
       <baseHealthScale>0.4</baseHealthScale>
-      <nameOnTameChance>1</nameOnTameChance>
+      <nameOnTameChance>0</nameOnTameChance>
       <trainability>Intermediate</trainability>
       <wildness>0</wildness>
       <nuzzleMtbHours>24</nuzzleMtbHours>
@@ -61,15 +61,10 @@
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
-      <butcherProducts>
-        <Steel>50</Steel>
-        <Plasteel>10</Plasteel>
-        <ComponentIndustrial>2</ComponentIndustrial>
-      </butcherProducts>
     </race>
   </ThingDef>
 
-  <PawnKindDef Name="SCP_ONE_THREE_ONE" ParentName="AnimalKindBase">
+  <SCP.PawnKindDef Name="SCP_ONE_THREE_ONE">
     <defName>SCP_ONE_THREE_ONE_A</defName>
     <label>SCP 131-A</label>
     <race>SCP_ONE_THREE_ONE_RACE</race>
@@ -87,12 +82,12 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-  </PawnKindDef>
+  </SCP.PawnKindDef>
 
-  <PawnKindDef ParentName="SCP_ONE_THREE_ONE">
+  <SCP.PawnKindDef ParentName="SCP_ONE_THREE_ONE">
     <defName>SCP_ONE_THREE_ONE_B</defName>
     <label>SCP 131-B</label>
-    <lifeStages>
+    <lifeStages Inherit="False">
       <li>
         <bodyGraphicData>
           <texPath>Things/SCP/SCP131B</texPath>
@@ -104,6 +99,6 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-  </PawnKindDef>
+  </SCP.PawnKindDef>
   
   </Defs>

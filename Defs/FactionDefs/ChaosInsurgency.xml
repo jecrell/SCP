@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SCP.FactionDef>
+    <defName>SCP_ChaosInsurgency</defName>
+    <label>Chaos Insurgency</label>
+    <description>.</description>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <!-- START Custom Code from SCP.FactionDef -->
+    <representativeKind>SCP_CIRepresentative</representativeKind>
+    <representativeMessage>Attention occupants,\nWe are the Chaos Insurgency.\n...\nWill you accept?</representativeMessage>
+    <acceptWorker>SCP.AcceptWorker_PayForSCP</acceptWorker>
+    <acceptMessages>
+      <li>The SCP have been removed from your location.</li>
+      <li>Delta Command will learn what makes it tick to better ourselves.</li> 
+      <li>You have joined the Chaos Insurgency.</li>
+    </acceptMessages>
+    <declineMessages>      
+      <li>The SCP remains at your location under your custody.</li>
+      <li>You have declined to join the Chaos Insurgency.</li>
+    </declineMessages>
+    <factionBuildings>
+      <li>SCP_CIBench</li>
+    </factionBuildings>    
+    <startingRelations>
+      <li>
+        <factionDef>SCP_TheFoundation</factionDef>
+        <kind>Hostile</kind>
+      </li>
+      <li>
+        <factionDef>SCP_GlobalOccultCoalition</factionDef>
+        <kind>Hostile</kind>
+      </li>
+    </startingRelations>
+    <!-- 
+    *** TODO ***
+    <factionResearch>
+      <li>SCP_TechOne</li>
+    </factionResearch>
+    -->
+    <!-- END -->
+    <colorSpectrum>
+      <li>(0.35, 0.30, 0.60)</li>
+      <li>(0.45, 0.40, 0.90)</li>
+    </colorSpectrum>
+    <startingGoodwill>
+      <min>0</min>
+      <max>0</max>
+    </startingGoodwill>
+    <naturalColonyGoodwill>
+      <min>-50</min>
+      <max>50</max>
+    </naturalColonyGoodwill>
+    <goodwillDailyGain>0.20</goodwillDailyGain>
+    <goodwillDailyFall>0.40</goodwillDailyFall>
+    <pawnSingular>member</pawnSingular>
+    <pawnsPlural>personnel</pawnsPlural>
+    <listOrderPriority>30</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Delta Commander</leaderTitle>
+    <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<techLevel>Industrial</techLevel>
+		<backstoryCategories>
+			<li>Civil</li>
+		</backstoryCategories>
+		<geneticVariance>0.8</geneticVariance>
+		<hairTags>
+			<li>Rural</li>
+		</hairTags>
+    <caravanTraderKinds>
+      <li>Caravan_Outlander_BulkGoods</li>
+      <li>Caravan_Outlander_CombatSupplier</li>
+      <li>Caravan_Outlander_Exotic</li>
+      <li>Caravan_Outlander_PirateMerchant</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-40</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, standard mix -->
+        <kindDef>Combat</kindDef>
+        <options>
+					<Villager>5</Villager>
+          <Town_Guard>10</Town_Guard>
+          <Grenadier_Destructive>1.5</Grenadier_Destructive>
+					<Mercenary_Slasher>7</Mercenary_Slasher>
+					<Mercenary_Gunner>10</Mercenary_Gunner>
+					<Mercenary_Elite>10</Mercenary_Elite>
+          <Town_Councilman>10</Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Villager>20</Villager>
+          <Town_Guard>10</Town_Guard>
+          <Town_Councilman>10</Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Town_Trader>1</Town_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <Villager>3</Villager>
+          <Town_Guard>10</Town_Guard>
+          <Grenadier_Destructive>1.5</Grenadier_Destructive>
+          <Mercenary_Slasher>7</Mercenary_Slasher>
+          <Mercenary_Gunner>10</Mercenary_Gunner>
+					<Mercenary_Elite>10</Mercenary_Elite>
+				</guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+					<Villager>10</Villager>
+          <Town_Guard>10</Town_Guard>
+          <Grenadier_Destructive>1.5</Grenadier_Destructive>
+					<Mercenary_Slasher>7</Mercenary_Slasher>
+          <Mercenary_Gunner>10</Mercenary_Gunner>
+          <Mercenary_Elite>10</Mercenary_Elite>
+          <Town_Councilman>10</Town_Councilman>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+  </SCP.FactionDef>
+</Defs>

@@ -50,7 +50,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HarmonyRimQuest.cs" />
+    <Compile Include="AcceptWorker.cs" />
+    <Compile Include="AcceptWorker_KeepSCP.cs" />
+    <Compile Include="AcceptWorker_PayForSCP.cs" />
+    <Compile Include="AcceptWorker_TerminateSCP.cs" />
+    <Compile Include="Dialog_WithRepresentative.cs" />
+    <Compile Include="FactionDef.cs" />
+    <Compile Include="FactionUtility.cs" />
+    <Compile Include="HarmonySCP.cs" />
+    <Compile Include="PawnKindDef.cs" />
+    <Compile Include="SCPUtility.cs" />
+    <Compile Include="StartingRelation.cs" />
+    <Compile Include="WorldComponent_FactionsTracker.cs" />
+    <Compile Include="WorldComponent_UniqueTracker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

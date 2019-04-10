@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <SCP_FactionArrival>Faction Revealed</SCP_FactionArrival>
+  <SCP_FactionArrivalDesc>A representative from {0} has arrived. Previously, their existence was hidden. Now they have chosen to reveal themselves.</SCP_FactionArrivalDesc>
+  <SCP_DialogNote>[You can accept this offer or wait for other offers to reveal themselves.]</SCP_DialogNote>
+
+</LanguageData>
