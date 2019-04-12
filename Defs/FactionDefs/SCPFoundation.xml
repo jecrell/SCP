@@ -4,6 +4,7 @@
   <SCP.FactionDef>
     <defName>SCP_TheFoundation</defName>
     <label>SCP Foundation</label>
+    <fixedName>SCP Foundation</fixedName>
     <description>.</description>
     <requiredCountAtGameStart>0</requiredCountAtGameStart>
     <!-- START Custom Code from SCP.FactionDef -->

@@ -4,6 +4,7 @@
   <SCP.FactionDef>
     <defName>SCP_GlobalOccultCoalition</defName>
     <label>Global Occult Coalition</label>
+    <fixedName>Global Occult Coalition</fixedName>
     <description>.</description>
     <requiredCountAtGameStart>0</requiredCountAtGameStart>
     <!-- START Custom Code from SCP.FactionDef -->

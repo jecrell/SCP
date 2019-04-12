@@ -4,6 +4,7 @@
   <SCP.FactionDef>
     <defName>SCP_ChaosInsurgency</defName>
     <label>Chaos Insurgency</label>
+    <fixedName>Chaos Insurgency</fixedName>
     <description>.</description>
     <requiredCountAtGameStart>0</requiredCountAtGameStart>
     <!-- START Custom Code from SCP.FactionDef -->

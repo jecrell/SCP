@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+  <SCP_CannotConverse>Cannot converse</SCP_CannotConverse>
+  <SCP_MeetWith>Meet with {0}</SCP_MeetWith>
   <SCP_FactionArrival>Faction Revealed</SCP_FactionArrival>
-  <SCP_FactionArrivalDesc>A representative from {0} has arrived. Previously, their existence was hidden. Now they have chosen to reveal themselves.</SCP_FactionArrivalDesc>
+  <SCP_Proposal>Proposal from the {0}</SCP_Proposal>
+  <SCP_Compensation>Compensation</SCP_Compensation>
+  <SCP_CompensationDesc>The {0} has delivered compensation in exchange for the specimens.</SCP_CompensationDesc>
+  <SCP_AlreadyJoined>Due to your prior agreements, the {0} makes no offers.</SCP_AlreadyJoined>
+  <SCP_FactionArrivalDesc>A representative from the {0} has arrived. Previously, their existence was hidden. Now they have chosen to reveal themselves.</SCP_FactionArrivalDesc>
+  <SCP_SCPArrival>A strange specimen has arrived. You are strongly encouraged to take all necessary precautions.</SCP_SCPArrival> 
+  <SCP_SCPEntrusted>The specimens have been entrused into the care of your colonists.</SCP_SCPEntrusted>
   <SCP_DialogNote>[You can accept this offer or wait for other offers to reveal themselves.]</SCP_DialogNote>
+  <SCP_MustHaveACurrentResearchProject>Select a new research project first.</SCP_MustHaveACurrentResearchProject>
 
 </LanguageData>

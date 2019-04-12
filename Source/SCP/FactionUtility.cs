@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Verse;
+using Verse.AI.Group;
 
 namespace SCP
 {
@@ -13,15 +14,19 @@ namespace SCP
         
         public static void IntroduceFaction(SCP.FactionDef newFaction)
         {
-            Find.LetterStack.ReceiveLetter(
-                "SCP_FactionArrival".Translate(),
-                "SCP_FactionArrivalDesc".Translate(newFaction.LabelCap),
-                LetterDefOf.NeutralEvent);
 
             Faction faction = SpawnNewFactionIntoWorld(newFaction);
             if (faction == null) return;
 
             SpawnNewFactionBasesIntoWorld(faction, 3);
+            
+            //Prevents errors where pawns will refuse to walk around and throw errors.
+            //  This is primarily due to the game not being designed for
+            //  dynamic faction introduction.
+            foreach (Map m in Find.Maps)
+            {
+                m.pawnDestinationReservationManager.RegisterFaction(faction);
+            }
 
             var map = Find.AnyPlayerHomeMap;
             IntVec3 result;
@@ -43,6 +48,22 @@ namespace SCP
             pawn.relations.everSeenByPlayer = true;
             PawnComponentsUtility.AddComponentsForSpawn(pawn);
             GenSpawn.Spawn(pawn, result, map);
+            IntVec3 chillSpot;
+            RCellFinder.TryFindRandomSpotJustOutsideColony(pawn, out chillSpot);
+            LordJob_VisitColony lordJob = new LordJob_VisitColony(faction, chillSpot);
+            LordMaker.MakeNewLord(faction, lordJob, map, new List<Pawn>() {pawn });
+
+            var ft = Find.World.GetComponent<WorldComponent_FactionsTracker>();
+            if (ft.joinedFaction == null)
+                ft.activeRepresentatives.Add(pawn);
+            else
+                Messages.Message("SCP_AlreadyJoined".Translate(pawn.Faction.def.label), pawn, MessageTypeDefOf.RejectInput);
+
+            Find.LetterStack.ReceiveLetter(
+            "SCP_FactionArrival".Translate(),
+            "SCP_FactionArrivalDesc".Translate(newFaction.LabelCap),
+            LetterDefOf.NeutralEvent, pawn);
+
         }
 
         public static Faction SpawnNewFactionIntoWorld(SCP.FactionDef newFaction)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,11 @@ namespace SCP
 {
     public static class SCPUtility
     {
+        public static void CreateSCPLetter(Pawn scp)
+        {
+            Find.LetterStack.ReceiveLetter(scp.Label, "SCP_SCPArrival".Translate(), LetterDefOf.NeutralEvent, scp);
+        }
+
         public static void SpawnFirstSCPGroup(Map map)
         {
             Predicate<IntVec3> validator = (IntVec3 c) => map.reachability.CanReachColony(c) && !c.Fogged(map);
@@ -20,6 +26,9 @@ namespace SCP
             Pawn pawnB = PawnGenerator.GeneratePawn(PawnKindDef.Named("SCP_ONE_THREE_ONE_B"));
             GenSpawn.Spawn(pawnA, spawnSpotOne, map);
             GenSpawn.Spawn(pawnB, spawnSpotTwo, map);
+
+            CreateSCPLetter(pawnA);
+            CreateSCPLetter(pawnB);
         }
     }
 }

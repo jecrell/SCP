@@ -11,16 +11,47 @@ namespace SCP
         public Dialog_WithRepresentative(Pawn representative,
             SCP.FactionDef factionDef) : base(factionDef.representativeMessage)
         {
-            this.text = factionDef.representativeMessage;
-            this.buttonAText = "Yes".Translate();
-            this.buttonAAction = factionDef.AcceptWorker.PostAccept;
-            this.buttonBText = "No".Translate();
-            this.buttonBAction = factionDef.AcceptWorker.PostDecline;
-            this.title = "PawnMainDescFactionedWrap".Translate(representative.KindLabel, factionDef.LabelCap);
-            this.buttonCText = "Ignore".Translate();
-            this.buttonCAction = factionDef.AcceptWorker.PostIgnore;
-            this.acceptAction = factionDef.AcceptWorker.PostAccept;
-            this.cancelAction = factionDef.AcceptWorker.PostIgnore;
+            this.text = factionDef.representativeMessage + "\n\n" + "SCP_DialogNote".Translate();
+
+            this.buttonAText = "Ignore".Translate();
+            this.buttonAAction = () => factionDef.AcceptWorker.PostIgnore(representative);
+
+            this.buttonBText = "Yes".Translate();
+            this.buttonBAction = (() => 
+            {
+                if (factionDef.AcceptWorker.CanAccept(representative))
+                {
+                    factionDef.AcceptWorker.PostAccept(representative);
+
+                    var factionsTracker = Find.World.GetComponent<WorldComponent_FactionsTracker>();
+                    if (factionsTracker.activeRepresentatives.Contains(representative))
+                    {
+                        factionsTracker.activeRepresentatives.Clear();
+                        factionsTracker.activeRepresentatives = new List<Pawn>();
+                        factionsTracker.joinedFaction = (SCP.FactionDef)representative.Faction.def;
+                    }
+                }
+            });
+            this.buttonCText = "No".Translate();
+            this.buttonCAction = (() =>
+            {
+                factionDef.AcceptWorker.PostDecline(representative);
+
+                var factionsTracker = Find.World.GetComponent<WorldComponent_FactionsTracker>();
+                if (factionsTracker.activeRepresentatives.Contains(representative))
+                    factionsTracker.activeRepresentatives.Remove(representative);
+            });
+            this.title = "SCP_Proposal".Translate(factionDef.LabelCap);
+
+            this.acceptAction = (() =>
+            {
+                factionDef.AcceptWorker.PostAccept(representative);
+
+                var factionsTracker = Find.World.GetComponent<WorldComponent_FactionsTracker>();
+                if (factionsTracker.activeRepresentatives.Contains(representative))
+                        factionsTracker.activeRepresentatives.Remove(representative);
+            });
+            this.cancelAction = () => factionDef.AcceptWorker.PostIgnore(representative);
             if (buttonAText.NullOrEmpty())
             {
                 this.buttonAText = "OK".Translate();
