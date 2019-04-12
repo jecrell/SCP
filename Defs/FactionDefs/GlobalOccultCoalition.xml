@@ -23,6 +23,9 @@
     <factionBuildings>
      <li>SCP_GOCBench</li>
     </factionBuildings>
+    <hostileToFactions>
+      <li>SCP_ChaosInsurgency</li>
+    </hostileToFactions>    
     <startingRelations>
       <li>
         <factionDef>SCP_TheFoundation</factionDef>

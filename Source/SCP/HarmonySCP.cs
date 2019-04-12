@@ -20,14 +20,71 @@ namespace SCP
         static HarmonyPatches()
         {
             var harmony = HarmonyInstance.Create("rimworld.scp");
-            //harmony.Patch(AccessTools.Method(typeof(PawnUIOverlay), "DrawPawnGUIOverlay"),
-            //    null, new HarmonyMethod(typeof(HarmonyPatches), nameof(DrawPawnGUIOverlay)));
             harmony.Patch(AccessTools.Method(typeof(GenSpawn), "Spawn", new Type[] { typeof(Thing), typeof(IntVec3), typeof(Map), typeof(Rot4), typeof(WipeMode), typeof(bool) }), new HarmonyMethod(typeof(HarmonyPatches), nameof(SCP_SpawnCheck)), null);
             harmony.Patch(AccessTools.Method(typeof(FloatMenuMakerMap), "AddHumanlikeOrders"),
                 null, new HarmonyMethod(typeof(HarmonyPatches), nameof(AddHumanlikeOrders)));
             harmony.Patch(AccessTools.Method(typeof(PawnRenderer), "RenderPawnAt", new[] { typeof(Vector3), typeof(RotDrawMode), typeof(bool) }),
                 null, new HarmonyMethod(typeof(HarmonyPatches), nameof(RenderPawnAt)));
+            harmony.Patch(original: AccessTools.Method(type: typeof(GameRules), name: nameof(GameRules.DesignatorAllowed)), prefix: null,
+                   postfix: new HarmonyMethod(typeof(HarmonyPatches), name: nameof(DesignatorAllowedPostfix)));
+            harmony.Patch(original: AccessTools.Method(type: typeof(GenConstruct), name: nameof(GenConstruct.CanConstruct)), prefix: null,
+                postfix: new HarmonyMethod(typeof(HarmonyPatches), name: nameof(CanConstructPostfix)));
         }
+
+        private static int colonistRacesTick;
+        private const int COLONIST_RACES_TICK_TIMER = GenDate.TicksPerHour * 2;
+        public static Dictionary<string, SCP.FactionDef> uniqueFactionBuildings;
+
+
+
+        public static void DesignatorAllowedPostfix(Designator d, ref bool __result)
+        {
+            if (!__result || !(d is Designator_Build build)) return;
+            __result = CanBuild(__result, build.PlacingDef.defName);
+        }
+        public static void CanConstructPostfix(Thing t, Pawn p, ref bool __result)
+        {
+            if (!__result) return;
+            __result = CanBuild(__result, t?.def?.entityDefToBuild?.defName ?? t.def.defName);
+        }
+
+        private static bool CanBuild(bool __result, string build)
+        {
+            //Initialize Unique Faction Buildings List
+            if (uniqueFactionBuildings == null)
+            {
+                uniqueFactionBuildings = new Dictionary<string, SCP.FactionDef>();
+                foreach (var facDef in DefDatabase<SCP.FactionDef>.AllDefs)
+                {
+                    foreach (var bld in facDef.factionBuildings)
+                    {
+                        uniqueFactionBuildings.Add(bld, facDef);
+                    }
+                }
+            }
+
+            //This shouldn't happen...
+            if (uniqueFactionBuildings.Count == 0 || uniqueFactionBuildings == null)
+                Log.Error("SCP :: Unique faction buildings list is 0");
+
+            //Is it a unique faction building? Don't build it.
+            if (uniqueFactionBuildings.ContainsKey(build))
+            {
+                __result = false;
+
+                //Unless we joined that faction
+                if (Find.World.GetComponent<WorldComponent_FactionsTracker>().joinedFactionDef is SCP.FactionDef fac)
+                {
+                    if (uniqueFactionBuildings[build] == fac)
+                    {
+                        __result = true;
+                    }
+                }
+            }
+
+            return __result;
+        }
+
 
         private static WorldComponent_FactionsTracker worldComponent_FactionsTracker = null;
         private static WorldComponent_FactionsTracker FactionTracker

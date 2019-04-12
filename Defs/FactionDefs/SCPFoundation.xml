@@ -22,6 +22,9 @@
     <factionBuildings>
       <li>SCP_TheFoundationBench</li>
     </factionBuildings>
+    <hostileToFactions>
+      <li>SCP_ChaosInsurgency</li>
+    </hostileToFactions>    
     <startingRelations>
       <li>
         <factionDef>SCP_GlobalOccultCoalition</factionDef>

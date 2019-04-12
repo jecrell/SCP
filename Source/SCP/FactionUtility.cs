@@ -54,7 +54,7 @@ namespace SCP
             LordMaker.MakeNewLord(faction, lordJob, map, new List<Pawn>() {pawn });
 
             var ft = Find.World.GetComponent<WorldComponent_FactionsTracker>();
-            if (ft.joinedFaction == null)
+            if (ft.joinedFactionDef == null)
                 ft.activeRepresentatives.Add(pawn);
             else
                 Messages.Message("SCP_AlreadyJoined".Translate(pawn.Faction.def.label), pawn, MessageTypeDefOf.RejectInput);

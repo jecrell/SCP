@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+  <SCP_HostilitiesDeclared>Hostilities Declared</SCP_HostilitiesDeclared>
+  <SCP_HostilitiesDeclaredDesc>After the SCP-related coalitions have revealed themselves, their hostilities are now made known.\n\n{0}</SCP_HostilitiesDeclaredDesc>
+  <SCP_Hostilities>{0} is at war with {1}</SCP_Hostilities>
+  <SCP_Alliances>{0} is allied with {1}</SCP_Alliances>
+  <SCP_Player>Player</SCP_Player>
+
   <SCP_CannotConverse>Cannot converse</SCP_CannotConverse>
   <SCP_MeetWith>Meet with {0}</SCP_MeetWith>
   <SCP_FactionArrival>Faction Revealed</SCP_FactionArrival>

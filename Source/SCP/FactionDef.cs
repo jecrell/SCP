@@ -11,7 +11,9 @@ namespace SCP
     {
         public Verse.PawnKindDef representativeKind;
         public string representativeMessage;
-        public List<ThingDef> factionBuildings;
+        public bool hostileByDefault;
+        public List<string> factionBuildings;
+        public List<string> hostileToFactions;
         public Type acceptWorker = typeof(AcceptWorker);
         public List<string> acceptMessages;
         public List<string> declineMessages;

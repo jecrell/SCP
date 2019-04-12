@@ -28,7 +28,7 @@ namespace SCP
                     {
                         factionsTracker.activeRepresentatives.Clear();
                         factionsTracker.activeRepresentatives = new List<Pawn>();
-                        factionsTracker.joinedFaction = (SCP.FactionDef)representative.Faction.def;
+                        factionsTracker.joinedFactionDef = (SCP.FactionDef)representative.Faction.def;
                     }
                 }
             });

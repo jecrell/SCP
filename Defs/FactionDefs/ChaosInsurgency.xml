@@ -22,7 +22,12 @@
     </declineMessages>
     <factionBuildings>
       <li>SCP_CIBench</li>
-    </factionBuildings>    
+    </factionBuildings>
+    <hostileToFactions>
+      <li>SCP_GlobalOccultCoalition</li>
+      <li>SCP_TheFoundation</li>
+    </hostileToFactions>    
+    <hostileByDefault>true</hostileByDefault>
     <startingRelations>
       <li>
         <factionDef>SCP_TheFoundation</factionDef>
