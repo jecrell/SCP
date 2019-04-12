@@ -20,7 +20,7 @@ namespace SCP
         public List<Pawn> activeRepresentatives = new List<Pawn>();
 
         private static int GetTimeUntilHostilities =>
-            new IntRange((int)(GenDate.TicksPerDay * (7 + (numOfSCPFactions * 0.6))), (int)(GenDate.TicksPerDay * 8)).RandomInRange;
+            new IntRange((int)(GenDate.TicksPerDay * (7.5 + (numOfSCPFactions * 0.6))), (int)(GenDate.TicksPerDay * 8)).RandomInRange;
 
 
         private static int GetInitialSCPArrivalTime =>
@@ -28,7 +28,7 @@ namespace SCP
 
 
         private static int GetNextRevealInterval =>
-             new IntRange((int)(GenDate.TicksPerDay * 0.2), (int)(GenDate.TicksPerDay * 0.6)).RandomInRange;
+             new IntRange((int)(GenDate.TicksPerDay * 0.2), (int)(GenDate.TicksPerDay * 0.3)).RandomInRange;
 
         public override void WorldComponentTick()
         {
