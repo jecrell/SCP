@@ -18,20 +18,36 @@ namespace SCP
         public int ticksUntilHostilities = int.MaxValue;
         public static int numOfSCPFactions = 1;
         public List<Pawn> activeRepresentatives = new List<Pawn>();
+        private bool factionsSpawned;
+        private DevSettings devSettings = DefDatabase<DevSettings>.AllDefs.First();
 
-        private static int GetTimeUntilHostilities =>
-            new IntRange((int)(GenDate.TicksPerDay * (7.5 + (numOfSCPFactions * 0.6))), (int)(GenDate.TicksPerDay * 8)).RandomInRange;
+        private int GetTimeUntilHostilities =>
+            new IntRange(
+                (int)(GenDate.TicksPerDay * devSettings.daysUntilHostilities.min), 
+                (int)(GenDate.TicksPerDay * devSettings.daysUntilHostilities.max))
+            .RandomInRange;
 
 
-        private static int GetInitialSCPArrivalTime =>
-            new IntRange((int)(GenDate.TicksPerDay * 3), (int)(GenDate.TicksPerDay * 6)).RandomInRange;
+        private int GetInitialSCPArrivalTime =>
+            new IntRange(
+                (int)(GenDate.TicksPerDay * devSettings.daysUntilSCPArrival.min),
+                (int)(GenDate.TicksPerDay * devSettings.daysUntilSCPArrival.max))
+            .RandomInRange;
 
 
-        private static int GetNextRevealInterval =>
-             new IntRange((int)(GenDate.TicksPerDay * 0.2), (int)(GenDate.TicksPerDay * 0.3)).RandomInRange;
+        private int GetNextRevealInterval =>
+             new IntRange(
+                 (int)(GenDate.TicksPerDay * devSettings.daysBetweenRepresentatives.min),
+                 (int)(GenDate.TicksPerDay * devSettings.daysBetweenRepresentatives.max))
+            .RandomInRange;
 
         public override void WorldComponentTick()
         {
+            if (Find.TickManager.TicksGame < 500)
+            {
+                base.WorldComponentTick();
+                return;
+            }
             if (!firstSCPSpawned &&
                 Find.TickManager.TicksGame > ticksUntilSCPArrival)
             {
@@ -45,6 +61,11 @@ namespace SCP
             {
                 ticksUntilNextReveal = Find.TickManager.TicksGame + GetNextRevealInterval;
                 SCP.FactionDef toBeRevealed = factionsLeftToSpawn.Pop();
+                if (factionsLeftToSpawn?.Count == 0)
+                {
+                    factionsSpawned = true;
+                    ticksUntilHostilities = Find.TickManager.TicksGame + GetTimeUntilHostilities;
+                }
                 FactionUtility.IntroduceFaction(toBeRevealed);
             }
             if (Find.TickManager.TicksGame > ticksUntilHostilities)
@@ -113,18 +134,20 @@ namespace SCP
         }
 
         public WorldComponent_FactionsTracker(World world) : base(world)
-        {
+        { 
+            devSettings = DefDatabase<DevSettings>.AllDefs.First();        
             numOfSCPFactions = DefDatabase<SCP.FactionDef>.AllDefsListForReading.Count();
             ticksUntilSCPArrival = Find.TickManager.TicksGame + GetInitialSCPArrivalTime;
             Log.Message($"Ticks until SCP arrival: {ticksUntilSCPArrival}");
 
-            ticksUntilHostilities = Find.TickManager.TicksGame + GetTimeUntilHostilities;
+            //ticksUntilHostilities = Find.TickManager.TicksGame + GetTimeUntilHostilities;
 
         }
 
         public override void ExposeData()
         {
             Scribe_Values.Look(ref this.firstSCPSpawned, "firstSCPSpawned", false);
+            Scribe_Values.Look(ref this.factionsSpawned, "factionsSpawned", false);
             Scribe_Collections.Look(ref this.factionsLeftToSpawn, "factionsLeftToSpawn", LookMode.Def);
             Scribe_Defs.Look(ref this.joinedFactionDef, "joinedFaction");
             Scribe_Values.Look(ref this.ticksUntilNextReveal, "ticksUntilNextReveal", int.MaxValue);

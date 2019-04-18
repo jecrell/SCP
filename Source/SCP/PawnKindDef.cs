@@ -8,5 +8,6 @@ namespace SCP
     public class PawnKindDef : Verse.PawnKindDef
     {
         public bool isUnique = false;
+        public bool trainableMechanoid = false;
     }
 }

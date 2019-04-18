@@ -29,7 +29,22 @@ namespace SCP
                    postfix: new HarmonyMethod(typeof(HarmonyPatches), name: nameof(DesignatorAllowedPostfix)));
             harmony.Patch(original: AccessTools.Method(type: typeof(GenConstruct), name: nameof(GenConstruct.CanConstruct)), prefix: null,
                 postfix: new HarmonyMethod(typeof(HarmonyPatches), name: nameof(CanConstructPostfix)));
+
+            //Allow for trainable mechanoids (mechanoid SCPs that can move around)
+            harmony.Patch(original: AccessTools.Method(type: typeof(WildManUtility), name: nameof(WildManUtility.AnimalOrWildMan)), prefix: null,
+                postfix: new HarmonyMethod(typeof(HarmonyPatches), name: nameof(AnimalOrWildMan_PostFix)));
         }
+
+        // Verse.WildManUtility
+        public static void AnimalOrWildMan_PostFix(Pawn p, ref bool __result)
+        {
+            if (p.kindDef is SCP.PawnKindDef spckind && spckind.trainableMechanoid)
+            {
+                Log.Message("SCP Check passed for " + p.Label);
+                __result = true;
+            }
+        }
+
 
         private static int colonistRacesTick;
         private const int COLONIST_RACES_TICK_TIMER = GenDate.TicksPerHour * 2;
@@ -204,6 +219,15 @@ namespace SCP
         {
             if (newThing is Pawn newPawn && newPawn.kindDef is SCP.PawnKindDef newPkd && newPkd.isUnique)
             {
+                //SCPs should not be spawned as mechanoids in shrines.
+                //Spawn lancers instead.
+                if (Find.TickManager.TicksGame < 500)
+                {
+                    newThing = PawnGenerator.GeneratePawn(PawnKindDef.Named("Mech_Lancer"));
+                    //Log.Message(newPkd.label + " attempted to spawn before gamestart. Denied");
+                    return true;
+                }
+
                 var worldComp = Find.World.GetComponent<WorldComponent_UniqueTracker>();
                 if (worldComp == null) return true;
 

@@ -60,6 +60,7 @@
     <Compile Include="HarmonySCP.cs" />
     <Compile Include="JobDriver_TalkWithRepresentative.cs" />
     <Compile Include="PawnKindDef.cs" />
+    <Compile Include="DevSettings.cs" />
     <Compile Include="SCPUtility.cs" />
     <Compile Include="StartingRelation.cs" />
     <Compile Include="WorldComponent_FactionsTracker.cs" />

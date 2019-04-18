@@ -16,8 +16,12 @@ namespace SCP
             var listOfSCP = map.mapPawns.AllPawnsSpawned.FindAll(x => x?.def?.defName == "SCP_ONE_THREE_ONE_RACE");
 
             foreach (Pawn scp in listOfSCP)
+            {
                 scp.SetFaction(Faction.OfPlayer);
-
+                scp.training = new Pawn_TrainingTracker(scp);
+                //scp.training.Train(TrainableDefOf.Obedience, startingAndOptionalPawn, true);
+                //scp.playerSettings.Master = startingAndOptionalPawn;
+            }
             Messages.Message("SCP_SCPEntrusted".Translate(), listOfSCP, MessageTypeDefOf.PositiveEvent);
 
             base.PostAccept(representative);

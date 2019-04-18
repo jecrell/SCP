@@ -71,6 +71,8 @@
     <label>SCP 131-A</label>
     <race>SCP_ONE_THREE_ONE_RACE</race>
     <combatPower>30</combatPower>
+    <isUnique>true</isUnique>
+    <trainableMechanoid>true</trainableMechanoid>
     <ecoSystemWeight>0.0</ecoSystemWeight>
     <lifeStages>
       <li>
@@ -89,6 +91,8 @@
   <SCP.PawnKindDef ParentName="SCP_ONE_THREE_ONE">
     <defName>SCP_ONE_THREE_ONE_B</defName>
     <label>SCP 131-B</label>
+    <isUnique>true</isUnique>
+    <trainableMechanoid>true</trainableMechanoid>
     <lifeStages Inherit="False">
       <li>
         <bodyGraphicData>
