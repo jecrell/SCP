@@ -9,7 +9,7 @@ namespace SCP
 {
     public class WorldComponent_UniqueTracker : WorldComponent
     {
-        public List<SCP.PawnKindDef> uniquePawnTypes = new List<SCP.PawnKindDef>();
+        public List<CustomPawnKindDef> uniquePawnTypes = new List<CustomPawnKindDef>();
         public List<Pawn> uniquePawns = new List<Pawn>();
 
         public WorldComponent_UniqueTracker(World world) : base(world)

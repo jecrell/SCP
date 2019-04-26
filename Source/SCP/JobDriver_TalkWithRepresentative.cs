@@ -24,7 +24,7 @@ namespace SCP
             {
                 var actor = trade.actor;
                 if (CanTalkWithNow(Representative))
-                    Find.WindowStack.Add(new Dialog_WithRepresentative(Representative, (SCP.FactionDef)Representative.Faction.def));
+                    Find.WindowStack.Add(new Dialog_WithRepresentative(Representative, (CustomFactionDef)Representative.Faction.def));
             };
             yield return trade;
             yield break;

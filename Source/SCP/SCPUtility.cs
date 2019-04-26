@@ -22,8 +22,8 @@ namespace SCP
             CellFinder.TryFindRandomEdgeCellWith(validator, map, CellFinder.EdgeRoadChance_Neutral, out spawnSpotOne);
             CellFinder.TryFindRandomEdgeCellWith(validator, map, CellFinder.EdgeRoadChance_Neutral, out spawnSpotTwo);
 
-            Pawn pawnA = PawnGenerator.GeneratePawn(PawnKindDef.Named("SCP_ONE_THREE_ONE_A"));
-            Pawn pawnB = PawnGenerator.GeneratePawn(PawnKindDef.Named("SCP_ONE_THREE_ONE_B"));
+            Pawn pawnA = PawnGenerator.GeneratePawn(CustomPawnKindDef.Named("SCP_ONE_THREE_ONE_A"));
+            Pawn pawnB = PawnGenerator.GeneratePawn(CustomPawnKindDef.Named("SCP_ONE_THREE_ONE_B"));
             GenSpawn.Spawn(pawnA, spawnSpotOne, map);
             GenSpawn.Spawn(pawnB, spawnSpotTwo, map);
 

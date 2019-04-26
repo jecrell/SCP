@@ -7,7 +7,7 @@ using RimWorld;
 
 namespace SCP
 {
-    public class FactionDef : RimWorld.FactionDef
+    public class CustomFactionDef : RimWorld.FactionDef
     {
         public Verse.PawnKindDef representativeKind;
         public string representativeMessage;

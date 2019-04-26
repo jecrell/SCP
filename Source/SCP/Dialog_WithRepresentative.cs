@@ -9,7 +9,7 @@ namespace SCP
     public class Dialog_WithRepresentative : Dialog_MessageBox
     {
         public Dialog_WithRepresentative(Pawn representative,
-            SCP.FactionDef factionDef) : base(factionDef.representativeMessage)
+            CustomFactionDef factionDef) : base(factionDef.representativeMessage)
         {
             this.text = factionDef.representativeMessage + "\n\n" + "SCP_DialogNote".Translate();
 
@@ -28,7 +28,7 @@ namespace SCP
                     {
                         factionsTracker.activeRepresentatives.Clear();
                         factionsTracker.activeRepresentatives = new List<Pawn>();
-                        factionsTracker.joinedFactionDef = (SCP.FactionDef)representative.Faction.def;
+                        factionsTracker.joinedFactionDef = (CustomFactionDef)representative.Faction.def;
                     }
                 }
             });

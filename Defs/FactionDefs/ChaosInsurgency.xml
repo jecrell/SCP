@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <SCP.FactionDef>
+  <SCP.CustomFactionDef>
     <defName>SCP_ChaosInsurgency</defName>
     <label>Chaos Insurgency</label>
     <fixedName>Chaos Insurgency</fixedName>
@@ -159,5 +159,5 @@
       </li>
     </pawnGroupMakers>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
-  </SCP.FactionDef>
+  </SCP.CustomFactionDef>
 </Defs>
