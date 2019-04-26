@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <SCP.FactionDef>
+  <SCP.CustomFactionDef>
     <defName>SCP_GlobalOccultCoalition</defName>
     <label>Global Occult Coalition</label>
     <fixedName>Global Occult Coalition</fixedName>
@@ -153,5 +153,5 @@
       </li>
     </pawnGroupMakers>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
-  </SCP.FactionDef>
+  </SCP.CustomFactionDef>
 </Defs>

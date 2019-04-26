@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+  <SCP_GatheringSCPForDrop>Securing SCP for relocation</SCP_GatheringSCPForDrop>
+  <SCP_CommandHaulSCP>Relocate SCP</SCP_CommandHaulSCP>
+  <SCP_SCPDropping>Relocating {0}</SCP_SCPDropping>
+  <SCP_SCPDropFinished>Finished relocation effort</SCP_SCPDropFinished>
+  <SCP_CommandHaulSCPDesc>Designate an agent with the responsibility of delicately relocating the subject.</SCP_CommandHaulSCPDesc>
+  <SCP_CommandCancelHaulSCPDesc>Cancel relocation</SCP_CommandCancelHaulSCPDesc>
+  <SCP_Unavailable>The SCP is unavailable</SCP_Unavailable>
+  <SCP_AgentUnavailable>The agent is unavailable</SCP_AgentUnavailable>
+  <SCP_CannotFindActor>Cannot find agent to relocate SCP</SCP_CannotFindActor>
+
   <SCP_HostilitiesDeclared>Hostilities Declared</SCP_HostilitiesDeclared>
   <SCP_HostilitiesDeclaredDesc>After the SCP-related coalitions have revealed themselves, their hostilities are now made known.\n\n{0}</SCP_HostilitiesDeclaredDesc>
   <SCP_Hostilities>{0} is at war with {1}</SCP_Hostilities>

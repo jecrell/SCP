@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SCP
 {
-    public class PawnKindDef : Verse.PawnKindDef
+    public class CustomPawnKindDef : Verse.PawnKindDef
     {
         public bool isUnique = false;
         public bool trainableMechanoid = false;

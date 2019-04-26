@@ -12,7 +12,7 @@ namespace SCP
     public class FactionUtility
     {
         
-        public static void IntroduceFaction(SCP.FactionDef newFaction)
+        public static void IntroduceFaction(CustomFactionDef newFaction)
         {
 
             Faction faction = SpawnNewFactionIntoWorld(newFaction);
@@ -66,7 +66,7 @@ namespace SCP
 
         }
 
-        public static Faction SpawnNewFactionIntoWorld(SCP.FactionDef newFaction)
+        public static Faction SpawnNewFactionIntoWorld(CustomFactionDef newFaction)
         {
             if (Find.FactionManager.AllFactionsListForReading.Any(x => x.def == newFaction))
             {

@@ -8,7 +8,7 @@ namespace SCP
 {
     public class StartingRelation
     {
-        FactionDef factionDef;
+        CustomFactionDef factionDef;
         FactionRelationKind kind;
     }
 }

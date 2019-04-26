@@ -4,7 +4,7 @@ namespace SCP
 {
     public abstract class AcceptWorker
     {
-        public SCP.FactionDef factionDef;
+        public CustomFactionDef factionDef;
 
         public virtual bool CanAccept(Pawn representative)
         {

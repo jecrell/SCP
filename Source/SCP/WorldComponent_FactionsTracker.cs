@@ -11,8 +11,8 @@ namespace SCP
     public class WorldComponent_FactionsTracker : WorldComponent
     {
         public bool firstSCPSpawned = false;
-        public List<SCP.FactionDef> factionsLeftToSpawn = new List<SCP.FactionDef>();
-        public SCP.FactionDef joinedFactionDef = null;
+        public List<CustomFactionDef> factionsLeftToSpawn = new List<CustomFactionDef>();
+        public CustomFactionDef joinedFactionDef = null;
         public int ticksUntilNextReveal = int.MaxValue;
         public int ticksUntilSCPArrival = int.MaxValue;
         public int ticksUntilHostilities = int.MaxValue;
@@ -53,14 +53,14 @@ namespace SCP
             {
                 firstSCPSpawned = true;
                 SCPUtility.SpawnFirstSCPGroup(Find.AnyPlayerHomeMap);
-                factionsLeftToSpawn = new List<FactionDef>(DefDatabase<SCP.FactionDef>.AllDefsListForReading);
+                factionsLeftToSpawn = new List<CustomFactionDef>(DefDatabase<CustomFactionDef>.AllDefsListForReading);
                 ticksUntilNextReveal = Find.TickManager.TicksGame + GetNextRevealInterval;
             }
             if (factionsLeftToSpawn?.Count > 0 && firstSCPSpawned &&
                 Find.TickManager.TicksGame > ticksUntilNextReveal)
             {
                 ticksUntilNextReveal = Find.TickManager.TicksGame + GetNextRevealInterval;
-                SCP.FactionDef toBeRevealed = factionsLeftToSpawn.Pop();
+                CustomFactionDef toBeRevealed = factionsLeftToSpawn.Pop();
                 if (factionsLeftToSpawn?.Count == 0)
                 {
                     factionsSpawned = true;
@@ -73,10 +73,10 @@ namespace SCP
                 ticksUntilHostilities = int.MaxValue;
 
                 //Log.Message("1");
-                var facDefs = new List<FactionDef>(DefDatabase<SCP.FactionDef>.AllDefsListForReading);
+                var facDefs = new List<CustomFactionDef>(DefDatabase<CustomFactionDef>.AllDefsListForReading);
                 //Log.Message("2");
                 var facs = new List<Faction>(Find.FactionManager.AllFactions
-                    .Where(f => f.def is SCP.FactionDef sDef && facDefs.Contains(sDef)));
+                    .Where(f => f.def is CustomFactionDef sDef && facDefs.Contains(sDef)));
                 //Log.Message("3");
                 var s = new StringBuilder();
                 //Log.Message("4");
@@ -86,7 +86,7 @@ namespace SCP
                     return;
                 }
                 //Log.Message("5");
-                var hostileFacs = facs.Where(x => x.def is SCP.FactionDef sDef && sDef.hostileByDefault && sDef != joinedFactionDef);
+                var hostileFacs = facs.Where(x => x.def is CustomFactionDef sDef && sDef.hostileByDefault && sDef != joinedFactionDef);
                 //Log.Message("6");
                 if (hostileFacs != null && hostileFacs?.Count() > 0)
                 {
@@ -103,7 +103,7 @@ namespace SCP
                 foreach (var f in facs)
                 {
                     //Log.Message("7a");
-                    var fDef = f.def as SCP.FactionDef;
+                    var fDef = f.def as CustomFactionDef;
                     foreach (var hostileFactionName in fDef.hostileToFactions)
                     {
                         //Log.Message("7aloop");
@@ -136,7 +136,7 @@ namespace SCP
         public WorldComponent_FactionsTracker(World world) : base(world)
         { 
             devSettings = DefDatabase<DevSettings>.AllDefs.First();        
-            numOfSCPFactions = DefDatabase<SCP.FactionDef>.AllDefsListForReading.Count();
+            numOfSCPFactions = DefDatabase<CustomFactionDef>.AllDefsListForReading.Count();
             ticksUntilSCPArrival = Find.TickManager.TicksGame + GetInitialSCPArrivalTime;
             Log.Message($"Ticks until SCP arrival: {ticksUntilSCPArrival}");
 

@@ -30,15 +30,41 @@ namespace SCP
             harmony.Patch(original: AccessTools.Method(type: typeof(GenConstruct), name: nameof(GenConstruct.CanConstruct)), prefix: null,
                 postfix: new HarmonyMethod(typeof(HarmonyPatches), name: nameof(CanConstructPostfix)));
 
+            //Add SCPs to the "Animals" Tab
+            //harmony.Patch(AccessTools.Method(typeof(MainTabWindow_Animals), "get_Pawns"), null,
+            //    new HarmonyMethod(typeof(HarmonyPatches), nameof(AnimalsPawnsPostFix)));
+
             //Allow for trainable mechanoids (mechanoid SCPs that can move around)
             harmony.Patch(original: AccessTools.Method(type: typeof(WildManUtility), name: nameof(WildManUtility.AnimalOrWildMan)), prefix: null,
                 postfix: new HarmonyMethod(typeof(HarmonyPatches), name: nameof(AnimalOrWildMan_PostFix)));
+        }
+        
+        public static IEnumerable<Pawn> SCPGetter(Map map)
+        {
+
+                var enumerator = map.mapPawns.PawnsInFaction(Faction.OfPlayer).GetEnumerator();
+                while (enumerator.MoveNext())
+                {
+                    var current = enumerator.Current;
+                    if (current.kindDef is CustomPawnKindDef)
+                        yield return current;
+                    continue;
+                }
+        }
+
+        public static void AnimalsPawnsPostFix(ref IEnumerable<Pawn> __result)
+        {
+            var newPawnsToAdd = new List<Pawn>(SCPGetter(Find.CurrentMap));
+            if (!newPawnsToAdd.NullOrEmpty())
+            {
+                __result = __result.Concat(newPawnsToAdd);
+            }
         }
 
         // Verse.WildManUtility
         public static void AnimalOrWildMan_PostFix(Pawn p, ref bool __result)
         {
-            if (p.kindDef is SCP.PawnKindDef spckind && spckind.trainableMechanoid)
+            if (p.kindDef is CustomPawnKindDef spckind && spckind.trainableMechanoid)
             {
                 Log.Message("SCP Check passed for " + p.Label);
                 __result = true;
@@ -48,7 +74,7 @@ namespace SCP
 
         private static int colonistRacesTick;
         private const int COLONIST_RACES_TICK_TIMER = GenDate.TicksPerHour * 2;
-        public static Dictionary<string, SCP.FactionDef> uniqueFactionBuildings;
+        public static Dictionary<string, CustomFactionDef> uniqueFactionBuildings;
 
 
 
@@ -68,8 +94,8 @@ namespace SCP
             //Initialize Unique Faction Buildings List
             if (uniqueFactionBuildings == null)
             {
-                uniqueFactionBuildings = new Dictionary<string, SCP.FactionDef>();
-                foreach (var facDef in DefDatabase<SCP.FactionDef>.AllDefs)
+                uniqueFactionBuildings = new Dictionary<string, CustomFactionDef>();
+                foreach (var facDef in DefDatabase<CustomFactionDef>.AllDefs)
                 {
                     foreach (var bld in facDef.factionBuildings)
                     {
@@ -88,7 +114,7 @@ namespace SCP
                 __result = false;
 
                 //Unless we joined that faction
-                if (Find.World.GetComponent<WorldComponent_FactionsTracker>().joinedFactionDef is SCP.FactionDef fac)
+                if (Find.World.GetComponent<WorldComponent_FactionsTracker>().joinedFactionDef is CustomFactionDef fac)
                 {
                     if (uniqueFactionBuildings[build] == fac)
                     {
@@ -217,13 +243,13 @@ namespace SCP
 
         public static bool SCP_SpawnCheck(Thing newThing, IntVec3 loc, Map map, Rot4 rot, WipeMode wipeMode, bool respawningAfterLoad)
         {
-            if (newThing is Pawn newPawn && newPawn.kindDef is SCP.PawnKindDef newPkd && newPkd.isUnique)
+            if (newThing is Pawn newPawn && newPawn.kindDef is CustomPawnKindDef newPkd && newPkd.isUnique)
             {
                 //SCPs should not be spawned as mechanoids in shrines.
                 //Spawn lancers instead.
                 if (Find.TickManager.TicksGame < 500)
                 {
-                    newThing = PawnGenerator.GeneratePawn(PawnKindDef.Named("Mech_Lancer"));
+                    newThing = PawnGenerator.GeneratePawn(CustomPawnKindDef.Named("Mech_Lancer"));
                     //Log.Message(newPkd.label + " attempted to spawn before gamestart. Denied");
                     return true;
                 }
@@ -232,7 +258,7 @@ namespace SCP
                 if (worldComp == null) return true;
 
                 if (worldComp.uniquePawnTypes == null)
-                    worldComp.uniquePawnTypes = new List<PawnKindDef>();
+                    worldComp.uniquePawnTypes = new List<CustomPawnKindDef>();
 
                 //Check to see if the unique pawn type has already been spawned.
                 if (worldComp.uniquePawnTypes.Count != 0 &&

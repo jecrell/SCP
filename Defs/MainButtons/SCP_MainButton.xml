@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <MainButtonDef>
+    <defName>SCP_SCPMainButton</defName>
+    <label>SCPs</label>
+    <description>Configure SCP containment.</description>
+    <tabWindowClass>SCP.MainTabWindow_SCPs</tabWindowClass>
+    <order>51</order>
+  </MainButtonDef>
+
+  <PawnTableDef>
+    <defName>SCP_SCPPawnTable</defName>
+    <workerClass>SCP.PawnTable_SCPs</workerClass>
+    <columns>
+      <li>Label</li>
+      <li>Info</li>
+      <li>GapTiny</li>
+      <li>GapTiny</li>
+      <li>FollowDrafted</li>
+      <li>FollowFieldwork</li>
+      <li>GapTiny</li>
+      <li>Slaughter</li>
+      <li>MedicalCare</li>
+      <li>GapTiny</li>
+      <li>AllowedAreaWide</li>
+      <li>RemainingSpace</li>
+    </columns>
+  </PawnTableDef>
+
+  <PawnColumnDef>
+    <defName>SCP_ObjectClasses</defName>
+    <label>class</label>
+    <workerClass>SCP.PawnColumnWorker_ObjectClass</workerClass>
+    <sortable>true</sortable>
+  </PawnColumnDef>
+
+
+</Defs>
