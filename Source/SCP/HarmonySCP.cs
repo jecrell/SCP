@@ -66,7 +66,7 @@ namespace SCP
         {
             if (p.kindDef is CustomPawnKindDef spckind && spckind.trainableMechanoid)
             {
-                Log.Message("SCP Check passed for " + p.Label);
+                //Log.Message("SCP Check passed for " + p.Label);
                 __result = true;
             }
         }

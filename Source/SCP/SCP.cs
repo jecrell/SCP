@@ -13,7 +13,6 @@ namespace SCP
     public class SCP : Pawn
     {
         public bool isMoving;
-        public bool isMovingGUI;
 
 
 
@@ -109,18 +108,18 @@ namespace SCP
         private IntVec3 tempLoc;
 
 
-        private void DrawGhost(Color ghostCol, IntVec3 loc)
-        {
-            GhostDrawer.DrawGhostThing(loc, placingRot, this.def, null, ghostCol, AltitudeLayer.Blueprint);
-        }
+        //private void DrawGhost(Color ghostCol, IntVec3 loc)
+        //{
+        //    GhostDrawer.DrawGhostThing(loc, placingRot, this.def, null, ghostCol, AltitudeLayer.Blueprint);
+        //}
 
         public override void DrawExtraSelectionOverlays()
         {
-            if (isMoving && tempLoc != null && tempLoc.IsValid)
-            {
+            //if (isMoving && tempLoc != null && tempLoc.IsValid)
+            //{
                 base.DrawExtraSelectionOverlays();
-                DrawGhost(Color.white, tempLoc);
-            }
+            //    DrawGhost(Color.white, tempLoc);
+            //}
         }
 
         private void StartHaul(Pawn actor)

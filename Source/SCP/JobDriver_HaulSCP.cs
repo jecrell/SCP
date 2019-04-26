@@ -22,7 +22,7 @@ namespace SCP
         private const TargetIndex DestinationIndex = TargetIndex.B;
         private string customString = "";
 
-        protected Pawn Takee => (Pawn)base.job.GetTarget(TargetIndex.A).Thing;
+        protected SCP Takee => (SCP)base.job.GetTarget(TargetIndex.A).Thing;
 
         protected IntVec3 DropLocation => base.job.GetTarget(TargetIndex.B).Cell;
 
@@ -110,10 +110,12 @@ namespace SCP
         private void SacrificeCompleted()
         {
             //Drop them in~~
+            this.Takee.isMoving = false;
+
             this.Takee.Position = this.DropLocation;
             this.Takee.Notify_Teleported(false);
             this.Takee.stances.CancelBusyStanceHard();
-            
+
             //Record a tale
             //TaleRecorder.RecordTale(TaleDefOf.ExecutedPrisoner, new object[]
             //{
