@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+<!-- ======== SCP FOUNDATION=========-->
+
+
 
               	<!-- ==================================== SCP RCF Cap =====================================-->
   <ThingDef ParentName="HatMakeableBase">
@@ -7,7 +10,7 @@
     <label>RCF Cap (SCP) </label>
     <description>A multicam cap utilized by Rapid Containment Force opperatives</description>
     <graphicData>
-      <texPath>Things/Apparel/Display/RCFcap_Frontwards</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_RCFcap_Frontwards</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -34,7 +37,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/RCFcap_Frontwards</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_RCFcap_Frontwards</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -53,7 +56,7 @@
     <label>RCF Backwards Cap (SCP) </label>
     <description>A multicam cap utilized by Rapid Containment Force opperatives</description>
     <graphicData>
-      <texPath>Things/Apparel/Display/RCFcap_Backwards</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_RCFcap_Backwards</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -80,7 +83,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/RCFcap_Backwards</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_RCFcap_Backwards</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -110,7 +113,7 @@
     </recipeMaker>
 	
     <graphicData>
-      <texPath>Things/Apparel/Display/RCFHelmet</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_RCFHelmet</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -144,7 +147,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/RCFHelmet</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_RCFHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -158,12 +161,12 @@
   </ThingDef>
   
   
-      	<!-- ================================== SCP MTF Helmet ====================================-->
+             	<!-- ================================== SCP Security Helmet ====================================-->
   
       <ThingDef ParentName="ArmorHelmetMakeableBase">
-    <defName>Apparel_ScpMtfHelmet</defName>
-    <label>MTF Helmet (SCP) </label>
-    <description>A Helmet used by the Foundations' Elite [REDACTED].</description>
+    <defName>Apparel_ScpSecurityHelmet</defName>
+    <label>Security Helmet (SCP) </label>
+    <description>A Masked Helmet with a Visor used by Foundation Security.</description>
     <techLevel>Industrial</techLevel>
 	
     <recipeMaker>
@@ -175,7 +178,72 @@
     </recipeMaker>
 	
     <graphicData>
-      <texPath>Things/Apparel/Display/MTFHelmet_Normal</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_SecurityHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>0.69</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+	
+		<equippedStatOffsets>
+		    <ShootingAccuracyPawn>0.06</ShootingAccuracyPawn>
+			<PsychicSensitivity>-0.50</PsychicSensitivity>
+			<GlobalLearningFactor>0.25</GlobalLearningFactor>
+		</equippedStatOffsets>
+			
+	
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+    <costList>
+      <!--<ComponentIndustrial>2</ComponentIndustrial>-->
+			<Steel>10</Steel>
+    </costList>
+    <apparel>
+	<careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_SecurityHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>SCP_SecurityHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+      	<!-- ================================== SCP MTF Helmet ====================================-->
+  
+      <ThingDef ParentName="ArmorHelmetMakeableBase">
+    <defName>Apparel_ScpMtfHelmet</defName>
+    <label>MTF Helmet (SCP) </label>
+    <description>A Helmet used by the Foundations' Elite Mobile Task Force.</description>
+    <techLevel>Industrial</techLevel>
+	
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	
+    <graphicData>
+      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmet_Normal</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -209,7 +277,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/MTFHelmet_Normal</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmet_Normal</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -228,7 +296,7 @@
       <ThingDef ParentName="ArmorHelmetMakeableBase">
     <defName>Apparel_ScpMtfHelmetGoggles</defName>
     <label>MTF Helmet Goggles (SCP) </label>
-    <description>A Helmet with goggles used by the Foundations' Elite [REDACTED].</description>
+    <description>A Helmet with goggles used by the Foundations' Elite Mobile Task Force].</description>
     <techLevel>Industrial</techLevel>
 	
     <recipeMaker>
@@ -240,7 +308,7 @@
     </recipeMaker>
 	
     <graphicData>
-      <texPath>Things/Apparel/Display/MTFHelmetGoggles_Normal</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmetGoggles_Normal</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -272,9 +340,9 @@
     <apparel>
 	<careIfWornByCorpse>false</careIfWornByCorpse>
       <bodyPartGroups>
-        <li>UpperHead</li>
+        <li>FullHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/MTFHelmetGoggles_Normal</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmetGoggles_Normal</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -293,7 +361,7 @@
       <ThingDef ParentName="ArmorHelmetMakeableBase">
     <defName>Apparel_ScpMtfHelmetVisor</defName>
     <label>MTF Helmet Visor (SCP) </label>
-    <description>A Helmet with a Visor used by the Foundations' Elite [REDACTED].</description>
+    <description>A Helmet with a Visor used by the Foundations' Elite Mobile Task Force.</description>
     <techLevel>Industrial</techLevel>
 	
     <recipeMaker>
@@ -305,7 +373,7 @@
     </recipeMaker>
 	
     <graphicData>
-      <texPath>Things/Apparel/Display/MTFHelmetVisor_Normal</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmetVisor_Normal</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -337,9 +405,9 @@
     <apparel>
 	<careIfWornByCorpse>false</careIfWornByCorpse>
       <bodyPartGroups>
-        <li>UpperHead</li>
+        <li>FullHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/MTFHelmetVisor_Normal</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmetVisor_Normal</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -359,7 +427,7 @@
       <ThingDef ParentName="ArmorHelmetMakeableBase">
     <defName>Apparel_ScpMtfHelmetMasked</defName>
     <label>MTF Helmet Masked (SCP) </label>
-    <description>A Masked Helmet used by the Foundations' Elite [REDACTED].</description>
+    <description>A Masked Helmet used by the Foundations' Elite Mobile Task Force.</description>
     <techLevel>Industrial</techLevel>
 	
     <recipeMaker>
@@ -371,7 +439,7 @@
     </recipeMaker>
 	
     <graphicData>
-      <texPath>Things/Apparel/Display/MTFHelmet_Masked</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmet_Masked</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -405,7 +473,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/MTFHelmet_Masked</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmet_Masked</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -424,7 +492,7 @@
       <ThingDef ParentName="ArmorHelmetMakeableBase">
     <defName>Apparel_ScpMtfHelmetGogglesMasked</defName>
     <label>MTF Helmet Goggles Masked (SCP) </label>
-    <description>A Masked Helmet with Goggles used by the Foundations' Elite [REDACTED].</description>
+    <description>A Masked Helmet with Goggles used by the Foundations' Elite Mobile Task Force.</description>
     <techLevel>Industrial</techLevel>
 	
     <recipeMaker>
@@ -436,7 +504,7 @@
     </recipeMaker>
 	
     <graphicData>
-      <texPath>Things/Apparel/Display/MTFHelmetGoggles_Masked</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmetGoggles_Masked</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -468,9 +536,9 @@
     <apparel>
 	<careIfWornByCorpse>false</careIfWornByCorpse>
       <bodyPartGroups>
-        <li>UpperHead</li>
+        <li>FullHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/MTFHelmetGoggles_Masked</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmetGoggles_Masked</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -489,7 +557,7 @@
       <ThingDef ParentName="ArmorHelmetMakeableBase">
     <defName>Apparel_ScpMtfHelmetVisorMasked</defName>
     <label>MTF Helmet Visor Masked (SCP) </label>
-    <description>A Masked Helmet with a Visor used by the Foundations' Elite [REDACTED].</description>
+    <description>A Masked Helmet with a Visor used by the Foundations' Elite Mobile Task Force.</description>
     <techLevel>Industrial</techLevel>
 	
     <recipeMaker>
@@ -501,7 +569,7 @@
     </recipeMaker>
 	
     <graphicData>
-      <texPath>Things/Apparel/Display/MTFHelmetVisor_Masked</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmetVisor_Masked</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -533,9 +601,9 @@
     <apparel>
 	<careIfWornByCorpse>false</careIfWornByCorpse>
       <bodyPartGroups>
-        <li>UpperHead</li>
+        <li>FullHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/MTFHelmetVisor_Masked</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmetVisor_Masked</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -554,7 +622,7 @@
       <ThingDef ParentName="ArmorHelmetMakeableBase">
     <defName>Apparel_ScpMtfHelmetGasmask</defName>
     <label>MTF Helmet Gasmask (SCP) </label>
-    <description>A Gasmask Helmet used by the Foundations' Elite [REDACTED].</description>
+    <description>A Gasmask Helmet used by the Foundations' Elite Mobile Task Force.</description>
     <techLevel>Industrial</techLevel>
 	
     <recipeMaker>
@@ -566,7 +634,7 @@
     </recipeMaker>
 	
     <graphicData>
-      <texPath>Things/Apparel/Display/MTFHelmet_Gasmask</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmet_Gasmask</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -599,9 +667,9 @@
     <apparel>
 	<careIfWornByCorpse>false</careIfWornByCorpse>
       <bodyPartGroups>
-        <li>UpperHead</li>
+        <li>FullHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/MTFHelmet_Gasmask</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmet_Gasmask</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -620,7 +688,7 @@
       <ThingDef ParentName="ArmorHelmetMakeableBase">
     <defName>Apparel_ScpMtfHelmetVisorGasmask</defName>
     <label>MTF Helmet Visor Gasmask (SCP) </label>
-    <description>A Gasmask Helmet with a Visor used by the Foundations' Elite [REDACTED].</description>
+    <description>A Gasmask Helmet with a Visor used by the Foundations' Elite Mobile Task Force.</description>
     <techLevel>Industrial</techLevel>
 	
     <recipeMaker>
@@ -632,7 +700,7 @@
     </recipeMaker>
 	
     <graphicData>
-      <texPath>Things/Apparel/Display/MTFHelmetVisor_Gasmask</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmetVisor_Gasmask</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -665,14 +733,728 @@
     <apparel>
 	<careIfWornByCorpse>false</careIfWornByCorpse>
       <bodyPartGroups>
-        <li>UpperHead</li>
+        <li>FullHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/MTFHelmetVisor_Gasmask</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmetVisor_Gasmask</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
       <tags>
         <li>SCP_MTFHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+  
+  <!-- ======== GLOBAL OCCULT COALITION ========= -->
+  
+  
+  
+                	<!-- ==================================== GOC Security Beret =====================================-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Apparel_GocSecurityBeret</defName>
+    <label>Security Beret (GOC) </label>
+    <description>A blue United Nations Beret sported by Global Occult Coalition Security Guards.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Display/GOC/GOC_SecurityBeret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+	  <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <Mass>0.07</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.12</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.40</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.5</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.03</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.07</ShootingAccuracyPawn>
+	  <SocialImpact>0.10</SocialImpact>
+	  <NegotiationAbility>0.05</NegotiationAbility>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/GOC/GOC_SecurityBeret</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>GOC_SecurityHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+        	<!-- ================================== GOC Security Helmet ====================================-->
+  
+      <ThingDef ParentName="ArmorHelmetMakeableBase">
+    <defName>Apparel_GocSecurityHelmet</defName>
+    <label>Security Helmet (GOC) </label>
+    <description>A blue United Nations helmet with a GOC Star on the front, used by Global Occult Coalition Security Guards.</description>
+    <techLevel>Industrial</techLevel>
+	
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	
+    <graphicData>
+      <texPath>Things/Apparel/Display/GOC/GOC_SecurityHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>0.67</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+	
+		<equippedStatOffsets>
+		    <ShootingAccuracyPawn>0.06</ShootingAccuracyPawn>
+			<PsychicSensitivity>-0.50</PsychicSensitivity>
+			<GlobalLearningFactor>0.25</GlobalLearningFactor>
+		</equippedStatOffsets>
+			
+	
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+    <costList>
+      <!--<ComponentIndustrial>2</ComponentIndustrial>-->
+			<Steel>10</Steel>
+    </costList>
+    <apparel>
+	<careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/GOC/GOC_SecurityHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>GOC_SecurityHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+                  	<!-- ==================================== GOC Strike Team Boonie =====================================-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Apparel_GocSTBoonie</defName>
+    <label>Strike Team Boonie (GOC) </label>
+    <description>A dark Boonie used by GOC Strike Team Opperatives.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Display/GOC/GOC_STBoonie</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>30</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+	  <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <Mass>0.07</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.5</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.03</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
+	  <SocialImpact>0.5</SocialImpact>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/GOC/GOC_STBoonie</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>GOC_StrikeTeamHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+             	<!-- ================================== GOC Strike Team Helmet ====================================-->
+  
+      <ThingDef ParentName="ArmorHelmetMakeableBase">
+    <defName>Apparel_GocSTHelmet</defName>
+    <label>Strike Team Helmet (GOC) </label>
+    <description>A Helmet used by GOC Strike Team Opperatives.</description>
+    <techLevel>Industrial</techLevel>
+	
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	
+    <graphicData>
+      <texPath>Things/Apparel/Display/GOC/GOC_STHelmet_Normal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <MaxHitPoints>125</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>0.71</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+	
+		<equippedStatOffsets>
+		    <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
+			<PsychicSensitivity>-0.45</PsychicSensitivity>
+			<GlobalLearningFactor>0.25</GlobalLearningFactor>
+		</equippedStatOffsets>
+			
+	
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>45</costStuffCount>
+    <costList>
+      <!--<ComponentIndustrial>2</ComponentIndustrial>-->
+			<Steel>12</Steel>
+    </costList>
+    <apparel>
+	<careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/GOC/GOC_STHelmet_Normal</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>GOC_StrikeTeamHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+               	<!-- ================================== GOC Strike Team Helmet Masked ====================================-->
+  
+      <ThingDef ParentName="ArmorHelmetMakeableBase">
+    <defName>Apparel_GocSTHelmetMasked</defName>
+    <label>Strike Team Helmet Masked (GOC) </label>
+    <description>A Masked Helmet used by GOC Strike Team Opperatives.</description>
+    <techLevel>Industrial</techLevel>
+	
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	
+    <graphicData>
+      <texPath>Things/Apparel/Display/GOC/GOC_STHelmet_Masked</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <MaxHitPoints>125</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>0.71</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+	
+		<equippedStatOffsets>
+		    <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
+			<PsychicSensitivity>-0.45</PsychicSensitivity>
+			<GlobalLearningFactor>0.25</GlobalLearningFactor>
+		</equippedStatOffsets>
+			
+	
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>45</costStuffCount>
+    <costList>
+      <!--<ComponentIndustrial>2</ComponentIndustrial>-->
+			<Steel>12</Steel>
+    </costList>
+    <apparel>
+	<careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/GOC/GOC_STHelmet_Masked</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>GOC_StrikeTeamHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+                 	<!-- ================================== GOC Strike Team Helmet Gasmask ====================================-->
+  
+      <ThingDef ParentName="ArmorHelmetMakeableBase">
+    <defName>Apparel_GocSTHelmetGasMask</defName>
+    <label>Strike Team Helmet Gasmask (GOC) </label>
+    <description>A Gasmask and Helmet used by GOC Strike Team Opperatives.</description>
+    <techLevel>Industrial</techLevel>
+	
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	
+    <graphicData>
+      <texPath>Things/Apparel/Display/GOC/GOC_STHelmet_Gasmask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <MaxHitPoints>125</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>0.71</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+	
+		<equippedStatOffsets>
+		    <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
+			<PsychicSensitivity>-0.45</PsychicSensitivity>
+			<GlobalLearningFactor>0.25</GlobalLearningFactor>
+		    <ToxicSensitivity>-0.90</ToxicSensitivity>
+		</equippedStatOffsets>
+			
+	
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>45</costStuffCount>
+    <costList>
+      <!--<ComponentIndustrial>2</ComponentIndustrial>-->
+			<Steel>12</Steel>
+    </costList>
+    <apparel>
+	<careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/GOC/GOC_STHelmet_Gasmask</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>GOC_StrikeTeamHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+  <!-- ======== CHAOS INSURGENCY =========-->
+  
+                    	<!-- ==================================== CI Toque =====================================-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Apparel_CiToque</defName>
+    <label>Toque (CI) </label>
+    <description>A Toque worn by the military wing of the Chaos Insurgency.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Display/CI/CI_Toque</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+	  <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>0.05</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.45</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.15</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.05</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.20</ShootingAccuracyPawn>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/CI/CI_Toque</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>CI_MilitaryHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+                    	<!-- ==================================== CI Masked Headset =====================================-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Apparel_CiMaskedHeadset</defName>
+    <label>Masked Headset (CI) </label>
+    <description>A mask and headset worn by the military wing of the Chaos Insurgency.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Display/CI/CI_MaskedHeadset</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+	  <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <Mass>0.07</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.25</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.30</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.05</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+	  <SocialImpact>0.09</SocialImpact>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/CI/CI_MaskedHeadset</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>CI_MilitaryHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+                	<!-- ==================================== CI Cap =====================================-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Apparel_CiCap</defName>
+    <label>Cap (CI) </label>
+    <description>A cap and headset worn by the military wing of the Chaos Insurgency.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Display/CI/CI_Cap_Normal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+	  <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <Mass>0.07</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.12</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.40</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.8</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.05</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
+	  <SocialImpact>0.05</SocialImpact>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/CI/CI_Cap_Normal</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>CI_MilitaryHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+                  	<!-- ==================================== CI Cap Masked =====================================-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Apparel_CiCapMasked</defName>
+    <label>Masked Cap (CI) </label>
+    <description>A cap and headset paird with a Balaclava, worn by the military wing of the Chaos Insurgency.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Display/CI/CI_Cap_Masked</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+	  <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <Mass>0.07</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.20</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.05</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
+	  <SocialImpact>0.05</SocialImpact>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/CI/CI_Cap_Masked</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>CI_MilitaryHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+                  	<!-- ==================================== CI Military Cap =====================================-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Apparel_CiMilitaryCap</defName>
+    <label>Military Cap (CI) </label>
+    <description>A Military Cap worn by the Military Wing of the Chaos Insurgency.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Display/CI/CI_MilitaryCap</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+	  <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <Mass>0.07</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.12</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.40</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.8</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.05</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+	  <SocialImpact>0.15</SocialImpact>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/CI/CI_MilitaryCap</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>CI_MilitaryHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+        	<!-- ================================== CI Helmet ====================================-->
+  
+      <ThingDef ParentName="ArmorHelmetMakeableBase">
+    <defName>Apparel_CiHelmet</defName>
+    <label>Helmet (CI) </label>
+    <description>A Helmet worn by the Military Wing of the Chaos Insurgency.</description>
+    <techLevel>Industrial</techLevel>
+	
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	
+    <graphicData>
+      <texPath>Things/Apparel/Display/CI/CI_Helmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>0.67</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+	
+		<equippedStatOffsets>
+		    <ShootingAccuracyPawn>0.06</ShootingAccuracyPawn>
+			<PsychicSensitivity>-0.50</PsychicSensitivity>
+			<GlobalLearningFactor>0.25</GlobalLearningFactor>
+		</equippedStatOffsets>
+			
+	
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+    <costList>
+      <!--<ComponentIndustrial>2</ComponentIndustrial>-->
+			<Steel>10</Steel>
+    </costList>
+    <apparel>
+	<careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/CI/CI_Helmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>CI_MilitaryHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+            	<!-- ================================== CI Helmet Gasmask ====================================-->
+  
+      <ThingDef ParentName="ArmorHelmetMakeableBase">
+    <defName>Apparel_CiHelmetGasmask</defName>
+    <label>Helmet Gasmask (CI) </label>
+    <description>A Gasmask Helmet worn by the Military Wing of the Chaos Insurgency.</description>
+    <techLevel>Industrial</techLevel>
+	
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	
+    <graphicData>
+      <texPath>Things/Apparel/Display/CI/CI_Helmet_Gasmask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>0.67</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+	
+		<equippedStatOffsets>
+		    <ShootingAccuracyPawn>0.06</ShootingAccuracyPawn>
+			<PsychicSensitivity>-0.50</PsychicSensitivity>
+			<GlobalLearningFactor>0.25</GlobalLearningFactor>
+			<ToxicSensitivity>-0.90</ToxicSensitivity>
+		</equippedStatOffsets>
+			
+	
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+    <costList>
+      <!--<ComponentIndustrial>2</ComponentIndustrial>-->
+			<Steel>10</Steel>
+    </costList>
+    <apparel>
+	<careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/CI/CI_Helmet_Gasmask</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>CI_MilitaryHeadgear</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>
