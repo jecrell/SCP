@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+  <SCP_ClassSafe>Safe</SCP_ClassSafe>
+  <SCP_ClassSafeDesc>Safe-class SCPs are anomalies that are easily and safely contained. This is often due to the fact that the Foundation has researched the SCP well enough that containment does not require significant resources or that the anomalies require a specific and conscious activation or trigger. Classifying an SCP as Safe, however, does not mean that handling or activating it does not pose a threat.</SCP_ClassSafeDesc>
+  <SCP_ClassEuclid>Euclid</SCP_ClassEuclid>
+  <SCP_ClassEuclidDesc>Euclid-class SCPs are anomalies that require more resources to contain completely or where containment isn't always reliable. Usually this is because the SCP is insufficiently understood or inherently unpredictable. Euclid is the Object Class with the greatest scope, and it's usually a safe bet that an SCP will be this class if it doesn't easily fall into any of the other standard Object Classes.</SCP_ClassEuclidDesc>
+  <SCP_ClassKeter>Keter</SCP_ClassKeter>
+  <SCP_ClassKeterDesc>Keter-class SCPs are anomalies that are exceedingly difficult to contain consistently or reliably, with containment procedures often being extensive and complex. The Foundation often can't contain these SCPs well due to not having a solid understanding of the anomaly, or lacking the technology to properly contain or counter it. A Keter SCP does not mean the SCP is dangerous, just that it is simply very difficult or costly to contain.</SCP_ClassKeterDesc>
+  <SCP_ClassThaumiel>Thaumiel</SCP_ClassThaumiel>
+  <SCP_ClassThaumielDesc>Thaumiel-class SCPs are anomalies that the Foundation specifically uses to contain other SCPs. Even the mere existence of Thaumiel-class objects is classified at the highest levels of the Foundation and their locations, functions, and current status are known to few Foundation personnel outside of the O5 Council.</SCP_ClassThaumielDesc>
+  <SCP_ClassNeutralized>Neutralized</SCP_ClassNeutralized>
+  <SCP_ClassNeutralizedDesc>Neutralized SCPs are anomalies that are no longer anomalous, either through having been intentionally or accidentally destroyed, or disabled.</SCP_ClassNeutralizedDesc>
+
   <SCP_GatheringSCPForDrop>Securing SCP for relocation</SCP_GatheringSCPForDrop>
   <SCP_CommandHaulSCP>Relocate SCP</SCP_CommandHaulSCP>
   <SCP_SCPDropping>Relocating {0}</SCP_SCPDropping>

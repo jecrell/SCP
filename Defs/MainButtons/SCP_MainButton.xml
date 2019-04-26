@@ -15,13 +15,13 @@
     <columns>
       <li>Label</li>
       <li>Info</li>
+      <li>SCP_ObjectClasses</li>
       <li>GapTiny</li>
       <li>GapTiny</li>
       <li>FollowDrafted</li>
       <li>FollowFieldwork</li>
       <li>GapTiny</li>
       <li>Slaughter</li>
-      <li>MedicalCare</li>
       <li>GapTiny</li>
       <li>AllowedAreaWide</li>
       <li>RemainingSpace</li>

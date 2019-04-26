@@ -63,6 +63,7 @@
     <Compile Include="CustomPawnKindDef.cs" />
     <Compile Include="DevSettings.cs" />
     <Compile Include="MainTabWindow_SCPs.cs" />
+    <Compile Include="PawnColumnWorker_ObjectClass.cs" />
     <Compile Include="PawnTable_SCPs.cs" />
     <Compile Include="SCP.cs" />
     <Compile Include="SCPUtility.cs" />
