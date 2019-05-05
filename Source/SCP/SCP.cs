@@ -80,7 +80,7 @@ namespace SCP
                 pawn = listeners[i];
                 if (pawn.Faction == Faction.OfPlayer)
                 {
-                    if (pawn.CurJob.def == DefDatabase<JobDef>.GetNamed("ROM_HaulSCP"))
+                    if (pawn.CurJob.def == DefDatabase<JobDef>.GetNamed("SCP_HaulSCP"))
                     {
                         pawn.jobs.StopAll();
                     }
@@ -165,26 +165,8 @@ namespace SCP
             actor.jobs.TryTakeOrderedJob(job);
         }
 
-        private void TryHaulSCP(Pawn prisoner)
+        private void TryHaulSCP(Pawn actor)
         {
-            Pawn actor = null;
-
-            //Try to find an actor.
-            foreach (Pawn current in this.Map.mapPawns.FreeColonistsSpawned)
-            {
-                if (!current.Dead)
-                {
-                    if (current.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation) &&
-                      current.health.capacities.CapableOf(PawnCapacityDefOf.Moving))
-                    {
-                        if (IsActorAvailable(current))
-                        {
-                            actor = current;
-                            break;
-                        }
-                    }
-                }
-            }
 
             if (actor != null)
             {
