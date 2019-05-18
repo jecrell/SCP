@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <!-- Weapons -->
+
+	    <!-- Rimmu-Nation Melee -->
+		
+	<ThingCategoryDef>
+      <defName>RN_MeleeMain</defName>
+      <label>Rimmu-Nation Melee</label>
+      <parent>WeaponsMelee</parent>
+    </ThingCategoryDef>
+	  
+	  <!--<ThingCategoryDef>
+      <defName>RN_MeleeBlunt</defName>
+      <label>Blunt</label>
+      <parent>RN_MeleeMain</parent>
+    </ThingCategoryDef>
+	
+		      <ThingCategoryDef>
+      <defName>RN_MeleeSharp</defName>
+      <label>Sharp</label>
+      <parent>RN_MeleeMain</parent>
+    </ThingCategoryDef>-->
+	
+		  	  <!-- Rimmu-Nation Pistols -->
+			  
+	 <!--<ThingCategoryDef>
+        <defName>RN_HandgunsMain</defName>
+        <label>handguns</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>-->
+
+      <ThingCategoryDef>
+        <defName>RN_Pistols</defName>
+        <label>pistol</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	        <ThingCategoryDef>
+        <defName>RN_Revolvers</defName>
+        <label>revolver</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	
+		  	    <!-- Rimmu-Nation PDW -->
+
+      <ThingCategoryDef>
+        <defName>RN_PDWMain</defName>
+        <label>SMG and PDW</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+
+	  
+	  	  	    <!-- Rimmu-Nation Shotguns -->
+
+      <ThingCategoryDef>
+        <defName>RN_ShotgunsMain</defName>
+        <label>shotgun</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	        <!--<ThingCategoryDef>
+        <defName>RN_PumpShotguns</defName>
+        <label>pump action</label>
+        <parent>RN_ShotgunsMain</parent>
+      </ThingCategoryDef>
+	  
+	        <ThingCategoryDef>
+        <defName>RN_SemiAutoShotguns</defName>
+        <label>semi automatic</label>
+        <parent>RN_ShotgunsMain</parent>
+      </ThingCategoryDef>
+	  
+	  	        <ThingCategoryDef>
+        <defName>RN_FullAutoShotguns</defName>
+        <label>fully automatic</label>
+        <parent>RN_ShotgunsMain</parent>
+      </ThingCategoryDef>-->
+	
+		  
+	    <!-- Rimmu-Nation Assault Rifles -->
+
+    <ThingCategoryDef>
+      <defName>RN_RangedMain</defName>
+      <label>Rimmu-Nation weapons</label>
+      <parent>WeaponsRanged</parent>
+    </ThingCategoryDef>
+	
+	      <ThingCategoryDef>
+        <defName>RN_AssaultRifle</defName>
+        <label>assault rifle</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	  <ThingCategoryDef>
+        <defName>RN_ARStyle</defName>
+        <label>AR style rifle</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	  <ThingCategoryDef>
+        <defName>RN_AKStyle</defName>
+        <label>AK style rifle</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	  <ThingCategoryDef>
+        <defName>RN_BullpupStyle</defName>
+        <label>bullpup rifle</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  <ThingCategoryDef>
+        <defName>RN_OldieRifle</defName>
+        <label>oldies</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	    <!-- Rimmu-Nation Marksman-->
+	
+	      <!--<ThingCategoryDef>
+        <defName>RN_MarksmanMain</defName>
+        <label>marksman rifles</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>-->
+	  
+	  	  <ThingCategoryDef>
+        <defName>RN_BoltAction</defName>
+        <label>bolt action</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	  <ThingCategoryDef>
+        <defName>RN_DMR</defName>
+        <label>DMR</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	  	  <ThingCategoryDef>
+        <defName>RN_AMR</defName>
+        <label>AMR</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	  	    <!-- Rimmu-Nation Misc-->
+	
+	      <ThingCategoryDef>
+        <defName>RN_MiscRanged</defName>
+        <label>blade and bow</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	  	  	    <!-- Rimmu-Nation LMG-->
+	
+	      <ThingCategoryDef>
+        <defName>RN_LMGMain</defName>
+        <label>LMG and GPMG</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	  	  	  	    <!-- Rimmu-Nation Things that go boom-->
+	
+	      <!--<ThingCategoryDef>
+        <defName>RN_LaunchersMain</defName>
+        <label>launchers</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>-->
+	  
+	  	      <ThingCategoryDef>
+        <defName>RN_GrenadeLaunchers</defName>
+        <label>grenade launcher</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	  	      <ThingCategoryDef>
+        <defName>RN_RocketLaunchers</defName>
+        <label>rocket launcher</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	  	  	      <ThingCategoryDef>
+        <defName>RN_OneTimeUseLaunchers</defName>
+        <label>one-use launcher</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	  	  	  	  	    <!-- Rimmu-Nation Things that go boom 2 -->
+	
+		      <!--<ThingCategoryDef>
+        <defName>RN_ThrownMain</defName>
+        <label>thrown</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>-->
+	  
+	  
+	  	      <ThingCategoryDef>
+        <defName>RN_Grenades</defName>
+        <label>lethal grenade</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	
+	      <ThingCategoryDef>
+        <defName>RN_GrenadesNL</defName>
+        <label>non-lethal grenade</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	      <ThingCategoryDef>
+        <defName>RN_OneTimeUseThrown</defName>
+        <label>one-use explosive</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  	  	  	  	  	  	    <!-- Rimmu-Nation Things that go boom 3 -->
+	
+	      <ThingCategoryDef>
+        <defName>RN_Airstrikes</defName>
+        <label>air support</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+	  
+	  <!-- Rimmu-Nation Things that go boom 3 -->
+	
+	      <ThingCategoryDef>
+        <defName>RN_SpacerMain</defName>
+        <label>spacer</label>
+        <parent>RN_RangedMain</parent>
+      </ThingCategoryDef>
+
+
+
+
+
+
+
+</Defs>

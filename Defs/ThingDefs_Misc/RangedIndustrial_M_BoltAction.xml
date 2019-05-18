@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+      <!-- ================================= C14 Timberwolf ==================================== -->
+
+  <ThingDef ParentName="RNBaseBoltAction">
+    <defName>RNGun_C14TimberwolfSn</defName>
+    <label>C14 Timberwolf</label>
+    <description>The C14 Timberwolf MRSWS (Medium Range Sniper Weapon System) is a bolt-action sniper rifle built by the Canadian arms company PGW Defence Technologies Inc. In 2005 they won the contract to supply the Canadian Forces Land Command with the C14 Timberwolf MRSWS for $4.5 million.
+
+The military version of the rifle, which is being used to replace the C3A1 sniper rifle, started as a civilian precision sport rifle. The military rifle, however, has several modifications to make it better suited for military use, and many accessories are available.
+
+The official military designation for the rifle is C14 Timberwolf Medium Range Sniper Weapon System (MRSWS).</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/M_Bolt_Action/C14_Timberwolf</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+	<equippedAngleOffset>40</equippedAngleOffset>
+    <recipeMaker>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>50000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.44</AccuracyTouch>
+      <AccuracyShort>0.66</AccuracyShort>
+      <AccuracyMedium>0.93</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>	  
+      <RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_338Lapua_Sniper</defaultProjectile>
+        <warmupTime>3.0</warmupTime>
+        <range>47.9</range>
+        <soundCast>RNShot_GenericBoltSniper_II</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags Inherit="False">
+      <!--<li>SniperRifle</li>-->
+	  <li>RN_C14Timberwolf</li>
+    </weaponTags>
+  </ThingDef>
+
+</Defs>

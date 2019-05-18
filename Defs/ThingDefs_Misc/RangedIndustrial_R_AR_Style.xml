@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+         <!-- ================================= M16A4 MilSpecs ==================================== -->
+
+   <ThingDef ParentName="RNBaseARStyle">
+    <defName>RNGun_M16A4MilSpec</defName>
+    <label>M16A4 MIL-SPEC</label>
+    <description>The M16 rifle, officially designated Rifle, Caliber 5.56 mm, M16, is a United States military adaptation of the ArmaLite AR-15 rifle. The original M16 was a 5.56mm automatic rifle with a 20-round magazine.
+
+In 1964, the M16 entered U.S. military service and the following year was deployed for jungle warfare operations during the Vietnam War. In 1969, the M16A1 replaced the M14 rifle to become the U.S. military's standard service rifle.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Rifles/AR-15/MilSpec/M16A4_MilSpec</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	
+	<equippedAngleOffset>40</equippedAngleOffset>
+	
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.57</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.72</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>1.55</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_556x45_Rifle</defaultProjectile>
+        <warmupTime>0.95</warmupTime>
+        <range>37.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>RNShot_GenericAR_IV</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<weaponTags>
+			<!--<li>IndustrialGunAdvanced</li>-->
+			<li>RN_M16A4_MilSpec</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef> 
+
+</Defs>

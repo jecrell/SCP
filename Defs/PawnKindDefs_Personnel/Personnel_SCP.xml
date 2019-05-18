@@ -4,31 +4,15 @@
   <PawnKindDef Name="SCPPersonnelBase" Abstract="True">
     <race>Human</race>
     <defaultFactionType>SCP_TheFoundation</defaultFactionType>
-    <chemicalAddictionChance>0.05</chemicalAddictionChance>
-    <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+    <chemicalAddictionChance>0.0</chemicalAddictionChance>
+    <backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
     <backstoryCategories>
-      <li>Civil</li>
+      <li>Raider</li>
     </backstoryCategories>
-    <invNutrition>2.55</invNutrition>
-    <apparelTags>
-      <li>IndustrialBasic</li>
-      <li>IndustrialAdvanced</li>
-    </apparelTags>
-    <inventoryOptions>
-      <skipChance>0.70</skipChance>
-      <subOptionsChooseOne>
-        <li>
-          <choiceChance>90</choiceChance>
-          <thingDef>Silver</thingDef>
-          <countRange>
-            <min>30</min>
-            <max>100</max>
-          </countRange>
-        </li>
-      </subOptionsChooseOne>
-    </inventoryOptions>
   </PawnKindDef>
 
+        <!-- \\\!!! SITE PERSONNEL!!!/// -->
+  
   <PawnKindDef ParentName="SCPPersonnelBase">
     <defName>SCP_Representative</defName>
     <label>foundation representative</label>
@@ -41,34 +25,526 @@
       <max>1</max>
     </gearHealthRange>
     <itemQuality>Good</itemQuality>
-    <weaponMoney>
-      <min>200</min>
-      <max>200</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>Gun</li>
-    </weaponTags>
-    <apparelMoney>
-      <min>700</min>
-      <max>1200</max>
-    </apparelMoney>
     <apparelTags>
-      <li>IndustrialMilitaryBasic</li>
-      <li>BeltDefensePop</li>
+      <li>SCP_HigherUps</li>
     </apparelTags>
     <apparelRequired>
-      <li>Apparel_BowlerHat</li>
+      <li>Apparel_ScpBuisnessSuit</li>
     </apparelRequired>
-    <techHediffsChance>0.15</techHediffsChance>
-    <techHediffsMoney>
-      <min>600</min>
-      <max>1500</max>
-    </techHediffsMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
     <techHediffsTags>
       <li>Simple</li>
       <li>Advanced</li>
     </techHediffsTags>
   </PawnKindDef>
+  
+  
+    <PawnKindDef ParentName="SCPPersonnelBase">
+    <defName>SCP_FacilityStaff</defName>
+    <label>foundation staff</label>
+    <labelPlural>staff</labelPlural>
+    <combatPower>40</combatPower>
+    <minGenerationAge>30</minGenerationAge>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <apparelTags>
+        <li>SCP_Staff</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_ScpFacilityStaff</li>
+    </apparelRequired>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+      <PawnKindDef ParentName="SCPPersonnelBase">
+    <defName>SCP_Scientest</defName>
+    <label>foundation scientest</label>
+    <labelPlural>scientest</labelPlural>
+    <combatPower>40</combatPower>
+    <minGenerationAge>30</minGenerationAge>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <apparelTags>
+        <li>SCP_Scientest</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_ScpScientist</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+      <!-- \\\!!!SECURITY PERSONNEL!!!/// -->
 
+  <PawnKindDef ParentName="SCPPersonnelBase" Name="SCPPersonnel_SecurityBase" Abstract="True">
+    <techHediffsChance>0.10</techHediffsChance>
+    <techHediffsMoney>
+      <min>700</min>
+      <max>5000</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <!--<li>Simple</li>-->
+      <li>Advanced</li>
+    </techHediffsTags>
+  </PawnKindDef>
+  
+        <!-- SECURITY OFFICER -->
+      <PawnKindDef ParentName="SCPPersonnel_SecurityBase">
+    <defName>SCP_SecuritySoldier</defName>
+    <label>Security Officer</label>
+    <combatPower>55</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>SCP_SecurityHeadgear</li>
+      <li>SCP_SecurityUniforms</li>
+    </apparelTags>
+   <apparelRequired>
+	  <li>Apparel_ScpSecurityHelmet</li>
+	  <li>Apparel_ScpSecurityFatigues</li>
+	  <li>Apparel_ScpSecurityArmor</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_P90_Contractor</li>
+	  <li>RN_Remington870HRT</li>
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+        <!-- RCF SOLDIER CQB -->
+      <PawnKindDef ParentName="SCPPersonnel_SecurityBase">
+    <defName>SCP_RCFSoldier_CQB</defName>
+    <label>RCF Operator</label>
+    <combatPower>60</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>SCP_RCFHeadgear</li>
+      <li>SCP_RCFUniforms</li>
+    </apparelTags>
+   <apparelRequired>
+      <!--<li>Apparel_SmokepopBelt</li>-->
+	  <li>Apparel_ScpRcfBackCap</li>
+	  <li>Apparel_ScpRcfTShirt</li>
+	  <li>Apparel_ScpRcfBodyArmor</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_KRISSVector</li>
+	  <li>RN_Glock17HRT</li>
+	  <li>RN_Mossberg500</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+          <!-- RCF SOLDIER ASSAULT -->
+      <PawnKindDef ParentName="SCPPersonnel_SecurityBase">
+    <defName>SCP_RCFSoldier_Assault</defName>
+    <label>RCF Operator</label>
+    <combatPower>60</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>SCP_RCFHeadgear</li>
+      <li>SCP_RCFUniforms</li>
+    </apparelTags>
+   <apparelRequired>
+      <!--<li>Apparel_SmokepopBelt</li>-->
+	  <li>Apparel_ScpRcfHelmet</li>
+	  <li>Apparel_ScpRcfJacket</li>
+	  <li>Apparel_ScpRcfBodyArmor</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_M16A4_MilSpec</li>
+	  <li>RN_AUG_A2</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+            <!-- RCF SOLDIER SNIPER -->
+      <PawnKindDef ParentName="SCPPersonnel_SecurityBase">
+    <defName>SCP_RCFSoldier_Sniper</defName>
+    <label>RCF Operator</label>
+    <combatPower>60</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>SCP_RCFHeadgear</li>
+      <li>SCP_RCFUniforms</li>
+    </apparelTags>
+   <apparelRequired>
+      <!--<li>Apparel_SmokepopBelt</li>-->
+	  <li>Apparel_ScpRcfFrontCap</li>
+	  <li>Apparel_ScpRcfJacket</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>570</min>
+      <max>650</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_C14Timberwolf</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+  
+    <!-- \\\!!!MTF PERSONNEL!!!/// -->
 
+  <PawnKindDef ParentName="SCPPersonnelBase" Name="SCPPersonnel_RaiderBase" Abstract="True">
+    <techHediffsChance>0.10</techHediffsChance>
+    <techHediffsMoney>
+      <min>700</min>
+      <max>5000</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <!--<li>Simple</li>-->
+      <li>Advanced</li>
+    </techHediffsTags>
+  </PawnKindDef>
+  
+      <!-- MTF SOLDIER CQB -->
+      <PawnKindDef ParentName="SCPPersonnel_RaiderBase">
+    <defName>SCP_MTFSoldier_CQB</defName>
+    <label>MTF Operator</label>
+    <combatPower>60</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>SCP_MTFHeadgear</li>
+      <li>SCP_Armor</li>
+      <li>SCP_MTFUniforms</li>
+      <!--<li>BeltDefensePop</li>-->
+    </apparelTags>
+   <apparelRequired>
+      <!--<li>Apparel_SmokepopBelt</li>-->
+	  <li>Apparel_ScpMtfHelmetVisorMasked</li>
+	  <li>Apparel_ScpMtfFatigues</li>
+	  <li>Apparel_ScpMtfBodyArmor</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_MP5A2HRT</li>
+	  <li>RN_UMP45HRT</li>
+	  <li>RN_Remington870HRT</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <!--<li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>-->
+        <li>
+          <thingDef>MealSurvivalPack</thingDef>
+          <countRange>
+            <min>4</min>
+            <max>5</max>
+          </countRange>
+        </li>        
+		<li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>4</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+        <!-- MTF SOLDIER ASSAULT -->
+        <PawnKindDef ParentName="SCPPersonnel_RaiderBase">
+    <defName>SCP_MTFSoldier_Assault</defName>
+    <label>MTF Operator</label>
+    <combatPower>60</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>SCP_MTFHeadgear</li>
+      <li>SCP_Armor</li>
+      <li>SCP_MTFUniforms</li>
+      <!--<li>BeltDefensePop</li>-->
+    </apparelTags>
+   <apparelRequired>
+      <!--<li>Apparel_SmokepopBelt</li>-->
+	  <li>Apparel_ScpMtfHelmetMasked</li>
+	  <li>Apparel_ScpMtfFatigues</li>
+	  <li>Apparel_ScpMtfBodyArmor</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>580</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_M4A1HRT</li>
+	  <li>RN_G36CHRT</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <!--<li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>-->
+        <li>
+          <thingDef>MealSurvivalPack</thingDef>
+          <countRange>
+            <min>4</min>
+            <max>5</max>
+          </countRange>
+        </li>        
+		<li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>4</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+  
+          <!-- MTF SOLDIER GUNNER -->
+          <PawnKindDef ParentName="SCPPersonnel_RaiderBase">
+    <defName>SCP_MTFSoldier_Gunner</defName>
+    <label>MTF Operator</label>
+    <combatPower>60</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>SCP_MTFHeadgear</li>
+      <li>SCP_Armor</li>
+      <li>SCP_MTFUniforms</li>
+      <!--<li>BeltDefensePop</li>-->
+    </apparelTags>
+   <apparelRequired>
+      <li>Apparel_SmokepopBelt</li>
+	  <li>Apparel_ScpMtfHelmetGogglesMasked</li>
+	  <li>Apparel_ScpMtfFatigues</li>
+	  <li>Apparel_ScpMtfBodyArmor</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>580</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RNGun_MK48</li>
+	  <li>RNGun_M249</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <!--<li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>-->
+        <li>
+          <thingDef>MealSurvivalPack</thingDef>
+          <countRange>
+            <min>4</min>
+            <max>5</max>
+          </countRange>
+        </li>        
+		<li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>4</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+  
+  
+        <!-- MTF SOLDIER SNIPER -->
+          <PawnKindDef ParentName="SCPPersonnel_RaiderBase">
+    <defName>SCP_MTFSoldier_Sniper</defName>
+    <label>MTF Operator</label>
+    <combatPower>60</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>SCP_MTFHeadgear</li>
+      <li>SCP_Armor</li>
+      <li>SCP_MTFUniforms</li>
+      <!--<li>BeltDefensePop</li>-->
+    </apparelTags>
+   <apparelRequired>
+      <li>Apparel_SmokepopBelt</li>
+	  <li>Apparel_ScpMtfHelmet</li>
+	  <li>Apparel_ScpMtfFatigues</li>
+	  <li>Apparel_ScpMtfBodyArmor</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>580</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_M24A2HRT</li>
+	  <li>RN_AR10</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <!--<li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>-->
+        <li>
+          <thingDef>MealSurvivalPack</thingDef>
+          <countRange>
+            <min>4</min>
+            <max>5</max>
+          </countRange>
+        </li>        
+		<li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>4</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+ 
 </Defs>

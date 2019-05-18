@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+
+      <SoundDef>
+    <defName>RNMollyIgnite</defName>  
+    <context>MapOnly</context> 
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Molly/RNMollyIgnite</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>80</min>        
+          <max>80</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.8516304</min>        
+          <max>1.254348</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+    	<!-- ===================== Interact ========================= -->
+
+  <SoundDef>
+    <defName>RNInteractMolly</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Molly/RNInteractMolly</clipPath>
+          </li>
+        </grains>      
+        <pitchRange>
+          <min>0.936413</min>        
+          <max>1.042391</max>
+        </pitchRange>      
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <outParam Class="SoundParamTarget_PropertyLowPass">
+              <filterProperty>Cutoff</filterProperty>
+            </outParam>          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>17.08957</x>                  
+                    <y>21001.8</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>24.77761</x>                  
+                    <y>12701.95</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>32.786</x>                  
+                    <y>7168.717</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>45.91975</x>                  
+                    <y>4270.358</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>66.10088</x>                  
+                    <y>2557.69</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+        </paramMappings>      
+        <filters>
+          <li Class="SoundFilterLowPass">
+            <cutoffFrequency>10000</cutoffFrequency>          
+            <lowpassResonaceQ>1</lowpassResonaceQ>
+          </li>
+        </filters>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <!-- ===================== Thrown ========================= -->
+
+  <SoundDef>
+    <defName>RNMollyThrow</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Molly/RNMollyThrow</clipPath>
+          </li>
+        </grains>      
+        <pitchRange>
+          <min>0.936413</min>        
+          <max>1.042391</max>
+        </pitchRange>      
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <outParam Class="SoundParamTarget_PropertyLowPass">
+              <filterProperty>Cutoff</filterProperty>
+            </outParam>          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>17.08957</x>                  
+                    <y>21001.8</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>24.77761</x>                  
+                    <y>12701.95</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>32.786</x>                  
+                    <y>7168.717</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>45.91975</x>                  
+                    <y>4270.358</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>66.10088</x>                  
+                    <y>2557.69</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+        </paramMappings>      
+        <filters>
+          <li Class="SoundFilterLowPass">
+            <cutoffFrequency>10000</cutoffFrequency>          
+            <lowpassResonaceQ>1</lowpassResonaceQ>
+          </li>
+        </filters>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+</Defs>

@@ -39,8 +39,7 @@
     -->
     <!-- END -->
     <colorSpectrum>
-      <li>(0.35, 0.30, 0.60)</li>
-      <li>(0.45, 0.40, 0.90)</li>
+      <li>(255,255,255)</li>
     </colorSpectrum>
     <startingGoodwill>
       <min>0</min>
@@ -55,14 +54,14 @@
     <pawnSingular>member</pawnSingular>
     <pawnsPlural>personnel</pawnsPlural>
     <listOrderPriority>30</listOrderPriority>
-    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <settlementGenerationWeight>0.8</settlementGenerationWeight>
     <canMakeRandomly>true</canMakeRandomly>
     <canSiege>true</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>Administrator</leaderTitle>
-    <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
-		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
-		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <expandingIconTexture>World/SCPLogo</expandingIconTexture>
+		<!--<factionNameMaker>NamerFactionOutlander</factionNameMaker>-->
+		<settlementNameMaker>SCP_NamerSCPFoundationSite</settlementNameMaker>
 		<techLevel>Industrial</techLevel>
 		<backstoryCategories>
 			<li>Civil</li>

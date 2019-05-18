@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>SCP_NamerSCPFoundationSite</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->Site [SCP_SiteNumbers]</li>
+      </rulesStrings>
+      <rulesRaw>     
+		<li Class="Rule_File">
+          <keyword>SCP_SiteNumbers</keyword>
+          <path>NameBanks/Names_SCPSiteNumbers</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>
+
+
+
+
+
+
+

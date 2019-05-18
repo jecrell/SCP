@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+      <!-- ================================= M107 ==================================== -->
+
+  <ThingDef ParentName="RNBaseAMR">
+    <defName>RNGun_M107AMR</defName>
+    <label>M107</label>
+    <description>The Barrett M82, standardized by the U.S. military as the M107, is a recoil-operated, semi-automatic anti-materiel sniper system developed by the American Barrett Firearms Manufacturing company. Despite its designation as an anti-materiel rifle, it is used by some armed forces as an anti-personnel system. 
+	
+It is also called the Light Fifty for its .50 BMG (12.7×99mm NATO) chambering and significantly lighter weight compared to previous applications.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/M_Semi_Auto/M107</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+	<equippedAngleOffset>40</equippedAngleOffset>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.58</AccuracyTouch>
+      <AccuracyShort>0.67</AccuracyShort>
+      <AccuracyMedium>0.91</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_50BMG_Sniper</defaultProjectile>
+        <warmupTime>4.0</warmupTime>
+        <range>51.9</range>
+        <soundCast>RNShot50Cal</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags Inherit="False">
+      <!--<li>SniperRifle</li>-->
+	  <li>RN_M107</li>
+    </weaponTags>
+  </ThingDef>
+
+       	    <!-- ================================= AR-10 ==================================== -->
+
+  <ThingDef ParentName="RNBaseDMR">
+    <defName>RNGun_AR10DMR</defName>
+    <label>AR-10</label>
+    <description>The ArmaLite AR-10 is a 7.62x51mm NATO battle rifle developed by Eugene Stoner in the late 1950s and manufactured by ArmaLite, then a division of the Fairchild Aircraft Corporation.
+	
+In 1957, the basic AR-10 design was rescaled and substantially modified by ArmaLite to accommodate the .223 Remington cartridge, and given the designation ArmaLite AR-15.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/M_Semi_Auto/AR-10_DMR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+	<equippedAngleOffset>40</equippedAngleOffset>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.58</AccuracyTouch>
+      <AccuracyShort>0.69</AccuracyShort>
+      <AccuracyMedium>0.91</AccuracyMedium>
+      <AccuracyLong>0.89</AccuracyLong>
+      <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_762x51mm_DMR</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>43.9</range>
+        <soundCast>RNShot_GenericDMR</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags Inherit="False">
+      <li>SniperRifle</li>
+	  <li>RN_AR10</li>
+    </weaponTags>
+  </ThingDef>
+  
+</Defs>

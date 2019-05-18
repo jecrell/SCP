@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+  		<!-- ================================= Mk 48 ==================================== -->
+  
+	<ThingDef ParentName="RNBaseLMG">
+		<defName>RNGun_MK48LMG</defName>
+		<label>Mk 48</label>
+		<description>The Mark 48, or Mk 48 is a lightweight belt-fed machine gun, firing 7.62×51mm NATO cartridges from a disintegrating belt of ammunition.
+
+It is manufactured by Fabrique Nationale Manufacturing, Inc., a division of FN Herstal based in the United States. The Mk 48 has been developed in conjunction with the U.S. Special Operations Command (USSOCOM), which has adopted the weapon and started its fielding process, beginning with special operations units.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/LMG/MK48</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+		<statBases>
+			<WorkToMake>33000</WorkToMake>
+			<Mass>10</Mass>
+			<AccuracyTouch>0.49</AccuracyTouch>
+			<AccuracyShort>0.60</AccuracyShort>
+			<AccuracyMedium>0.45</AccuracyMedium>
+			<AccuracyLong>0.33</AccuracyLong>
+			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+		</costList>
+		
+				<equippedAngleOffset>40</equippedAngleOffset>
+		
+    <verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RNBullet_762x51mm_LMG</defaultProjectile>
+				<warmupTime>1.8</warmupTime>
+				<range>28.9</range>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<burstShotCount>8</burstShotCount>
+				<soundCast>RNShotM240B</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<weaponTags>
+			<!--<li>IndustrialGunAdvanced</li>-->
+			<li>RNGun_MK48</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef> 
+  
+        <!-- ================================= M249 ==================================== -->
+  
+	<ThingDef ParentName="RNBaseLMG">
+		<defName>RNGun_M249LMG</defName>
+		<label>M249</label>
+		<description>The M249 light machine gun (LMG), formerly designated the M249 Squad Automatic Weapon (SAW) and formally written as Light Machine Gun, 5.56 mm, M249, is the American adaptation of the Belgian FN Minimi, a light machine gun manufactured by the Belgian company FN Herstal (FN).</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/LMG/M249SAW</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+		<statBases>
+			<WorkToMake>33000</WorkToMake>
+			<Mass>7</Mass>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.61</AccuracyShort>
+			<AccuracyMedium>0.39</AccuracyMedium>
+			<AccuracyLong>0.27</AccuracyLong>
+			<RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		
+				<equippedAngleOffset>40</equippedAngleOffset>
+		
+    <verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RNBullet_556x45_Rifle</defaultProjectile>
+				<warmupTime>1.5</warmupTime>
+				<range>25.5</range>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<burstShotCount>8</burstShotCount>
+				<soundCast>RNShotL86LMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<weaponTags>
+			<!--<li>IndustrialGunAdvanced</li>-->
+			<li>RNGun_M249</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+
+</Defs>

@@ -41,7 +41,7 @@
     <surfaceType>Item</surfaceType>
     <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
     <recipes>
-      <li>ButcherCorpseMechanoid</li>
+      <li>Make_ScpDClassUniform</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -77,4 +77,72 @@
     </placeWorkers>
   </ThingDef>
 
+  
+  
+
+  
+   <!-- ==================================== SCP D Class Uniform  =====================================-->
+  <RecipeDef>
+    <defName>Make_ScpDClassUniform</defName>
+    <label>make D-Class Uniform</label>
+    <description>An orange jumpsuit worn by D Class inmates within a SCP Facility.</description>
+    <jobString>Making D-Class Uniform.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1500</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Fabric</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>70</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Fabric</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_ScpDClassUniform>1</Apparel_ScpDClassUniform>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
 </Defs>

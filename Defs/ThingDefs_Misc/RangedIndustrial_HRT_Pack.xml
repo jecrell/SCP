@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+      <!-- ================================= Semi-Auto ==================================== -->
+
+  
+   <!-- ================================= M9 Spaghetti, for federalies ==================================== -->
+
+  
+  
+  <ThingDef ParentName="RNBasePistol">
+    <defName>RNGun_M9A1_HRT</defName>
+    <label>M9A1 HRT</label>
+    <description>The Beretta M9 — officially the Pistol, Semiautomatic, 9mm, M9 — is the designation for the Beretta 92FS semi-automatic pistol by the United States Armed Forces. The M9 was adopted by the United States military as their service pistol in 1985.
+
+The M9 won a competition in the 1980s to replace the M1911A1 as the primary sidearm of the U.S. military, beating many other contenders, and only narrowly defeating the SIG P226 for cost reasons.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/HRT_Pack/M9_HRT</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <weaponTags>
+      <!--<li>SimpleGun</li>-->
+	  <li>RN_M9HRT</li>
+    </weaponTags>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>1.2</Mass>
+      <AccuracyTouch>0.84</AccuracyTouch>
+      <AccuracyShort>0.73</AccuracyShort>
+      <AccuracyMedium>0.42</AccuracyMedium>
+      <AccuracyLong>0.32</AccuracyLong>
+      <RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_9MM_Pistol</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>25.9</range>
+        <soundCast>RNPistolShot</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  
+       <!-- ================================= Glock 17 for police officers ==================================== -->
+
+  
+  
+  <ThingDef ParentName="RNBasePistol">
+    <defName>RNGun_Glock17_HRT</defName>
+    <label>Glock 17 HRT</label>
+    <description>The Glock pistol is a series of polymer-framed, short recoil-operated, locked-breech semi-automatic pistols designed and produced by Austrian Glock Ges.m.b.H.. It entered Austrian military and police service by 1982 after it was the top performer in reliability and safety tests.
+	
+Glocks are also popular firearms among civilians for recreational and competition shooting, home and self-defense, and concealed carry or open carry.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/HRT_Pack/Glock17_HRT</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <weaponTags>
+      <!--<li>SimpleGun</li>-->
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>1.2</Mass>
+      <AccuracyTouch>0.84</AccuracyTouch>
+      <AccuracyShort>0.73</AccuracyShort>
+      <AccuracyMedium>0.42</AccuracyMedium>
+      <AccuracyLong>0.32</AccuracyLong>
+      <RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_9MM_Pistol</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>25.9</range>
+        <soundCast>RNShotGlock17</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+      <!-- ================================= M24A2 HRT ==================================== -->
+
+  <ThingDef ParentName="RNBaseBoltAction">
+    <defName>RNGun_M24A2HRTSn</defName>
+    <label>M24A2 HRT</label>
+    <description>The M24 Sniper Weapon System (SWS) is the military and police version of the Remington Model 700 rifle, M24 being the model name assigned by the United States Army after adoption as their standard sniper rifle in 1988. 
+	
+The M24 is referred to as a "weapon system" because it consists of not only a rifle, but also a detachable telescopic sight and other accessories.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/HRT_Pack/M24_HRT</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+	<equippedAngleOffset>40</equippedAngleOffset>
+    <recipeMaker>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.87</AccuracyMedium>
+      <AccuracyLong>0.89</AccuracyLong>
+      <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_762x51mm_Sniper</defaultProjectile>
+        <warmupTime>3.5</warmupTime>
+        <range>45.9</range>
+        <soundCast>RNShot_GenericBoltSniper</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags Inherit="False">
+      <!--<li>SniperRifle</li>-->
+	  <li>RN_M24A2HRT</li>
+    </weaponTags>
+  </ThingDef>
+  
+    	    <!-- ================================= HK417 ==================================== -->
+
+  <ThingDef ParentName="RNBaseDMR">
+    <defName>RNGun_HK417HRTDMR</defName>
+    <label>HK417 HRT</label>
+    <description>The Heckler and Koch HK417 is a battle rifle designed and manufactured by Heckler and Koch in Germany. It is the larger caliber version of the HK416, and chambered for the full-power 7.62×51mm NATO rifle cartridge. It is a gas-operated, selective fire rifle with a rotating bolt. 
+	
+The HK417 is intended for use in roles where the greater penetrative power, stopping power, and range of the 7.62×51mm cartridge are required.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/HRT_Pack/HK417_HRT</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+	<equippedAngleOffset>40</equippedAngleOffset>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.87</AccuracyLong>
+      <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_762x51mm_DMR</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>44.9</range>
+        <soundCast>RNShot_GenericDMR</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+	<weaponTags Inherit="False">
+      <!--<li>SniperRifle</li>-->
+	  <li>RN_HK417HRT</li>
+    </weaponTags>
+  </ThingDef>
+  
+  			   <!-- ================================= MP5A2 ==================================== -->
+   
+  
+	<ThingDef ParentName="RNBasePDW">
+		<defName>RNGun_MP5A2SDHRT_PDW</defName>
+		<label>MP5A2 HRT</label>
+		<description>The MP5 (German: Maschinenpistole 5) is a 9mm submachine gun, developed in the 1960s by a team of engineers from the German small arms manufacturer Heckler and Koch GmbH (HK) of Oberndorf am Neckar. There are over 100 variants of the MP5, including some semi-automatic versions.
+
+The MP5 is one of the most widely used submachine guns in the world, having been adopted by 40 nations and numerous military, law enforcement, intelligence, and security organizations. It is widely used by SWAT teams in North America.
+
+In 1999, Heckler and Koch developed the Heckler and Koch UMP, the MP5's successor</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/HRT_Pack/MP5A2_HRT</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+		<statBases>
+			<WorkToMake>11000</WorkToMake>
+			<Mass>2.5</Mass>
+            <AccuracyTouch>0.89</AccuracyTouch>
+            <AccuracyShort>0.68</AccuracyShort>
+            <AccuracyMedium>0.41</AccuracyMedium>
+            <AccuracyLong>0.29</AccuracyLong>
+			<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		
+		
+		<weaponTags>
+			<!--<li>Gun</li>-->
+			<li>RN_MP5A2HRT</li>
+		</weaponTags>
+	
+	
+	<verbs>		
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RNBullet_9MM_Pistol</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<range>23.9</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<soundCast>RNShotMP5SMG</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>	
+  
+  		   <!-- ================================= UMP45 HRT ==================================== -->
+   
+  
+	<ThingDef ParentName="RNBasePDW">
+		<defName>RNGun_UMP45HRT_PDW</defName>
+		<label>UMP45 HRT</label>
+		<description>The Heckler and Koch UMP (Universale Maschinenpistole, German for "Universal Submachine Gun") is a submachine gun developed and manufactured by Heckler and Koch. The UMP has been adopted by various agencies such as the U.S. Customs and Border Protection. Heckler and Koch developed the UMP as a lighter and cheaper successor to the MP5, though both remain in production.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/HRT_Pack/UMP45_HRT</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+		<statBases>
+			<WorkToMake>11000</WorkToMake>
+			<Mass>2.8</Mass>
+            <AccuracyTouch>0.86</AccuracyTouch>
+            <AccuracyShort>0.68</AccuracyShort>
+            <AccuracyMedium>0.42</AccuracyMedium>
+            <AccuracyLong>0.29</AccuracyLong>
+			<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>65</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		
+		<weaponTags>
+			<!--<li>Gun</li>-->
+			<li>RN_UMP45HRT</li>
+		</weaponTags>
+	
+	
+	<verbs>		
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RNBullet_45ACP_Pistol</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<range>25.9</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<soundCast>RNUMP45Shot</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>	
+	
+	         <!-- ================================= 870 Tactical ==================================== -->
+  <ThingDef ParentName="RNBaseShotgun">
+    <defName>RNGun_Remington870HRT</defName>
+    <label>Remington 870 HRT</label>
+    <description>The Remington Model 870 is a pump-action shotgun manufactured by Remington Arms Company, LLC. It is widely used by the public for sport shooting, hunting, and self-defense and used by law enforcement and military organizations worldwide.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/HRT_Pack/Remington870_HRT</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Shotgun</soundInteract>
+	<equippedAngleOffset>40</equippedAngleOffset>
+		 <weaponTags>
+			<li>Gun</li>
+			<li>RN_Remington870HRT</li>
+		</weaponTags>
+		
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>3</Mass>
+      <AccuracyTouch>0.79</AccuracyTouch>
+      <AccuracyShort>0.86</AccuracyShort>
+      <AccuracyMedium>0.81</AccuracyMedium>
+      <AccuracyLong>0.64</AccuracyLong>
+      <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_12Gauge_Shotgun</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>17.9</range>
+        <soundCast>RN870Shot</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+   <!-- ================================= M4A1 HRT ==================================== -->
+
+   <ThingDef ParentName="RNBaseARStyle">
+    <defName>RNGun_M4A1HRT</defName>
+    <label>M4A1 HRT</label>
+    <description>The M4 carbine is a shorter and lighter variant of the M16A2 assault rifle. The M4 is a 5.56×45mm NATO, air-cooled, direct impingement gas-operated, magazine-fed carbine. It has a 14.5 in (370 mm) barrel and a telescoping stock.
+
+The M4 carbine is extensively used by the United States Armed Forces and is largely replacing the M16 rifle in United States Army and United States Marine Corps combat units as the primary infantry weapon and service rifle.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/HRT_Pack/M4A1_HRT</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.64</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.54</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_556x45_Rifle</defaultProjectile>
+        <warmupTime>0.95</warmupTime>
+        <range>35.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>RNShot_GenericAR_II</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<weaponTags>
+			<!--<li>IndustrialGunAdvanced</li>-->
+			<li>RN_M4A1HRT</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>  
+  
+         <!-- ================================= G36C HRT ==================================== -->
+
+   <ThingDef ParentName="RNBaseAssaultRifle">
+    <defName>RNGun_G36CHRT</defName>
+    <label>G36C HRT</label>
+    <description>The G36 is a 5.56×45mm assault rifle, designed in the early 1990s by Heckler anf Koch in Germany as a replacement for the heavier 7.62mm G3 battle rifle.
+	
+It was accepted into service with the Bundeswehr in 1997, replacing the G3.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/HRT_Pack/G36C_HRT</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.68</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.54</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_556x45_Rifle</defaultProjectile>
+        <warmupTime>0.85</warmupTime>
+        <range>35.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>RNShotG36C</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<weaponTags>
+			<!--<li>IndustrialGunAdvanced</li>-->
+			<li>RN_G36CHRT</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>   
+
+  
+</Defs>

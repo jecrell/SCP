@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>RNExplosion</defName>  
+    <context>MapOnly</context> 
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Explosion/RNExplosion</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>80</min>        
+          <max>80</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.8516304</min>        
+          <max>1.254348</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  
+    <SoundDef>
+    <defName>RNEnergyExplosion</defName>  
+    <context>MapOnly</context> 
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Explosion/RNEnergyExplosion</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>80</min>        
+          <max>80</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.8516304</min>        
+          <max>1.254348</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+      <SoundDef>
+    <defName>RNSmokeExplosion</defName>  
+    <context>MapOnly</context> 
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Explosion/RNSmokeExplosion</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>80</min>        
+          <max>80</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.8516304</min>        
+          <max>1.254348</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+</Defs>
