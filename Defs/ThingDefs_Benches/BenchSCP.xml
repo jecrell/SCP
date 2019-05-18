@@ -106,7 +106,7 @@
         <filter>
           <categories>
             <li>Leathers</li>
-        <li>Fabric</li>					
+        <li>Textiles</li>					
           </categories>
           <disallowedThingDefs>
             <li>Leather_Thrumbo</li>
@@ -118,7 +118,7 @@
       <fixedIngredientFilter>
       <categories>
         <li>Leathers</li>
-        <li>Fabric</li>		
+        <li>Textiles</li>		
       </categories>
       <disallowedThingDefs>
           <li>Leather_Thrumbo</li>
