@@ -407,7 +407,7 @@
 			
 	<ThingDef ParentName="ApparelMakeableBase">
     <defName>Apparel_ScpMtfFatigues</defName>
-    <description>Black Military Fatigues utilized by the foundations Elite Mobile Task Force</description>
+    <description>Black Military Fatigues utilized by the Foundations Elite Mobile Task Force</description>
     <label>MTF Fatigues (SCP) </label>
     <recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
@@ -457,6 +457,470 @@
       </layers>
       <tags>
        	 <li>SCP_MTFUniforms</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+    <!-- ======== GLOBAL OCCULT COALITION ========= -->
+  
+  
+     <!-- ==================================== GOC Staff =====================================-->
+ 
+ <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_GocStaff</defName>
+    <label>Staff (GOC) </label>
+    <description>Professional office work atire used by a wide variety of roles within a Coalition Base.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Display/GOC/GOC_Staff</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>	  
+    </stuffCategories>
+    <thingCategories>
+      <li>SCP_Clothing</li>
+    </thingCategories>
+    <statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToMake>2000</WorkToMake>
+      <Mass>0.25</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.35</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.15</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.7</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+	  <WorkSpeedGlobal>0.30</WorkSpeedGlobal>
+	  <CarryingCapacity>5</CarryingCapacity>
+	        <SocialImpact>0.10</SocialImpact>
+    </equippedStatOffsets>
+	
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+		<li>Arms</li>
+		<li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Clothing/GOC/GOC_Staff</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>GOC_Staff</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+       <!-- ==================================== GOC Scientist =====================================-->
+ 
+ <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_GocScientist</defName>
+    <label>Scientist (GOC) </label>
+    <description>Worn by a Scientest/Researcher of the Coalition.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Display/GOC/GOC_Scientest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>85</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>	  
+    </stuffCategories>
+    <thingCategories>
+      <li>SCP_Clothing</li>
+    </thingCategories>
+    <statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToMake>2000</WorkToMake>
+      <Mass>0.30</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.45</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.20</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.7</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+	  <WorkSpeedGlobal>0.45</WorkSpeedGlobal>
+	  <CarryingCapacity>5</CarryingCapacity>
+	  <SocialImpact>0.60</SocialImpact>
+    </equippedStatOffsets>
+	
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+		<li>Arms</li>
+		<li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Clothing/GOC/GOC_Scientest</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>GOC_Scientist</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+         <!-- ==================================== GOC Buisness Suit =====================================-->
+ 
+ <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_GocBuisnessSuit</defName>
+    <label>Buisness Suit (GOC) </label>
+    <description>A Buisness suit sported by higher ups within the Coalition.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Display/GOC/GOC_BuisnessSuit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>95</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>	  
+    </stuffCategories>
+    <thingCategories>
+      <li>SCP_Clothing</li>
+    </thingCategories>
+    <statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+      <Mass>0.35</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.0</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+	  <SocialImpact>1.75</SocialImpact>
+    </equippedStatOffsets>
+	
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+		<li>Arms</li>
+		<li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Clothing/GOC/GOC_BuisnessSuit</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>GOC_HigherUps</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+        <!-- ====================================== GOC Security Fatigues =========================================== -->
+			
+	<ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_GocSecurityFatigues</defName>
+    <description>Dark Fatigues utilized by Coalition Security Officers.</description>
+    <label>Security Fatigues (GOC) </label>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/Display/GOC/GOC_SecurityFatigues</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>85</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+     <li>SCP_Clothing</li>
+    </thingCategories>
+    <statBases>
+			<MaxHitPoints>160</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+      <Mass>0.25</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.26</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.12</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+	
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.04</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.01</ShootingAccuracyPawn>
+	  <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+	  <ForagedNutritionPerDay>0.15</ForagedNutritionPerDay>
+	  <SocialImpact>0.15</SocialImpact>
+    </equippedStatOffsets>
+	
+		<apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+		<li>Shoulders</li>
+        <li>Arms</li>
+		<li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Clothing/GOC/GOC_SecurityFatigues</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+       	 <li>GOC_SecurityUniforms</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+         	<!-- ====================================== GOC Strike Team Fatigues =========================================== -->
+			
+	<ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_GocSTFatigues</defName>
+    <description>Military BDU used by the Coalitions Elite Strike Team.</description>
+    <label>Strike Team Fatigues (GOC) </label>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/Display/GOC/GOC_STFatigues</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>95</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+     <li>SCP_Clothing</li>
+    </thingCategories>
+    <statBases>
+			<MaxHitPoints>160</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+      <Mass>0.25</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.26</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.12</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+	
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.04</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.01</ShootingAccuracyPawn>
+	  <WorkSpeedGlobal>0.35</WorkSpeedGlobal>
+	  <ForagedNutritionPerDay>0.30</ForagedNutritionPerDay>
+	  <SocialImpact>0.30</SocialImpact>
+    </equippedStatOffsets>
+	
+		<apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+		<li>Shoulders</li>
+        <li>Arms</li>
+		<li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Clothing/GOC/GOC_STFatigues</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+       	 <li>GOC_STUniforms</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+      <!-- ======== CHAOS INSURGENCY ========= -->
+  
+       <!-- ==================================== CI Opperative =====================================-->
+ 
+ <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_CiOpperative</defName>
+    <label>Opperative (CI) </label>
+    <description>A heavy coat with a dress shirt and tie underneath, used by the mysterious Chaos Insurgency Opperatives.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Display/CI/CI_Opperative</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>100</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>	  
+    </stuffCategories>
+    <thingCategories>
+      <li>SCP_Clothing</li>
+    </thingCategories>
+    <statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToMake>2550</WorkToMake>
+      <Mass>0.35</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.79</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.0</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+	  <SocialImpact>0.90</SocialImpact>
+    </equippedStatOffsets>
+	
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+		<li>Arms</li>
+		<li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Clothing/CI/CI_Opperative</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>CI_RnD</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+      <!-- ====================================== CI Military Fatigues1 =========================================== -->
+  
+	<ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_CiMilitaryFatiguesOne</defName>
+    <description>A Jacket worn by the Military Wing of the Chaos Insurgency.</description>
+    <label>Military Fatigues 1 (CI) </label>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/Display/CI/CI_MilitaryFatigues1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>90</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>SCP_Clothing</li>
+    </thingCategories>
+    <statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToMake>2300</WorkToMake>
+      <Mass>0.35</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.32</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.7</EquipDelay>
+    </statBases>
+	
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.02</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.01</ShootingAccuracyPawn>
+	  <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+	  <ForagedNutritionPerDay>0.20</ForagedNutritionPerDay>
+	  <SocialImpact>0.15</SocialImpact>
+    </equippedStatOffsets>
+	
+		<apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+		<li>Shoulders</li>
+        <li>Arms</li>
+		<li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Clothing/CI/CI_MilitaryFatigues1</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+	  <li>CI_Military</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+           	<!-- ====================================== CI Military Fatigues2 =========================================== -->
+			
+	<ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_CiMilitaryFatiguesTwo</defName>
+    <description>Military fatigues used by the Military wing of the Chaos Insurgency.</description>
+    <label>Military Fatigues 2 (CI) </label>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/Display/CI/CI_MilitaryFatigues2</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>95</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+     <li>SCP_Clothing</li>
+    </thingCategories>
+    <statBases>
+			<MaxHitPoints>160</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+      <Mass>0.25</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.26</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.12</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+	
+	<equippedStatOffsets>
+	  <PainShockThreshold>0.04</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.01</ShootingAccuracyPawn>
+	  <WorkSpeedGlobal>0.35</WorkSpeedGlobal>
+	  <ForagedNutritionPerDay>0.30</ForagedNutritionPerDay>
+	  <SocialImpact>0.30</SocialImpact>
+    </equippedStatOffsets>
+	
+		<apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+		<li>Shoulders</li>
+        <li>Arms</li>
+		<li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Clothing/CI/CI_MilitaryFatigues2</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+       	 <li>CI_Military</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>

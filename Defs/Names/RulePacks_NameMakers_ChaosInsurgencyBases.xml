@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>SCP_NamerCIOutpost</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->Outpost [SCP_CIOutpostNames]</li>
+      </rulesStrings>
+      <rulesRaw>     
+		<li Class="Rule_File">
+          <keyword>SCP_CIOutpostNames</keyword>
+          <path>NameBanks/Names_CIOutpostNames</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>
+
+
+
+
+
+
+

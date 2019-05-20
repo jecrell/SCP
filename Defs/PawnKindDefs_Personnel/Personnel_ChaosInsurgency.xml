@@ -7,28 +7,43 @@
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
     <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
     <backstoryCategories>
-      <li>Civil</li>
+      <li>Raider</li>
     </backstoryCategories>
-    <invNutrition>2.55</invNutrition>
+    </PawnKindDef>
+	
+        <!-- DELTA COMMANDER -->
+  <PawnKindDef ParentName="CIPersonnelBase">
+    <defName>SCP_CIDeltaCommander</defName>
+    <label>Delta Commander</label>
+    <labelPlural>Delta Commanders</labelPlural>
+    <combatPower>40</combatPower>
+    <minGenerationAge>30</minGenerationAge>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <itemQuality>Good</itemQuality>
     <apparelTags>
-      <li>IndustrialBasic</li>
-      <li>IndustrialAdvanced</li>
+      <li>CI_RnD</li>
     </apparelTags>
-    <inventoryOptions>
-      <skipChance>0.70</skipChance>
-      <subOptionsChooseOne>
-        <li>
-          <choiceChance>90</choiceChance>
-          <thingDef>Silver</thingDef>
-          <countRange>
-            <min>30</min>
-            <max>100</max>
-          </countRange>
-        </li>
-      </subOptionsChooseOne>
-    </inventoryOptions>
-  </PawnKindDef>
-
+    <apparelRequired>
+      <li>Apparel_CiOpperative</li>
+    </apparelRequired>
+	    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </PawnKindDef>	
+	
+        <!-- REPRESENTATIVE -->
   <PawnKindDef ParentName="CIPersonnelBase">
     <defName>SCP_CIRepresentative</defName>
     <label>CI representative</label>
@@ -41,34 +56,231 @@
       <max>1</max>
     </gearHealthRange>
     <itemQuality>Good</itemQuality>
-    <weaponMoney>
-      <min>200</min>
-      <max>200</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>Gun</li>
-    </weaponTags>
-    <apparelMoney>
-      <min>700</min>
-      <max>1200</max>
-    </apparelMoney>
     <apparelTags>
-      <li>IndustrialMilitaryBasic</li>
-      <li>BeltDefensePop</li>
+      <li>CI_RnD</li>
     </apparelTags>
     <apparelRequired>
-      <li>Apparel_BowlerHat</li>
+      <li>Apparel_CiOpperative</li>
+	  <li>Apparel_CiToque</li>
     </apparelRequired>
-    <techHediffsChance>0.15</techHediffsChance>
-    <techHediffsMoney>
-      <min>600</min>
-      <max>1500</max>
-    </techHediffsMoney>
+	    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </PawnKindDef>
+  
+          <!-- TRADER -->
+  <PawnKindDef ParentName="CIPersonnelBase">
+    <defName>SCP_CITrader</defName>
+    <label>CI Trader</label>
+    <labelPlural>Traders</labelPlural>
+    <combatPower>40</combatPower>
+    <minGenerationAge>30</minGenerationAge>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <apparelTags>
+      <li>CI_RnD</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_CiMilitaryFatiguesOne</li>
+	  <li>Apparel_CiMilitaryCap</li>
+    </apparelRequired>
+	    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_MP5KPDW</li>
+    </weaponTags>
     <techHediffsTags>
       <li>Simple</li>
       <li>Advanced</li>
     </techHediffsTags>
   </PawnKindDef>
 
+        <!-- \\\!!!MILITARY PERSONNEL!!!/// -->
 
+  <PawnKindDef ParentName="CIPersonnelBase" Name="CIPersonnel_MilitaryBase" Abstract="True">
+    <techHediffsChance>0.10</techHediffsChance>
+    <techHediffsMoney>
+      <min>700</min>
+      <max>5000</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <!--<li>Simple</li>-->
+      <li>Advanced</li>
+    </techHediffsTags>
+  </PawnKindDef>
+  
+  
+  
+        <!-- MILITARY CQB -->
+      <PawnKindDef ParentName="CIPersonnel_MilitaryBase">
+    <defName>SCP_CISoldier_CQB</defName>
+    <label>Chaos Insurgent</label>
+    <combatPower>55</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>CI_MilitaryHeadgear</li>
+      <li>CI_Military</li>
+    </apparelTags>
+   <apparelRequired>
+	  <li>Apparel_CiHelmetGasmask</li>
+	  <li>Apparel_CiMilitaryFatiguesTwo</li>
+	  <li>Apparel_CiBodyArmorTwo</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_MP5KPDW</li>
+	  <li>RN_AA12</li>
+	  <li>RN_SkorpionVz61</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+  
+  
+          <!-- MILITARY ASSAULT -->
+      <PawnKindDef ParentName="CIPersonnel_MilitaryBase">
+    <defName>SCP_CISoldier_Assault</defName>
+    <label>Chaos Insurgent</label>
+    <combatPower>55</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>CI_MilitaryHeadgear</li>
+      <li>CI_Military</li>
+    </apparelTags>
+   <apparelRequired>
+	  <li>Apparel_CiCapMasked</li>
+	  <li>Apparel_CiMilitaryFatiguesOne</li>
+	  <li>Apparel_CiBodyArmorOne</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li></li>
+	  <li>RN_AK15</li>
+	  <li>RN_AK103</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+
+  
+            <!-- MILITARY GUNNER -->
+      <PawnKindDef ParentName="CIPersonnel_MilitaryBase">
+    <defName>SCP_CISoldier_Gunner</defName>
+    <label>Chaos Insurgent</label>
+    <combatPower>55</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>CI_MilitaryHeadgear</li>
+      <li>CI_Military</li>
+    </apparelTags>
+   <apparelRequired>
+	  <li>Apparel_CiHelmet</li>
+	  <li>Apparel_CiMilitaryFatiguesTwo</li>
+	  <li>Apparel_CiBodyArmorTwo</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li></li>
+	  <li>RNGun_RPD</li>
+	  <li>RNGun_PKM</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+              <!-- MILITARY SNIPER -->
+      <PawnKindDef ParentName="CIPersonnel_MilitaryBase">
+    <defName>SCP_CISoldier_Sniper</defName>
+    <label>Chaos Insurgent</label>
+    <combatPower>55</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>CI_MilitaryHeadgear</li>
+      <li>CI_Military</li>
+    </apparelTags>
+   <apparelRequired>
+	  <li>Apparel_CiMaskedHeadset</li>
+	  <li>Apparel_CiMilitaryFatiguesTwo</li>
+	  <li>Apparel_CiBodyArmorOne</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li></li>
+	  <li>RN_Dragunov</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
 </Defs>

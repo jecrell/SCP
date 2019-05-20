@@ -46,8 +46,7 @@
     -->
     <!-- END -->
     <colorSpectrum>
-      <li>(0.35, 0.30, 0.60)</li>
-      <li>(0.45, 0.40, 0.90)</li>
+ <li>(255,255,255)</li>
     </colorSpectrum>
     <startingGoodwill>
       <min>0</min>
@@ -67,12 +66,12 @@
     <canSiege>true</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>Delta Commander</leaderTitle>
-    <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
-		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
-		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <expandingIconTexture>World/CILogo</expandingIconTexture>
+		<!--<factionNameMaker>NamerFactionOutlander</factionNameMaker>-->
+		<settlementNameMaker>SCP_NamerCIOutpost</settlementNameMaker>
 		<techLevel>Industrial</techLevel>
 		<backstoryCategories>
-			<li>Civil</li>
+			<li>Raider</li>
 		</backstoryCategories>
 		<geneticVariance>0.8</geneticVariance>
 		<hairTags>
@@ -108,27 +107,23 @@
         <!-- Normal fights, standard mix -->
         <kindDef>Combat</kindDef>
         <options>
-					<Villager>5</Villager>
-          <Town_Guard>10</Town_Guard>
-          <Grenadier_Destructive>1.5</Grenadier_Destructive>
-					<Mercenary_Slasher>7</Mercenary_Slasher>
-					<Mercenary_Gunner>10</Mercenary_Gunner>
-					<Mercenary_Elite>10</Mercenary_Elite>
-          <Town_Councilman>10</Town_Councilman>
+					<SCP_CISoldier_CQB>18</SCP_CISoldier_CQB>
+					<SCP_CISoldier_Assault>15</SCP_CISoldier_Assault>
+					<SCP_CISoldier_Sniper>5</SCP_CISoldier_Sniper>
+          <SCP_CISoldier_Gunner>8</SCP_CISoldier_Gunner>
         </options>
       </li>
       <li>
         <kindDef>Peaceful</kindDef>
         <options>
-          <Villager>20</Villager>
-          <Town_Guard>10</Town_Guard>
-          <Town_Councilman>10</Town_Councilman>
+          <SCP_CISoldier_Assault>20</SCP_CISoldier_Assault>
+          <SCP_CISoldier_CQB>10</SCP_CISoldier_CQB>
         </options>
       </li>
       <li>
         <kindDef>Trader</kindDef>
         <traders>
-          <Town_Trader>1</Town_Trader>
+          <SCP_CITrader>1</SCP_CITrader>
         </traders>
         <carriers>
           <Muffalo>6</Muffalo>
@@ -137,24 +132,19 @@
           <Elephant>1</Elephant>
         </carriers>
         <guards>
-          <Villager>3</Villager>
-          <Town_Guard>10</Town_Guard>
-          <Grenadier_Destructive>1.5</Grenadier_Destructive>
-          <Mercenary_Slasher>7</Mercenary_Slasher>
-          <Mercenary_Gunner>10</Mercenary_Gunner>
-					<Mercenary_Elite>10</Mercenary_Elite>
+          <SCP_CISoldier_Assault>10</SCP_CISoldier_Assault>
+          <SCP_CISoldier_CQB>10</SCP_CISoldier_CQB>
+          <SCP_CISoldier_Gunner>5</SCP_CISoldier_Gunner>
 				</guards>
       </li>
       <li>
         <kindDef>Settlement</kindDef>
         <options>
-					<Villager>10</Villager>
-          <Town_Guard>10</Town_Guard>
-          <Grenadier_Destructive>1.5</Grenadier_Destructive>
-					<Mercenary_Slasher>7</Mercenary_Slasher>
-          <Mercenary_Gunner>10</Mercenary_Gunner>
-          <Mercenary_Elite>10</Mercenary_Elite>
-          <Town_Councilman>10</Town_Councilman>
+          <SCP_CISoldier_CQB>10</SCP_CISoldier_CQB>
+          <SCP_CIRepresentative>1.5</SCP_CIRepresentative>
+					<SCP_CISoldier_Assault>15</SCP_CISoldier_Assault>
+          <SCP_CISoldier_Gunner>7</SCP_CISoldier_Gunner>
+          <SCP_CISoldier_Sniper>5</SCP_CISoldier_Sniper>
         </options>
       </li>
     </pawnGroupMakers>

@@ -68,4 +68,74 @@
     </tools>
   </ThingDef>
   
+    <!-- ================================= AA-12 ==================================== -->
+    <ThingDef ParentName="RNBaseShotgun">
+    <defName>RNGun_AA12S</defName>
+    <label>AA-12</label>
+    <description>The Auto Assault-12 (AA-12), originally designed and known as the Atchisson Assault Shotgun, is a shotgun developed in 1972 by Maxwell Atchisson. The most prominent feature is reduced recoil. The current 2005 version has been developed over 18 years since the patent was sold to Military Police Systems, Inc. The original design was the basis of several later weapons, including the USAS-12 combat shotgun. The weapon is fully automatic only. However, it fires at a rate of 300 rounds per minute, allowing it to fire one round at a time with brief trigger pulls. It is fed from either an 8-shell box magazine, or a 20- or 32-shell drum magazine.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Shotgun/AA12</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Shotgun</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>31000</WorkToMake>
+      <Mass>2.8</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.67</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+    </statBases>
+	
+		    <weaponTags>
+			<li>Gun</li>
+			<li>RN_AA12</li>
+		</weaponTags>
+	
+    <costList>
+      <Steel>70</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_12Gauge_Shotgun</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>16</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>RNShotAutoShotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
 </Defs>

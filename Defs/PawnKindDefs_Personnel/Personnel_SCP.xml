@@ -13,6 +13,40 @@
 
         <!-- \\\!!! SITE PERSONNEL!!!/// -->
   
+                <!-- ADMINISTRATOR -->
+  <PawnKindDef ParentName="SCPPersonnelBase">
+    <defName>SCP_Administrator</defName>
+    <label>Foundation Administrator</label>
+    <labelPlural>Administrators</labelPlural>
+    <combatPower>40</combatPower>
+    <minGenerationAge>30</minGenerationAge>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <apparelTags>
+      <li>SCP_HigherUps</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_ScpBuisnessSuit</li>
+    </apparelRequired>
+    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </PawnKindDef>
+  
+              <!-- REPRESENTATIVE -->
   <PawnKindDef ParentName="SCPPersonnelBase">
     <defName>SCP_Representative</defName>
     <label>foundation representative</label>
@@ -31,6 +65,13 @@
     <apparelRequired>
       <li>Apparel_ScpBuisnessSuit</li>
     </apparelRequired>
+    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
     <techHediffsTags>
       <li>Simple</li>
@@ -38,7 +79,41 @@
     </techHediffsTags>
   </PawnKindDef>
   
+            <!-- FOUNDATION TRADER -->
+    <PawnKindDef ParentName="SCPPersonnelBase">
+    <defName>SCP_Trader</defName>
+    <label>foundation trader</label>
+    <labelPlural>traders</labelPlural>
+    <combatPower>40</combatPower>
+    <minGenerationAge>30</minGenerationAge>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <apparelTags>
+      <li>SCP_HigherUps</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_ScpBuisnessSuit</li>
+	  <li>Apparel_ScpSecurityArmor</li>
+    </apparelRequired>
+	    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </PawnKindDef>
   
+          <!-- FACILITY STAFF -->
     <PawnKindDef ParentName="SCPPersonnelBase">
     <defName>SCP_FacilityStaff</defName>
     <label>foundation staff</label>
@@ -57,6 +132,13 @@
     <apparelRequired>
       <li>Apparel_ScpFacilityStaff</li>
     </apparelRequired>
+	<weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
     <techHediffsTags>
       <li>Simple</li>
       <li>Advanced</li>
@@ -64,6 +146,7 @@
 	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
   </PawnKindDef>
   
+          <!-- SCIENTIST -->
       <PawnKindDef ParentName="SCPPersonnelBase">
     <defName>SCP_Scientest</defName>
     <label>foundation scientest</label>
@@ -82,6 +165,13 @@
     <apparelRequired>
       <li>Apparel_ScpScientist</li>
     </apparelRequired>
+	    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
     <techHediffsTags>
       <li>Simple</li>

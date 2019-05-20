@@ -58,13 +58,13 @@
     <canMakeRandomly>true</canMakeRandomly>
     <canSiege>true</canSiege>
     <canStageAttacks>true</canStageAttacks>
-    <leaderTitle>Administrator</leaderTitle>
+    <leaderTitle>Foundation Administrator</leaderTitle>
     <expandingIconTexture>World/SCPLogo</expandingIconTexture>
 		<!--<factionNameMaker>NamerFactionOutlander</factionNameMaker>-->
 		<settlementNameMaker>SCP_NamerSCPFoundationSite</settlementNameMaker>
 		<techLevel>Industrial</techLevel>
 		<backstoryCategories>
-			<li>Civil</li>
+			<li>Raider</li>
 		</backstoryCategories>
 		<geneticVariance>0.8</geneticVariance>
 		<hairTags>
@@ -100,27 +100,25 @@
         <!-- Normal fights, standard mix -->
         <kindDef>Combat</kindDef>
         <options>
-					<Villager>5</Villager>
-          <Town_Guard>10</Town_Guard>
-          <Grenadier_Destructive>1.5</Grenadier_Destructive>
-					<Mercenary_Slasher>7</Mercenary_Slasher>
-					<Mercenary_Gunner>10</Mercenary_Gunner>
-					<Mercenary_Elite>10</Mercenary_Elite>
-          <Town_Councilman>10</Town_Councilman>
+					<SCP_MTFSoldier_CQB>15</SCP_MTFSoldier_CQB>
+					<SCP_MTFSoldier_Assault>10</SCP_MTFSoldier_Assault>
+					<SCP_MTFSoldier_Gunner>8</SCP_MTFSoldier_Gunner>
+					<SCP_MTFSoldier_Sniper>5</SCP_MTFSoldier_Sniper>
         </options>
       </li>
       <li>
         <kindDef>Peaceful</kindDef>
         <options>
-          <Villager>20</Villager>
-          <Town_Guard>10</Town_Guard>
-          <Town_Councilman>10</Town_Councilman>
+          <SCP_MTFSoldier_Assault>10</SCP_MTFSoldier_Assault>
+		  <SCP_MTFSoldier_CQB>10</SCP_MTFSoldier_CQB>
+          <SCP_Representative>5</SCP_Representative>
+		  <SCP_Scientest>5</SCP_Scientest>
         </options>
       </li>
       <li>
         <kindDef>Trader</kindDef>
         <traders>
-          <Town_Trader>1</Town_Trader>
+          <SCP_Trader>1</SCP_Trader>
         </traders>
         <carriers>
           <Muffalo>6</Muffalo>
@@ -129,24 +127,18 @@
           <Elephant>1</Elephant>
         </carriers>
         <guards>
-          <Villager>3</Villager>
-          <Town_Guard>10</Town_Guard>
-          <Grenadier_Destructive>1.5</Grenadier_Destructive>
-          <Mercenary_Slasher>7</Mercenary_Slasher>
-          <Mercenary_Gunner>10</Mercenary_Gunner>
-					<Mercenary_Elite>10</Mercenary_Elite>
+          <SCP_SecuritySoldier>10</SCP_SecuritySoldier>
 				</guards>
       </li>
       <li>
         <kindDef>Settlement</kindDef>
         <options>
-					<Villager>10</Villager>
-          <Town_Guard>10</Town_Guard>
-          <Grenadier_Destructive>1.5</Grenadier_Destructive>
-					<Mercenary_Slasher>7</Mercenary_Slasher>
-          <Mercenary_Gunner>10</Mercenary_Gunner>
-          <Mercenary_Elite>10</Mercenary_Elite>
-          <Town_Councilman>10</Town_Councilman>
+					<SCP_SecuritySoldier>15</SCP_SecuritySoldier>
+          <SCP_RCFSoldier_CQB>5</SCP_RCFSoldier_CQB>
+          <SCP_RCFSoldier_Assault>8</SCP_RCFSoldier_Assault>
+					<SCP_RCFSoldier_Sniper>5</SCP_RCFSoldier_Sniper>
+          <SCP_FacilityStaff>1</SCP_FacilityStaff>
+          <SCP_Scientest>1</SCP_Scientest>
         </options>
       </li>
     </pawnGroupMakers>

@@ -149,4 +149,154 @@
     </tools>
 	</ThingDef>
 	
+	   <!-- ================================= MP5KA3 ==================================== -->
+   
+  
+	<ThingDef ParentName="RNBasePDW">
+		<defName>RNGun_MP5KPDW_PDW</defName>
+		<label>MP5K-PDW</label>
+		<description>The MP5 (German: Maschinenpistole 5) is a 9mm submachine gun, developed in the 1960s by a team of engineers from the German small arms manufacturer Heckler and Koch GmbH (HK) of Oberndorf am Neckar. There are over 100 variants of the MP5, including some semi-automatic versions.
+
+The MP5 is one of the most widely used submachine guns in the world, having been adopted by 40 nations and numerous military, law enforcement, intelligence, and security organizations. It is widely used by SWAT teams in North America.
+
+In 1999, Heckler and Koch developed the Heckler and Koch UMP, the MP5's successor</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/SMG/MP5K_PDW</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+		<statBases>
+			<WorkToMake>11000</WorkToMake>
+			<Mass>3</Mass>
+            <AccuracyTouch>0.95</AccuracyTouch>
+            <AccuracyShort>0.75</AccuracyShort>
+            <AccuracyMedium>0.32</AccuracyMedium>
+            <AccuracyLong>0.23</AccuracyLong>
+			<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>70</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+    	
+		<weaponTags>
+			<li>Gun</li>
+		    <li>RN_MP5KPDW</li>
+		</weaponTags>
+	
+	<verbs>		
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RNBullet_9MM_Pistol</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<range>23.9</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<soundCast>RNShotMP5K</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>	
+	
+			   <!-- ================================= Skorpion ==================================== -->
+   
+  
+	<ThingDef ParentName="RNBasePDW">
+		<defName>RNGun_SkorpionVZ61_PDW</defName>
+		<label>Skorpion vz. 61</label>
+		<description>The Škorpion vz. 61 is a Czechoslovak 7.65 mm machine pistol developed in 1959 by Miroslav Rybář (1924–1970) and produced under the official designation Samopal vzor 61 ("submachine gun model 1961") by the Česká zbrojovka arms factory in Uherský Brod from 1961 to 1979.
+
+Although it was developed for use with security forces and special forces, the weapon was also accepted into service with the Czechoslovak Army, as a personal sidearm for lower-ranking army staff, vehicle drivers, armoured vehicle personnel and special forces. Currently the weapon is in use with the armed forces of several countries as a sidearm.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/SMG/SkorpionSMG</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>2</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>1.4</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.17</AccuracyMedium>
+      <AccuracyLong>0.08</AccuracyLong>
+      <RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+	
+		<weaponTags>
+			<li>Gun</li>
+			<li>RN_SkorpionVz61</li>
+		</weaponTags>
+	
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_32ACP_Pistol</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>19.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>RNShotSkorpionVZ</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+		</verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>	
+	
 </Defs>
