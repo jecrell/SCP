@@ -60,7 +60,7 @@
   
    <!-- ==================================== SCP Facility Staff =====================================-->
  
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpFacilityStaff</defName>
     <label>Facility Staff (SCP) </label>
     <description>Professional office work atire used by a wide variety of roles within a Foundation Site.</description>
@@ -114,7 +114,7 @@
   
      <!-- ==================================== SCP Scientist =====================================-->
  
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpScientist</defName>
     <label>Scientist (SCP) </label>
     <description>Worn by a Scientest/Researcher of the Foundation.</description>
@@ -168,7 +168,7 @@
   
        <!-- ==================================== SCP Buisness Suit =====================================-->
  
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpBuisnessSuit</defName>
     <label>Buisness Suit (SCP) </label>
     <description>A Buisness Suit sported by higher ups within the Foundation.</description>
@@ -221,7 +221,7 @@
   
       <!-- ====================================== SCP Security Fatigues =========================================== -->
 			
-	<ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpSecurityFatigues</defName>
     <description>White Fatigues utilized by the Foundation's Security Force</description>
     <label>Security Fatigues (SCP) </label>
@@ -283,7 +283,7 @@
   
  <!-- ==================================== SCP RCF T shirt =====================================-->
 			
-	<ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpRcfTShirt</defName>
     <description>A shirt and camo pants worn by on site Rapid Containment Force.</description>
     <label>RCF T-Shirt (SCP) </label>
@@ -343,7 +343,7 @@
   
     <!-- ====================================== SCP RCF Jacket =========================================== -->
   
-	<ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpRcfJacket</defName>
     <description>A Jacket worn by on site Rapid Containment Force.</description>
     <label>RCF Jacket (SCP) </label>
@@ -405,7 +405,7 @@
   
        	<!-- ====================================== SCP MTF Fatigues =========================================== -->
 			
-	<ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpMtfFatigues</defName>
     <description>Black Military Fatigues utilized by the Foundations Elite Mobile Task Force</description>
     <label>MTF Fatigues (SCP) </label>
@@ -469,7 +469,7 @@
   
      <!-- ==================================== GOC Staff =====================================-->
  
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_GocStaff</defName>
     <label>Staff (GOC) </label>
     <description>Professional office work atire used by a wide variety of roles within a Coalition Base.</description>
@@ -523,7 +523,7 @@
   
        <!-- ==================================== GOC Scientist =====================================-->
  
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_GocScientist</defName>
     <label>Scientist (GOC) </label>
     <description>Worn by a Scientest/Researcher of the Coalition.</description>
@@ -577,7 +577,7 @@
   
          <!-- ==================================== GOC Buisness Suit =====================================-->
  
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_GocBuisnessSuit</defName>
     <label>Buisness Suit (GOC) </label>
     <description>A Buisness suit sported by higher ups within the Coalition.</description>
@@ -629,7 +629,7 @@
   
         <!-- ====================================== GOC Security Fatigues =========================================== -->
 			
-	<ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_GocSecurityFatigues</defName>
     <description>Dark Fatigues utilized by Coalition Security Officers.</description>
     <label>Security Fatigues (GOC) </label>
@@ -690,7 +690,7 @@
   
          	<!-- ====================================== GOC Strike Team Fatigues =========================================== -->
 			
-	<ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_GocSTFatigues</defName>
     <description>Military BDU used by the Coalitions Elite Strike Team.</description>
     <label>Strike Team Fatigues (GOC) </label>
@@ -754,7 +754,7 @@
   
        <!-- ==================================== CI Opperative =====================================-->
  
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_CiOpperative</defName>
     <label>Opperative (CI) </label>
     <description>A heavy coat with a dress shirt and tie underneath, used by the mysterious Chaos Insurgency Opperatives.</description>
@@ -807,7 +807,7 @@
   
       <!-- ====================================== CI Military Fatigues1 =========================================== -->
   
-	<ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_CiMilitaryFatiguesOne</defName>
     <description>A Jacket worn by the Military Wing of the Chaos Insurgency.</description>
     <label>Military Fatigues 1 (CI) </label>
@@ -869,7 +869,7 @@
   
            	<!-- ====================================== CI Military Fatigues2 =========================================== -->
 			
-	<ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_CiMilitaryFatiguesTwo</defName>
     <description>Military fatigues used by the Military wing of the Chaos Insurgency.</description>
     <label>Military Fatigues 2 (CI) </label>

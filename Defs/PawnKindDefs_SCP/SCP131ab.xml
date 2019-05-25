@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
+  
+  
   <ThingDef ParentName="BasePawn">
     <defName>SCP_ONE_THREE_ONE_RACE</defName>
     <label>SCP 131</label>
     <thingClass>SCP.SCP</thingClass>
-    <description>SCP-131-A and SCP-131-B (affectionately nicknamed the "Eye Pods" by personnel) are a pair of teardrop-shaped creatures roughly 30 cm (1 ft) in height, with a single blue eye in the middle of their bodies. SCP-131-A is burnt orange in color while SCP-131-B is mustard yellow. At the base of each creature is a wheel-like protrusion which allows for locomotion, suggesting that the creatures may be biomechanical in origin. The subjects can move surprisingly fast, covering over 60 m (200 ft) in a matter of seconds. The subjects, however, lack a braking system, which has led to some rather spectacular, if not overly amusing, mishaps involving the creatures.</description>
+      <description>SCP-131-A and SCP-131-B (affectionately nicknamed the "Eye Pods" by personnel) are a pair of teardrop-shaped creatures roughly 30 cm (1 ft) in height, with a single blue eye in the middle of their bodies. SCP-131-A is burnt orange in color while SCP-131-B is mustard yellow. At the base of each creature is a wheel-like protrusion which allows for locomotion, suggesting that the creatures may be biomechanical in origin. The subjects can move surprisingly fast, covering over 60 m (200 ft) in a matter of seconds. The subjects, however, lack a braking system, which has led to some rather spectacular, if not overly amusing, mishaps involving the creatures.</description>
     <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <statBases>
       <MoveSpeed>3.1</MoveSpeed>
@@ -71,8 +72,6 @@
     <defName>SCP_ONE_THREE_ONE_A</defName>
     <label>SCP 131-A</label>
     <race>SCP_ONE_THREE_ONE_RACE</race>
-    <isSCP>true</isSCP>
-    <isUnique>true</isUnique>
     <combatPower>30</combatPower>
     <ecoSystemWeight>0.0</ecoSystemWeight>
     <lifeStages>
@@ -92,8 +91,6 @@
   <SCP.CustomPawnKindDef ParentName="SCP_ONE_THREE_ONE">
     <defName>SCP_ONE_THREE_ONE_B</defName>
     <label>SCP 131-B</label>
-    <isSCP>true</isSCP>
-    <isUnique>true</isUnique>
     <lifeStages Inherit="False">
       <li>
         <bodyGraphicData>

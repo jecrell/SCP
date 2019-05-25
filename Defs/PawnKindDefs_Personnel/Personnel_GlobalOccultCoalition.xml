@@ -7,28 +7,55 @@
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
     <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
     <backstoryCategories>
-      <li>Civil</li>
+      <li>Raider</li>
     </backstoryCategories>
     <invNutrition>2.55</invNutrition>
-    <apparelTags>
-      <li>IndustrialBasic</li>
-      <li>IndustrialAdvanced</li>
-    </apparelTags>
-    <inventoryOptions>
-      <skipChance>0.70</skipChance>
-      <subOptionsChooseOne>
-        <li>
-          <choiceChance>90</choiceChance>
-          <thingDef>Silver</thingDef>
-          <countRange>
-            <min>30</min>
-            <max>100</max>
-          </countRange>
-        </li>
-      </subOptionsChooseOne>
-    </inventoryOptions>
   </PawnKindDef>
 
+         <!-- \\\!!!PERSONNEL!!!/// -->
+ 
+                <!-- SECRETARY GENERAL --> 
+  
+  <PawnKindDef ParentName="GOCPersonnelBase">
+    <defName>SCP_GOCSecretaryGeneral</defName>
+    <label>Secretary General</label>
+    <factionLeader>true</factionLeader>	
+    <labelPlural>Generals</labelPlural>
+    <combatPower>40</combatPower>
+    <minGenerationAge>30</minGenerationAge>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <apparelTags>
+      <li>GOC_HigherUps</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_GocBuisnessSuit</li>
+    </apparelRequired>
+	  <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
+    <techHediffsChance>0.15</techHediffsChance>
+    <techHediffsMoney>
+      <min>600</min>
+      <max>1500</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </PawnKindDef>
+
+ 
+                <!-- REPRESENTATIVE --> 
+  
   <PawnKindDef ParentName="GOCPersonnelBase">
     <defName>SCP_GOCRepresentative</defName>
     <label>GOC representative</label>
@@ -41,24 +68,19 @@
       <max>1</max>
     </gearHealthRange>
     <itemQuality>Good</itemQuality>
-    <weaponMoney>
-      <min>200</min>
-      <max>200</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>Gun</li>
-    </weaponTags>
-    <apparelMoney>
-      <min>700</min>
-      <max>1200</max>
-    </apparelMoney>
     <apparelTags>
-      <li>IndustrialMilitaryBasic</li>
-      <li>BeltDefensePop</li>
+      <li>GOC_HigherUps</li>
     </apparelTags>
     <apparelRequired>
-      <li>Apparel_BowlerHat</li>
+      <li>Apparel_GocBuisnessSuit</li>
     </apparelRequired>
+	  <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
     <techHediffsChance>0.15</techHediffsChance>
     <techHediffsMoney>
       <min>600</min>
@@ -70,5 +92,438 @@
     </techHediffsTags>
   </PawnKindDef>
 
+             <!-- GOC TRADER -->
+    <PawnKindDef ParentName="GOCPersonnelBase">
+    <defName>SCP_GOCTrader</defName>
+    <label>GOC trader</label>
+    <labelPlural>traders</labelPlural>
+    <combatPower>40</combatPower>
+    <minGenerationAge>30</minGenerationAge>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <apparelTags>
+      <li>GOC_HigherUps</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_GocBuisnessSuit</li>
+	  <li>Apparel_GocSecurityArmor</li>
+	  <li>Apparel_GocSecurityBeret</li>
+    </apparelRequired>
+	    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </PawnKindDef> 
 
+           <!-- STAFF -->
+    <PawnKindDef ParentName="GOCPersonnelBase">
+    <defName>SCP_GOCStaff</defName>
+    <label>GOC staff</label>
+    <labelPlural>staff</labelPlural>
+    <combatPower>40</combatPower>
+    <minGenerationAge>30</minGenerationAge>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <apparelTags>
+        <li>GOC_Staff</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_GocStaff</li>
+    </apparelRequired>
+	<weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+          <!-- SCIENTIST -->
+      <PawnKindDef ParentName="GOCPersonnelBase">
+    <defName>SCP_GOCScientist</defName>
+    <label>foundation scientist</label>
+    <labelPlural>scientest</labelPlural>
+    <combatPower>40</combatPower>
+    <minGenerationAge>30</minGenerationAge>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <apparelTags>
+        <li>GOC_Scientest</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_GocScientist</li>
+    </apparelRequired>
+	    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_Glock17HRT</li>
+    </weaponTags>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef> 
+  
+        <!-- \\\!!!SECURITY PERSONNEL!!!/// -->
+
+  <PawnKindDef ParentName="GOCPersonnelBase" Name="GOCPersonnel_SecurityBase" Abstract="True">
+    <techHediffsChance>0.10</techHediffsChance>
+    <techHediffsMoney>
+      <min>700</min>
+      <max>5000</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <!--<li>Simple</li>-->
+      <li>Advanced</li>
+    </techHediffsTags>
+  </PawnKindDef>
+  
+        <!-- SECURITY OFFICER -->
+      <PawnKindDef ParentName="GOCPersonnel_SecurityBase">
+    <defName>SCP_GOCSecuritySoldier</defName>
+    <label>Security Officer</label>
+    <combatPower>55</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>GOC_SecurityHeadgear</li>
+      <li>GOC_SecurityUniforms</li>
+    </apparelTags>
+   <apparelRequired>
+	  <li>Apparel_GocSecurityHelmet</li>
+	  <li>Apparel_GocSecurityFatigues</li>
+	  <li>Apparel_GocSecurityArmor</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_FNFAL</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+      <!-- \\\!!!STRIKE TEAM PERSONNEL!!!/// -->
+
+  <PawnKindDef ParentName="GOCPersonnelBase" Name="GOCPersonnel_RaiderBase" Abstract="True">
+    <techHediffsChance>0.10</techHediffsChance>
+    <techHediffsMoney>
+      <min>700</min>
+      <max>5000</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <!--<li>Simple</li>-->
+      <li>Advanced</li>
+    </techHediffsTags>
+  </PawnKindDef>
+  
+      <!-- STRIKE TEAM SOLDIER CQB -->
+      <PawnKindDef ParentName="GOCPersonnel_RaiderBase">
+    <defName>SCP_GOCSTSoldier_CQB</defName>
+    <label>Strike Team Operator</label>
+    <combatPower>60</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>GOC_StrikeTeamHeadgear</li>
+      <li>GOC_STUniforms</li>
+      <!--<li>BeltDefensePop</li>-->
+    </apparelTags>
+   <apparelRequired>
+      <!--<li>Apparel_SmokepopBelt</li>-->
+	  <li>Apparel_GocSTHelmetGasMask</li>
+	  <li>Apparel_GocSTFatigues</li>
+	  <li>Apparel_GocSTArmor</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>570</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_Uzi</li>
+	  <li>RN_MPX</li>
+	  <li>RN_KSG</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <!--<li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>-->
+        <li>
+          <thingDef>MealSurvivalPack</thingDef>
+          <countRange>
+            <min>4</min>
+            <max>5</max>
+          </countRange>
+        </li>        
+		<li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>4</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+  
+  
+        <!-- STRIKE TEAM SOLDIER ASSAULT -->
+        <PawnKindDef ParentName="GOCPersonnel_RaiderBase">
+    <defName>SCP_GOCSTSoldier_Assault</defName>
+    <label>Strike Team Operator</label>
+    <combatPower>60</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>GOC_StrikeTeamHeadgear</li>
+      <li>GOC_STUniforms</li>
+      <!--<li>BeltDefensePop</li>-->
+    </apparelTags>
+   <apparelRequired>
+      <!--<li>Apparel_SmokepopBelt</li>-->
+	  <li>Apparel_GocSTHelmet</li>
+	  <li>Apparel_GocSTFatigues</li>
+	  <li>Apparel_GocSTArmor</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>580</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_HK416Elite</li>
+	  <li>RN_G36CHRT</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <!--<li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>-->
+        <li>
+          <thingDef>MealSurvivalPack</thingDef>
+          <countRange>
+            <min>4</min>
+            <max>5</max>
+          </countRange>
+        </li>        
+		<li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>4</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
+  
+         <!-- STRIKE TEAM SOLDIER GUNNER -->
+        <PawnKindDef ParentName="GOCPersonnel_RaiderBase">
+    <defName>SCP_GOCSTSoldier_Gunner</defName>
+    <label>Strike Team Operator</label>
+    <combatPower>60</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>GOC_StrikeTeamHeadgear</li>
+      <li>GOC_STUniforms</li>
+      <!--<li>BeltDefensePop</li>-->
+    </apparelTags>
+   <apparelRequired>
+      <!--<li>Apparel_SmokepopBelt</li>-->
+	  <li>Apparel_GocSTHelmetMasked</li>
+	  <li>Apparel_GocSTFatigues</li>
+	  <li>Apparel_GocSTArmor</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>580</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RNGun_FNMinimi</li>
+	  <li>RNGun_Negev</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <!--<li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>-->
+        <li>
+          <thingDef>MealSurvivalPack</thingDef>
+          <countRange>
+            <min>4</min>
+            <max>5</max>
+          </countRange>
+        </li>        
+		<li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>4</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+ 
+          <!-- STRIKE TEAM SOLDIER SNIPER -->
+        <PawnKindDef ParentName="GOCPersonnel_RaiderBase">
+    <defName>SCP_GOCSTSoldier_Sniper</defName>
+    <label>Strike Team Operator</label>
+    <combatPower>60</combatPower>
+	<minGenerationAge>20</minGenerationAge>
+	<maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>GOC_StrikeTeamHeadgear</li>
+      <li>GOC_STUniforms</li>
+      <!--<li>BeltDefensePop</li>-->
+    </apparelTags>
+   <apparelRequired>
+      <!--<li>Apparel_SmokepopBelt</li>-->
+	  <li>Apparel_GocSTBoonie</li>
+	  <li>Apparel_GocSTFatigues</li>
+	  <li>Apparel_GocSTArmor</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>580</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RN_AS50</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>0</max>
+    </combatEnhancingDrugsCount>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <!--<li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>-->
+        <li>
+          <thingDef>MealSurvivalPack</thingDef>
+          <countRange>
+            <min>4</min>
+            <max>5</max>
+          </countRange>
+        </li>        
+		<li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>4</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  
 </Defs>

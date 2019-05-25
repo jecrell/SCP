@@ -298,5 +298,82 @@ Although it was developed for use with security forces and special forces, the w
       </li>
     </tools>
 	</ThingDef>	
+
+
+	   <!-- ================================= MPX ==================================== -->
+   
+  
+	<ThingDef ParentName="RNBasePDW">
+		<defName>RNGun_MPX_PDW</defName>
+		<label>MPX</label>
+		<description>The SIG MPX is a gas-operated submachine gun designed and manufactured by SIG Sauer, and is primarily chambered in 9×19mm Parabellum cartridge. It is gas-operated firearm, featuring a closed, rotating bolt. These design features, rare in submachine guns, were chosen to enhance the safety of the user and to have a more reliable firearm. It was designed in 2013 and was released to the general public in 2015. It features the SIG Sauer short stroke push-rod gas system to reduce the recoil and improve the reliability of the weapon.
+
+The MPX, in its second generation, features a system that would allow for conversion from 9mm to .357 SIG or .40 S&amp;W, however, since its inception, first party conversion kits have not been made available for either of the two production generations of the submachine gun.
+
+This MPX uses .40 S&amp;W cartridges.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/SMG/MPX</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+		<statBases>
+			<WorkToMake>11000</WorkToMake>
+			<Mass>2.4</Mass>
+            <AccuracyTouch>0.90</AccuracyTouch>
+            <AccuracyShort>0.76</AccuracyShort>
+            <AccuracyMedium>0.39</AccuracyMedium>
+            <AccuracyLong>0.28</AccuracyLong>
+			<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+    	
+		<weaponTags>
+			<li>Gun</li>
+		    <li>RN_MPX</li>
+		</weaponTags>
+	
+	<verbs>		
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RNBullet_40SW_Pistol</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<range>22.9</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<soundCast>RNShotMPX</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
 	
 </Defs>

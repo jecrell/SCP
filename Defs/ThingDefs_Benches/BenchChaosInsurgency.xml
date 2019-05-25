@@ -7,7 +7,7 @@
     <description>.</description>
     <thingClass>Building_WorkTable</thingClass>
     <graphicData>
-      <texPath>Things/Building/Production/TableMachining</texPath>
+      <texPath>Things/Building/Production/CI_ClothingBench</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(3.5,1.5)</drawSize>
       <damageData>
@@ -41,7 +41,18 @@
     <surfaceType>Item</surfaceType>
     <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
     <recipes>
-      <li>ButcherCorpseMechanoid</li>
+      <li>Make_CiOpperative</li>
+	  <li>Make_CiMilitaryFatiguesOne</li>
+	  <li>Make_CiMilitaryFatiguesTwo</li>
+	  <li>Make_CiBodyArmorOne</li>
+	  <li>Make_CiBodyArmorTwo</li>
+	  <li>Make_CiToque</li>
+	  <li>Make_CiMaskedHeadset</li>
+	  <li>Make_CiCap</li>
+	  <li>Make_CiCapMasked</li>
+	  <li>Make_CiMilitaryCap</li>
+	  <li>Make_CiHelmet</li>
+	  <li>Make_CiHelmetGasmask</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -77,4 +88,757 @@
     </placeWorkers>
   </ThingDef>
 
+       <!-- ==================================== CI Opperative =====================================-->
+  <RecipeDef>
+    <defName>Make_CiOpperative</defName>
+    <label>make Opperative Suit</label>
+    <description>A heavy coat with a dress shirt and tie underneath, used by the mysterious Chaos Insurgency Opperatives.</description>
+    <jobString>Making Opperative clothing.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1500</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>80</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_CiOpperative>1</Apparel_CiOpperative>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>	
+ 
+      <!-- ====================================== CI Military Fatigues1 =========================================== -->
+  <RecipeDef>
+    <defName>Make_CiMilitaryFatiguesOne</defName>
+    <label>make Military Fatigues 1</label>
+    <description>A Jacket worn by the Military Wing of the Chaos Insurgency.</description>
+    <jobString>Making Military Fatigues.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1500</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_CiMilitaryFatiguesOne>1</Apparel_CiMilitaryFatiguesOne>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>		
+	
+	
+           	<!-- ====================================== CI Military Fatigues2 =========================================== -->
+  <RecipeDef>
+    <defName>Make_CiMilitaryFatiguesTwo</defName>
+    <label>make Military Fatigues 2</label>
+    <description>Military fatigues used by the Military wing of the Chaos Insurgency.</description>
+    <jobString>Making Military Fatigues.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1500</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_CiMilitaryFatiguesTwo>1</Apparel_CiMilitaryFatiguesTwo>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>			
+
+
+    <!-- ======== ARMOR ========= -->	
+
+          <!-- ======================================= CI Body Armor1 =======================================-->
+  <RecipeDef>
+    <defName>Make_CiBodyArmorOne</defName>
+    <label>make Body Armor 1.</label>
+    <description>An armored vest worn by the Military Wing of the Chaos Insurgency.</description>
+    <jobString>Making Body Armor.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1500</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>45</count>
+      </li>	  
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+ </ingredients>		  
+	    <products>
+      <Apparel_CiBodyArmorOne>1</Apparel_CiBodyArmorOne>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>			
+	
+             <!-- ======================================= CI Body Armor2 =======================================-->
+  <RecipeDef>
+    <defName>Make_CiBodyArmorTwo</defName>
+    <label>make Body Armor 2.</label>
+    <description>A light Armored Vest worn by the Military Wing of the Chaos Insurgency.</description>
+    <jobString>Making Body Armor.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1500</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>	  
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+ </ingredients>		  
+	    <products>
+      <Apparel_CiBodyArmorTwo>1</Apparel_CiBodyArmorTwo>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>		
+
+    <!-- ======== HATS ========= -->	
+	
+
+                    	<!-- ==================================== CI Toque =====================================-->
+  <RecipeDef>
+    <defName>Make_CiToque</defName>
+    <label>make Toque</label>
+    <description>A Toque worn by the military wing of the Chaos Insurgency.</description>
+    <jobString>Making Toque.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1200</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_CiToque>1</Apparel_CiToque>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>			
+
+                    	<!-- ==================================== CI Masked Headset =====================================-->
+  <RecipeDef>
+    <defName>Make_CiMaskedHeadset</defName>
+    <label>make Masked Headset</label>
+    <description>A mask and headset worn by the military wing of the Chaos Insurgency.</description>
+    <jobString>Making Masked Headset.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1200</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_CiMaskedHeadset>1</Apparel_CiMaskedHeadset>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>	
+
+                	<!-- ==================================== CI Cap =====================================-->
+  <RecipeDef>
+    <defName>Make_CiCap</defName>
+    <label>make Cap</label>
+    <description>A cap and headset worn by the military wing of the Chaos Insurgency.</description>
+    <jobString>Making Cap.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1200</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_CiCap>1</Apparel_CiCap>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>		
+
+                  	<!-- ==================================== CI Cap Masked =====================================-->
+  <RecipeDef>
+    <defName>Make_CiCapMasked</defName>
+    <label>make Masked Cap</label>
+    <description>A cap and headset paird with a Balaclava, worn by the military wing of the Chaos Insurgency.</description>
+    <jobString>Making Masked Cap.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1200</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_CiCapMasked>1</Apparel_CiCapMasked>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>			
+	
+                  	<!-- ==================================== CI Military Cap =====================================-->
+  <RecipeDef>
+    <defName>Make_CiMilitaryCap</defName>
+    <label>make Military Cap</label>
+    <description>A Military Cap worn by the Military Wing of the Chaos Insurgency.</description>
+    <jobString>Making Military Cap.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1200</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_CiMilitaryCap>1</Apparel_CiMilitaryCap>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>			
+
+    <!-- ======== HELMET ========= -->	
+	
+        	<!-- ================================== CI Helmet ====================================-->
+  <RecipeDef>
+    <defName>Make_CiHelmet</defName>
+    <label>make CI Helmet</label>
+    <description>A Helmet worn by the Military Wing of the Chaos Insurgency.</description>
+    <jobString>Making Helmet.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>8000</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+	    </ingredients>	  
+	    <products>
+      <Apparel_CiHelmet>1</Apparel_CiHelmet>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>			
+
+            	<!-- ================================== CI Helmet Gasmask ====================================-->
+  <RecipeDef>
+    <defName>Make_CiHelmetGasmask</defName>
+    <label>make CI Helmet Gasmask</label>
+    <description>A Gasmask Helmet worn by the Military Wing of the Chaos Insurgency.</description>
+    <jobString>Making Helmet Gasmask.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>8000</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+	    </ingredients>	  
+	    <products>
+      <Apparel_CiHelmetGasmask>1</Apparel_CiHelmetGasmask>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>				
+	
 </Defs>

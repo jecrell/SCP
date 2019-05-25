@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ================================= FN ==================================== -->
+
+         <!-- ================================= FN FAL ==================================== -->
+
+   <ThingDef ParentName="RNBaseAssaultRifle">
+    <defName>RNGun_FNFALAR</defName>
+    <label>FN FAL</label>
+    <description>The FAL (French: Fusil Automatique Léger, English: Light Automatic Rifle) is a battle rifle designed by Belgian small arms designers Dieudonné Saive and Ernest Vervier and manufactured by FN Herstal.
+
+During the Cold War the FAL was adopted by many countries of the North Atlantic Treaty Organization (NATO), with the notable exception of the United States. It is one of the most widely used rifles in history, having been used by more than 90 countries. Because of its prevalence and widespread usage among the militaries of many NATO and first world countries during the Cold War it was given the title "The right arm of the Free World".</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Rifles/Others/FN_FAL</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	
+	<equippedAngleOffset>40</equippedAngleOffset>
+	
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.59</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.71</AccuracyMedium>
+      <AccuracyLong>0.67</AccuracyLong>
+      <RangedWeapon_Cooldown>1.55</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_762x51mm_LMG</defaultProjectile>
+        <warmupTime>0.95</warmupTime>
+        <range>34.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>RNShotSCARH</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<weaponTags>
+			<!--<li>IndustrialGunAdvanced</li>-->
+			<li>RN_FNFAL</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef> 
+  
+
+</Defs>

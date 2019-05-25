@@ -7,7 +7,7 @@
     <description>.</description>
     <thingClass>Building_WorkTable</thingClass>
     <graphicData>
-      <texPath>Things/Building/Production/TableMachining</texPath>
+      <texPath>Things/Building/Production/GOC_ClothingBench</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(3.5,1.5)</drawSize>
       <damageData>
@@ -41,7 +41,19 @@
     <surfaceType>Item</surfaceType>
     <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
     <recipes>
-      <li>ButcherCorpseMechanoid</li>
+      <li>Make_GocStaff</li>
+	  <li>Make_GocScientist</li>
+	  <li>Make_GocBuisnessSuit</li>
+	  <li>Make_GocSecurityFatigues</li>
+	  <li>Make_GocSTFatigues</li>
+	  <li>Make_GocSecurityArmor</li>
+	  <li>Make_GocSTArmor</li>
+	  <li>Make_GocSecurityBeret</li>
+	  <li>Make_GocSTBoonie</li>
+	  <li>Make_GocSecurityHelmet</li>
+	  <li>Make_GocSTHelmet</li>
+	  <li>Make_GocSTHelmetMasked</li>
+	  <li>Make_GocSTHelmetGasMask</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -77,4 +89,801 @@
     </placeWorkers>
   </ThingDef>
 
+  
+     <!-- ==================================== GOC Staff =====================================-->
+  <RecipeDef>
+    <defName>Make_GocStaff</defName>
+    <label>make Staff clothing</label>
+    <description>Professional office work atire used by a wide variety of roles within a Coalition Base.</description>
+    <jobString>Making Staff clothing.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1500</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>70</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_GocStaff>1</Apparel_GocStaff>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>	
+  
+       <!-- ==================================== GOC Scientist =====================================-->
+  <RecipeDef>
+    <defName>Make_GocScientist</defName>
+    <label>make Scientist clothing</label>
+    <description>Worn by a Scientest/Researcher of the Coalition.</description>
+    <jobString>Making Scientist clothing.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1500</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_GocScientist>1</Apparel_GocScientist>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+
+       <!-- ==================================== GOC Scientist =====================================-->
+  <RecipeDef>
+    <defName>Make_GocBuisnessSuit</defName>
+    <label>make Buisness Suit</label>
+    <description>A Buisness suit sported by higher ups within the Coalition.</description>
+    <jobString>Making Buisness Suit clothing.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1500</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_GocBuisnessSuit>1</Apparel_GocBuisnessSuit>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>	
+
+        <!-- ====================================== GOC Security Fatigues =========================================== -->
+  <RecipeDef>
+    <defName>Make_GocSecurityFatigues</defName>
+    <label>make Security Fatigues</label>
+    <description>Dark Fatigues utilized by Coalition Security Officers.</description>
+    <jobString>Making Security clothing.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1500</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_GocSecurityFatigues>1</Apparel_GocSecurityFatigues>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>	
+
+         	<!-- ====================================== GOC Strike Team Fatigues =========================================== -->
+  <RecipeDef>
+    <defName>Make_GocSTFatigues</defName>
+    <label>make Strike Team Fatigues</label>
+    <description>Military BDU used by the Coalitions Elite Strike Team.</description>
+    <jobString>Making Strike Team Fatigues.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1500</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>80</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_GocSTFatigues>1</Apparel_GocSTFatigues>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>			
+
+  
+
+  <!-- ======== ARMOR ========= -->	
+
+
+          <!-- ======================================= GOC Security Armor =======================================-->
+  <RecipeDef>
+    <defName>Make_GocSecurityArmor</defName>
+    <label>make Security Armor.</label>
+    <description>A light armor used by Coalition Security Officers.</description>
+    <jobString>Making Security Armor.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1500</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>45</count>
+      </li>	  
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+ </ingredients>		  
+	    <products>
+      <Apparel_GocSecurityArmor>1</Apparel_GocSecurityArmor>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>			
+
+
+            <!-- ======================================= GOC Strike Team Armor =======================================-->
+  <RecipeDef>
+    <defName>Make_GocSTArmor</defName>
+    <label>make Strike Team Armor.</label>
+    <description>An armored vest utilized by the elite Coalition Strike Team Operatives.</description>
+    <jobString>Making Strike Team Armor.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>8500</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>29</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>62</count>
+      </li>	  
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>	  	
+ </ingredients>		  
+	    <products>
+      <Apparel_GocSTArmor>1</Apparel_GocSTArmor>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>		
+
+	
+	
+    <!-- ======== HATS ========= -->		
+	
+                	<!-- ==================================== GOC Security Beret =====================================-->
+  <RecipeDef>
+    <defName>Make_GocSecurityBeret</defName>
+    <label>make Security Beret</label>
+    <description>A blue United Nations Beret sported by Global Occult Coalition Security Guards.</description>
+    <jobString>Making Security Beret.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1200</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_GocSecurityBeret>1</Apparel_GocSecurityBeret>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>			
+
+                    	<!-- ==================================== GOC Strike Team Boonie =====================================-->
+  <RecipeDef>
+    <defName>Make_GocSTBoonie</defName>
+    <label>make Strike Team Boonie</label>
+    <description>A dark Boonie used by GOC Strike Team Opperatives.</description>
+    <jobString>Making RCF Backwards Cap.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>8000</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+        <li>Textiles</li>					
+          </categories>
+          <disallowedThingDefs>
+            <li>Leather_Thrumbo</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+      <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+        <li>Textiles</li>		
+      </categories>
+      <disallowedThingDefs>
+          <li>Leather_Thrumbo</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+	    <products>
+      <Apparel_GocSTBoonie>1</Apparel_GocSTBoonie>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>		
+
+   <!-- ======== HELMET ========= -->	
+	
+        	<!-- ================================== GOC Security Helmet ====================================-->
+  <RecipeDef>
+    <defName>Make_GocSecurityHelmet</defName>
+    <label>make Security Helmet</label>
+    <description>A blue United Nations helmet with a GOC Star on the front, used by Global Occult Coalition Security Guards.</description>
+    <jobString>Making Security Helmet.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>8000</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+	    </ingredients>	  
+	    <products>
+      <Apparel_GocSecurityHelmet>1</Apparel_GocSecurityHelmet>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>			
+
+             	<!-- ================================== GOC Strike Team Helmet ====================================-->
+  <RecipeDef>
+    <defName>Make_GocSTHelmet</defName>
+    <label>make Strike Team Helmet</label>
+    <description>A Helmet used by GOC Strike Team Opperatives.</description>
+    <jobString>Making Strike Team Helmet.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1200</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>57</count>
+      </li>	  
+	    </ingredients>
+	    <products>
+      <Apparel_GocSTHelmet>1</Apparel_GocSTHelmet>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>	
+	
+	
+               	<!-- ================================== GOC Strike Team Helmet Masked ====================================-->
+  <RecipeDef>
+    <defName>Make_GocSTHelmetMasked</defName>
+    <label>make Strike Team Helmet Masked</label>
+    <description>A Helmet used by GOC Strike Team Opperatives.</description>
+    <jobString>Making Strike Team Helmet Masked.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1200</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>57</count>
+      </li>	  
+	    </ingredients>
+	    <products>
+      <Apparel_GocSTHelmetMasked>1</Apparel_GocSTHelmetMasked>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>	
+	
+                 	<!-- ================================== GOC Strike Team Helmet Gasmask ====================================-->
+  <RecipeDef>
+    <defName>Make_GocSTHelmetGasMask</defName>
+    <label>make Strike Team Helmet Gasmask</label>
+    <description>A Gasmask and Helmet used by GOC Strike Team Opperatives.</description>
+    <jobString>Making Strike Team Helmet Masked.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1200</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>50</targetCountAdjustment>
+	    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>57</count>
+      </li>	  
+	    </ingredients>
+	    <products>
+      <Apparel_GocSTHelmetGasMask>1</Apparel_GocSTHelmetGasMask>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  <WorkGiverDef>
+        <defName>DoBillsSCPBench</defName>
+        <label>making apparel</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>90</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SCP_TheFoundationBench</li>
+    </fixedBillGiverDefs>
+        <verb>make apparel at</verb>
+        <gerund>making apparel at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>	
+	
 </Defs>

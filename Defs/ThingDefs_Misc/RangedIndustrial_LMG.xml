@@ -293,5 +293,150 @@ The original PK was a development of Kalashnikov's AKM assault rifle and the acc
     </tools>
   </ThingDef> 
  
+       <!-- ================================= FN Minimi ==================================== -->
+  
+	<ThingDef ParentName="RNBaseLMG">
+		<defName>RNGun_FNMinimi</defName>
+		<label>FN Minimi</label>
+		<description>The FN Minimi (short for French: Mini Mitrailleuse; "mini machine gun") is a Belgian 5.56mm Squad Automatic Weapon, or SAW developed by Fabrique Nationale (FN) in Herstal by Ernest Vervier. First introduced in the late 1970s, it is now in service in more than 75 countries.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/LMG/FN_Minimi</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+		<statBases>
+			<WorkToMake>32000</WorkToMake>
+			<Mass>6</Mass>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.37</AccuracyMedium>
+			<AccuracyLong>0.25</AccuracyLong>
+			<RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		
+				<equippedAngleOffset>40</equippedAngleOffset>
+		
+    <verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RNBullet_556x45_Rifle</defaultProjectile>
+				<warmupTime>1.5</warmupTime>
+				<range>25.5</range>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<burstShotCount>8</burstShotCount>
+				<soundCast>RNShotL86LMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<weaponTags>
+			<!--<li>IndustrialGunAdvanced</li>-->
+			<li>RNGun_FNMinimi</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+          <!-- ================================= IWI Negev ==================================== -->
+  
+	<ThingDef ParentName="RNBaseLMG">
+		<defName>RNGun_NegevLMG</defName>
+		<label>IWI Negev</label>
+		<description>The IWI Negev is a gas-operated selective fire light machine gun that uses propellant gases from the barrel to cycle a short-stroke gas piston operating system under the barrel and a rotary bolt locking mechanism. The bolt itself features 4 radial locking lugs that engage the barrel extension and its rotation is controlled by a pin on the bolt body, which rides inside a camming guide machined into the bolt carrier. The bolt contains a spring-powered casing extractor unit, while a lever ejector is housed inside the receiver (it is rotated by the recoiling bolt carrier).
+
+The design was meant to be reliable, especially in adverse conditions. In 1997, it was officially adopted by the Israeli Defense Forces (IDF).</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/LMG/Negev</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+		<statBases>
+			<WorkToMake>33000</WorkToMake>
+			<Mass>7</Mass>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.61</AccuracyShort>
+			<AccuracyMedium>0.39</AccuracyMedium>
+			<AccuracyLong>0.27</AccuracyLong>
+			<RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		
+				<equippedAngleOffset>40</equippedAngleOffset>
+		
+    <verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RNBullet_556x45_Rifle</defaultProjectile>
+				<warmupTime>1.5</warmupTime>
+				<range>25.5</range>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<burstShotCount>8</burstShotCount>
+				<soundCast>RNShotL86LMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<weaponTags>
+			<!--<li>IndustrialGunAdvanced</li>-->
+			<li>RNGun_Negev</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>  
   
 </Defs>

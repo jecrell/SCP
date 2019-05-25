@@ -4,7 +4,7 @@
 
     	<!-- ================================== SCP RCF Helmet ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpRcfHelmet</defName>
     <label>RCF Helmet (SCP) </label>
     <description>A Helmet used by the Foundations' RCF Opperatives, it has a night vision mount and tactical glasses.</description>
@@ -69,7 +69,7 @@
   
              	<!-- ================================== SCP Security Helmet ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpSecurityHelmet</defName>
     <label>Security Helmet (SCP) </label>
     <description>A Masked Helmet with a Visor used by Foundation Security.</description>
@@ -134,7 +134,7 @@
   
       	<!-- ================================== SCP MTF Helmet ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpMtfHelmet</defName>
     <label>MTF Helmet (SCP) </label>
     <description>A Helmet used by the Foundations' Elite Mobile Task Force.</description>
@@ -199,7 +199,7 @@
   
         	<!-- ================================== SCP MTF Helmet Goggles ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpMtfHelmetGoggles</defName>
     <label>MTF Helmet Goggles (SCP) </label>
     <description>A Helmet with goggles used by the Foundations' Elite Mobile Task Force].</description>
@@ -264,7 +264,7 @@
   
           	<!-- ================================== SCP MTF Helmet Visor ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpMtfHelmetVisor</defName>
     <label>MTF Helmet Visor (SCP) </label>
     <description>A Helmet with a Visor used by the Foundations' Elite Mobile Task Force.</description>
@@ -330,7 +330,7 @@
 
         	<!-- ================================== SCP MTF Helmet Masked ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpMtfHelmetMasked</defName>
     <label>MTF Helmet Masked (SCP) </label>
     <description>A Masked Helmet used by the Foundations' Elite Mobile Task Force.</description>
@@ -395,7 +395,7 @@
   
          	<!-- ================================== SCP MTF Helmet Goggles Masked ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpMtfHelmetGogglesMasked</defName>
     <label>MTF Helmet Goggles Masked (SCP) </label>
     <description>A Masked Helmet with Goggles used by the Foundations' Elite Mobile Task Force.</description>
@@ -460,7 +460,7 @@
   
            	<!-- ================================== SCP MTF Helmet Visor Masked ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpMtfHelmetVisorMasked</defName>
     <label>MTF Helmet Visor Masked (SCP) </label>
     <description>A Masked Helmet with a Visor used by the Foundations' Elite Mobile Task Force.</description>
@@ -525,7 +525,7 @@
   
           	<!-- ================================== SCP MTF Helmet Gasmask ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpMtfHelmetGasmask</defName>
     <label>MTF Helmet Gasmask (SCP) </label>
     <description>A Gasmask Helmet used by the Foundations' Elite Mobile Task Force.</description>
@@ -591,7 +591,7 @@
   
             	<!-- ================================== SCP MTF Visor Helmet Gasmask ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpMtfHelmetVisorGasmask</defName>
     <label>MTF Helmet Visor Gasmask (SCP) </label>
     <description>A Gasmask Helmet with a Visor used by the Foundations' Elite Mobile Task Force.</description>
@@ -663,7 +663,7 @@
   
         	<!-- ================================== GOC Security Helmet ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_GocSecurityHelmet</defName>
     <label>Security Helmet (GOC) </label>
     <description>A blue United Nations helmet with a GOC Star on the front, used by Global Occult Coalition Security Guards.</description>
@@ -729,7 +729,7 @@
   
              	<!-- ================================== GOC Strike Team Helmet ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_GocSTHelmet</defName>
     <label>Strike Team Helmet (GOC) </label>
     <description>A Helmet used by GOC Strike Team Opperatives.</description>
@@ -794,7 +794,7 @@
   
                	<!-- ================================== GOC Strike Team Helmet Masked ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_GocSTHelmetMasked</defName>
     <label>Strike Team Helmet Masked (GOC) </label>
     <description>A Masked Helmet used by GOC Strike Team Opperatives.</description>
@@ -859,7 +859,7 @@
   
                  	<!-- ================================== GOC Strike Team Helmet Gasmask ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_GocSTHelmetGasMask</defName>
     <label>Strike Team Helmet Gasmask (GOC) </label>
     <description>A Gasmask and Helmet used by GOC Strike Team Opperatives.</description>
@@ -929,7 +929,7 @@
   
         	<!-- ================================== CI Helmet ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_CiHelmet</defName>
     <label>Helmet (CI) </label>
     <description>A Helmet worn by the Military Wing of the Chaos Insurgency.</description>
@@ -993,7 +993,7 @@
   
             	<!-- ================================== CI Helmet Gasmask ====================================-->
   
-      <ThingDef ParentName="ArmorHelmetMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_CiHelmetGasmask</defName>
     <label>Helmet Gasmask (CI) </label>
     <description>A Gasmask Helmet worn by the Military Wing of the Chaos Insurgency.</description>

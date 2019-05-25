@@ -5,7 +5,7 @@
 
 
               	<!-- ==================================== SCP RCF Cap =====================================-->
-  <ThingDef ParentName="HatMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpRcfFrontCap</defName>
     <label>RCF Cap (SCP) </label>
     <description>A multicam cap utilized by Rapid Containment Force opperatives</description>
@@ -51,7 +51,7 @@
   </ThingDef>
   
                	<!-- ==================================== SCP RCF Backwards Cap =====================================-->
-  <ThingDef ParentName="HatMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpRcfBackCap</defName>
     <label>RCF Backwards Cap (SCP) </label>
     <description>A multicam cap utilized by Rapid Containment Force opperatives</description>
@@ -102,7 +102,7 @@
   
   
                 	<!-- ==================================== GOC Security Beret =====================================-->
-  <ThingDef ParentName="HatMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_GocSecurityBeret</defName>
     <label>Security Beret (GOC) </label>
     <description>A blue United Nations Beret sported by Global Occult Coalition Security Guards.</description>
@@ -148,7 +148,7 @@
   </ThingDef>
   
                     	<!-- ==================================== GOC Strike Team Boonie =====================================-->
-  <ThingDef ParentName="HatMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_GocSTBoonie</defName>
     <label>Strike Team Boonie (GOC) </label>
     <description>A dark Boonie used by GOC Strike Team Opperatives.</description>
@@ -196,7 +196,7 @@
     <!-- ======== CHAOS INSURGENCY =========-->
   
                     	<!-- ==================================== CI Toque =====================================-->
-  <ThingDef ParentName="HatMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_CiToque</defName>
     <label>Toque (CI) </label>
     <description>A Toque worn by the military wing of the Chaos Insurgency.</description>
@@ -240,7 +240,7 @@
   </ThingDef>
   
                     	<!-- ==================================== CI Masked Headset =====================================-->
-  <ThingDef ParentName="HatMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_CiMaskedHeadset</defName>
     <label>Masked Headset (CI) </label>
     <description>A mask and headset worn by the military wing of the Chaos Insurgency.</description>
@@ -286,7 +286,7 @@
   
   
                 	<!-- ==================================== CI Cap =====================================-->
-  <ThingDef ParentName="HatMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_CiCap</defName>
     <label>Cap (CI) </label>
     <description>A cap and headset worn by the military wing of the Chaos Insurgency.</description>
@@ -331,7 +331,7 @@
   </ThingDef>
   
                   	<!-- ==================================== CI Cap Masked =====================================-->
-  <ThingDef ParentName="HatMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_CiCapMasked</defName>
     <label>Masked Cap (CI) </label>
     <description>A cap and headset paird with a Balaclava, worn by the military wing of the Chaos Insurgency.</description>
@@ -376,7 +376,7 @@
   </ThingDef>
   
                   	<!-- ==================================== CI Military Cap =====================================-->
-  <ThingDef ParentName="HatMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_CiMilitaryCap</defName>
     <label>Military Cap (CI) </label>
     <description>A Military Cap worn by the Military Wing of the Chaos Insurgency.</description>

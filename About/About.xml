@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ModMetaData>
-	<name>[Ods] SCP Early Access (READ DESC)</name>
+	<name>[Ods] SCP</name>
 	<author>Odstriman</author>
 	<url></url>
     <supportedVersions>
         <li>1.0</li>
     </supportedVersions>
-    <description>Early access? is that the right term? im not sure. But yeah, not even close to being done</description>
+    <description>Early access</description>
 </ModMetaData>

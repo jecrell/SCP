@@ -5,7 +5,7 @@
   
            <!-- ======================================= SCP Facility Security Armor =======================================-->
   
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpSecurityArmor</defName>
     <label>Security Armor (SCP) </label>
     <description>A light Armored Vest used by Facility Security Forces.</description>
@@ -69,7 +69,7 @@
   
         <!-- ======================================= SCP RCF Body Armor =======================================-->
   
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpRcfBodyArmor</defName>
     <label>RCF Body Armor (SCP) </label>
     <description>A light armored vest utilized by the Rapid Containment Force.</description>
@@ -133,7 +133,7 @@
   
           <!-- ======================================= SCP MTF Body Armor =======================================-->
   
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpMtfBodyArmor</defName>
     <label>MTF Body Armor (SCP) </label>
     <description>An armored vest utilized by the foundations elite Mobile Task Force.</description>
@@ -201,7 +201,7 @@
   
           <!-- ======================================= GOC Security Armor =======================================-->
   
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_GocSecurityArmor</defName>
     <label>Security Armor (GOC) </label>
     <description>A light armor used by Coalition Security Officers.</description>
@@ -264,7 +264,7 @@
   
             <!-- ======================================= GOC Strike Team Armor =======================================-->
   
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_GocSTArmor</defName>
     <label>Strike Team Armor (GOC) </label>
     <description>An armored vest utilized by the elite Coalition Strike Team Operatives.</description>
@@ -330,7 +330,7 @@
 
           <!-- ======================================= CI Body Armor1 =======================================-->
   
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_CiBodyArmorOne</defName>
     <label>Body Armor 1 (CI) </label>
     <description>An armored vest worn by the Military Wing of the Chaos Insurgency.</description>
@@ -393,7 +393,7 @@
   
             <!-- ======================================= CI Body Armor2 =======================================-->
   
- <ThingDef ParentName="ApparelMakeableBase">
+ <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_CiBodyArmorTwo</defName>
     <label>Body Armor 2 (CI) </label>
     <description>A light Armored Vest worn by the Military Wing of the Chaos Insurgency.</description>

@@ -75,4 +75,149 @@ In 1964, the M16 entered U.S. military service and the following year was deploy
     </tools>
   </ThingDef> 
 
+        <!-- ================================= M27 IAR SD ==================================== -->
+
+   <ThingDef ParentName="RNBaseARStyle">
+    <defName>RNGun_M27IAR_SD</defName>
+    <label>M27 IAR SD</label>
+    <description>The M27 Infantry Automatic Rifle (IAR) is a lightweight, magazine-fed 5.56mm, select-fire weapon based on the Heckler and Koch HK416. It is used by the United States Marine Corps and is intended to enhance an automatic rifleman's maneuverability.
+	
+ In December 2017, the Marine Corps revealed a decision to equip every Marine in an infantry squad with the M27.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Rifles/AR-15/M27/M27_IAR_SD</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	
+	<equippedAngleOffset>40</equippedAngleOffset>		
+	
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.62</AccuracyTouch>
+      <AccuracyShort>0.72</AccuracyShort>
+      <AccuracyMedium>0.68</AccuracyMedium>
+      <AccuracyLong>0.58</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_556x45_Rifle</defaultProjectile>
+        <warmupTime>0.85</warmupTime>
+        <range>36.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>RNShot_SDAR_III</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<weaponTags>
+			<!--<li>IndustrialGunAdvanced</li>-->
+			<li>RN_M27IARSD</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef> 
+  
+         <!-- ================================= HK416 Elite ==================================== -->
+
+   <ThingDef ParentName="RNBaseARStyle">
+    <defName>RNGun_HK416Elite</defName>
+    <label>HK416 Elite</label>
+    <description>The Heckler and Koch HK416 is an assault rifle designed and manufactured by Heckler and Koch. Although its design is in large part based on the AR-15 class of weapons, specifically the Colt M4 carbine family issued to the U.S. military, it uses an HK-proprietary short-stroke gas piston system originally derived from the ArmaLite AR-18 (the same system was also used in Heckler and Koch's earlier G36 family of rifles). 
+
+It is the standard assault rifle of the French Armed Forces and Norwegian Armed Forces, and was the weapon used by SEAL Team Six to kill Osama Bin Laden in 2011.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Rifles/AR-15/HK416/HK416_Elite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.67</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.55</AccuracyLong>
+      <RangedWeapon_Cooldown>1.75</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_556x45_Rifle</defaultProjectile>
+        <warmupTime>0.95</warmupTime>
+        <range>35.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <soundCast>RNShot_GenericAR</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<weaponTags>
+			<!--<li>IndustrialGunAdvanced</li>-->
+			<li>RN_HK416Elite</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
 </Defs>

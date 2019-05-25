@@ -9,7 +9,9 @@
     <requiredCountAtGameStart>0</requiredCountAtGameStart>
     <!-- START Custom Code from SCP.FactionDef -->
     <representativeKind>SCP_Representative</representativeKind>
-    <representativeMessage>Attention occupants,\nWe are the SCP Foundation.\n...\nWill you accept?</representativeMessage>
+    <representativeMessage>'Attention Occupants,we are the SCP Foundation. We are dedicated to the Containment and Study of Anomalous entities. Will you accept an invitation to join our Faction?' The Representative asks.
+
+As a reward they will let you keep the SCP's.</representativeMessage>
     <acceptWorker>SCP.AcceptWorker_KeepSCP</acceptWorker>
     <acceptMessages>
       <li>The SCP remains at your location under your custody.</li>
@@ -100,19 +102,19 @@
         <!-- Normal fights, standard mix -->
         <kindDef>Combat</kindDef>
         <options>
-					<SCP_MTFSoldier_CQB>15</SCP_MTFSoldier_CQB>
-					<SCP_MTFSoldier_Assault>10</SCP_MTFSoldier_Assault>
-					<SCP_MTFSoldier_Gunner>8</SCP_MTFSoldier_Gunner>
-					<SCP_MTFSoldier_Sniper>5</SCP_MTFSoldier_Sniper>
+					<SCP_MTFSoldier_CQB>10</SCP_MTFSoldier_CQB>
+					<SCP_MTFSoldier_Assault>15</SCP_MTFSoldier_Assault>
+					<SCP_MTFSoldier_Gunner>4</SCP_MTFSoldier_Gunner>
+					<SCP_MTFSoldier_Sniper>3</SCP_MTFSoldier_Sniper>
         </options>
       </li>
       <li>
         <kindDef>Peaceful</kindDef>
         <options>
           <SCP_MTFSoldier_Assault>10</SCP_MTFSoldier_Assault>
-		  <SCP_MTFSoldier_CQB>10</SCP_MTFSoldier_CQB>
-          <SCP_Representative>5</SCP_Representative>
-		  <SCP_Scientest>5</SCP_Scientest>
+		  <SCP_MTFSoldier_CQB>5</SCP_MTFSoldier_CQB>
+          <SCP_Representative>3</SCP_Representative>
+		  <SCP_Scientist>3</SCP_Scientist>
         </options>
       </li>
       <li>
@@ -133,12 +135,13 @@
       <li>
         <kindDef>Settlement</kindDef>
         <options>
-					<SCP_SecuritySoldier>15</SCP_SecuritySoldier>
+					<SCP_SecuritySoldier>20</SCP_SecuritySoldier>
           <SCP_RCFSoldier_CQB>5</SCP_RCFSoldier_CQB>
-          <SCP_RCFSoldier_Assault>8</SCP_RCFSoldier_Assault>
-					<SCP_RCFSoldier_Sniper>5</SCP_RCFSoldier_Sniper>
+          <SCP_RCFSoldier_Assault>10</SCP_RCFSoldier_Assault>
+					<SCP_RCFSoldier_Sniper>2</SCP_RCFSoldier_Sniper>
           <SCP_FacilityStaff>1</SCP_FacilityStaff>
-          <SCP_Scientest>1</SCP_Scientest>
+          <SCP_Scientist>1</SCP_Scientist>
+          <SCP_Administrator>1</SCP_Administrator>		  
         </options>
       </li>
     </pawnGroupMakers>

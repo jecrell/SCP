@@ -15,6 +15,7 @@
   <PawnKindDef ParentName="CIPersonnelBase">
     <defName>SCP_CIDeltaCommander</defName>
     <label>Delta Commander</label>
+    <factionLeader>true</factionLeader>	
     <labelPlural>Delta Commanders</labelPlural>
     <combatPower>40</combatPower>
     <minGenerationAge>30</minGenerationAge>
@@ -61,7 +62,6 @@
     </apparelTags>
     <apparelRequired>
       <li>Apparel_CiOpperative</li>
-	  <li>Apparel_CiToque</li>
     </apparelRequired>
 	    <weaponMoney>
       <min>570</min>

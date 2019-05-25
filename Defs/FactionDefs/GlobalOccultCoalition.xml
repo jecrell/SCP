@@ -9,7 +9,9 @@
     <requiredCountAtGameStart>0</requiredCountAtGameStart>
     <!-- START Custom Code from SCP.FactionDef -->
     <representativeKind>SCP_GOCRepresentative</representativeKind>
-    <representativeMessage>Attention occupants,\nWe are the Global Occult Coalition.\n...\nWill you accept?</representativeMessage>
+    <representativeMessage>'Greetings Colonists,we are the Global Occult Coalition. We are dedicated to the protection of humanity and the destruction of any Supernatural Anomalies. Will you join us?' The Representative asks.
+	
+As a reward they will help you finish whatever research you are working on in exchange for the SCP's.</representativeMessage>
     <acceptWorker>SCP.AcceptWorker_TerminateSCP</acceptWorker>
     <acceptMessages>
       <li>The SCP have been removed from your location.</li>
@@ -40,8 +42,7 @@
     -->
     <!-- END -->
     <colorSpectrum>
-      <li>(0.35, 0.30, 0.60)</li>
-      <li>(0.45, 0.40, 0.90)</li>
+ <li>(255,255,255)</li>
     </colorSpectrum>
     <startingGoodwill>
       <min>0</min>
@@ -60,13 +61,13 @@
     <canMakeRandomly>true</canMakeRandomly>
     <canSiege>true</canSiege>
     <canStageAttacks>true</canStageAttacks>
-    <leaderTitle>Under-Secretary General</leaderTitle>
-    <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
-		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
-		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <leaderTitle>Secretary General</leaderTitle>
+    <expandingIconTexture>World/GOCLogo</expandingIconTexture>
+		<!--<factionNameMaker>NamerFactionOutlander</factionNameMaker>-->
+		<settlementNameMaker>SCP_NamerCIOutpost</settlementNameMaker>
 		<techLevel>Industrial</techLevel>
 		<backstoryCategories>
-			<li>Civil</li>
+			<li>Raider</li>
 		</backstoryCategories>
 		<geneticVariance>0.8</geneticVariance>
 		<hairTags>
@@ -102,27 +103,24 @@
         <!-- Normal fights, standard mix -->
         <kindDef>Combat</kindDef>
         <options>
-					<Villager>5</Villager>
-          <Town_Guard>10</Town_Guard>
-          <Grenadier_Destructive>1.5</Grenadier_Destructive>
-					<Mercenary_Slasher>7</Mercenary_Slasher>
-					<Mercenary_Gunner>10</Mercenary_Gunner>
-					<Mercenary_Elite>10</Mercenary_Elite>
-          <Town_Councilman>10</Town_Councilman>
+          <SCP_GOCSTSoldier_CQB>10</SCP_GOCSTSoldier_CQB>
+					<SCP_GOCSTSoldier_Assault>15</SCP_GOCSTSoldier_Assault>
+					<SCP_GOCSTSoldier_Gunner>5</SCP_GOCSTSoldier_Gunner>
+					<SCP_GOCSTSoldier_Sniper>1</SCP_GOCSTSoldier_Sniper>
         </options>
       </li>
       <li>
         <kindDef>Peaceful</kindDef>
         <options>
-          <Villager>20</Villager>
-          <Town_Guard>10</Town_Guard>
-          <Town_Councilman>10</Town_Councilman>
+          <SCP_GOCSecuritySoldier>20</SCP_GOCSecuritySoldier>
+          <SCP_GOCSTSoldier_Assault>10</SCP_GOCSTSoldier_Assault>
+          <SCP_GOCRepresentative>5</SCP_GOCRepresentative>
         </options>
       </li>
       <li>
         <kindDef>Trader</kindDef>
         <traders>
-          <Town_Trader>1</Town_Trader>
+          <SCP_GOCTrader>1</SCP_GOCTrader>
         </traders>
         <carriers>
           <Muffalo>6</Muffalo>
@@ -131,24 +129,19 @@
           <Elephant>1</Elephant>
         </carriers>
         <guards>
-          <Villager>3</Villager>
-          <Town_Guard>10</Town_Guard>
-          <Grenadier_Destructive>1.5</Grenadier_Destructive>
-          <Mercenary_Slasher>7</Mercenary_Slasher>
-          <Mercenary_Gunner>10</Mercenary_Gunner>
-					<Mercenary_Elite>10</Mercenary_Elite>
+          <SCP_GOCSecuritySoldier>20</SCP_GOCSecuritySoldier>
 				</guards>
       </li>
       <li>
         <kindDef>Settlement</kindDef>
         <options>
-					<Villager>10</Villager>
-          <Town_Guard>10</Town_Guard>
-          <Grenadier_Destructive>1.5</Grenadier_Destructive>
-					<Mercenary_Slasher>7</Mercenary_Slasher>
-          <Mercenary_Gunner>10</Mercenary_Gunner>
-          <Mercenary_Elite>10</Mercenary_Elite>
-          <Town_Councilman>10</Town_Councilman>
+		  <SCP_GOCSecuritySoldier>20</SCP_GOCSecuritySoldier>
+          <SCP_GOCStaff>1.5</SCP_GOCStaff>
+          <SCP_GOCScientist>1</SCP_GOCScientist>
+		  <SCP_GOCSTSoldier_Assault>4</SCP_GOCSTSoldier_Assault>
+		  <SCP_GOCSTSoldier_Gunner>3</SCP_GOCSTSoldier_Gunner>
+		  <SCP_GOCSTSoldier_Sniper>2</SCP_GOCSTSoldier_Sniper>
+		  <SCP_GOCSecretaryGeneral>1</SCP_GOCSecretaryGeneral>		  		  
         </options>
       </li>
     </pawnGroupMakers>

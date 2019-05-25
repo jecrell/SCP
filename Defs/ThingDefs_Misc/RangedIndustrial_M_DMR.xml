@@ -209,4 +209,74 @@ The Dragunov was designed as a squad support weapon since, according to Soviet a
     </weaponTags>
   </ThingDef>
   
+   <!-- ================================= AS50 ==================================== -->
+
+  <ThingDef ParentName="RNBaseAMR">
+    <defName>RNGun_AS50AMR</defName>
+    <label>AS50</label>
+    <description>The AS50 is a .50 BMG sniper/anti-materiel rifle manufactured by British firearms producer Accuracy International. The AS50 enables operators to engage targets at very long range with high accuracy using explosive or incendiary ammunition. 
+	
+The AS50 employs a gas operated semi-automatic action and muzzle brake, allowing for lower recoil than the AW50 bolt-action rifle and faster target acquisition.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/M_Semi_Auto/AS50</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+	<equippedAngleOffset>40</equippedAngleOffset>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.71</AccuracyShort>
+      <AccuracyMedium>0.89</AccuracyMedium>
+      <AccuracyLong>0.92</AccuracyLong>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_50BMG_Sniper</defaultProjectile>
+        <warmupTime>4.0</warmupTime>
+        <range>51.9</range>
+        <soundCast>RNShot50Cal</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags Inherit="False">
+      <!--<li>SniperRifle</li>-->
+	  <li>RN_AS50</li>
+    </weaponTags>
+  </ThingDef> 
+  
 </Defs>

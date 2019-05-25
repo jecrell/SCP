@@ -9,7 +9,9 @@
     <requiredCountAtGameStart>0</requiredCountAtGameStart>
     <!-- START Custom Code from SCP.FactionDef -->
     <representativeKind>SCP_CIRepresentative</representativeKind>
-    <representativeMessage>Attention occupants,\nWe are the Chaos Insurgency.\n...\nWill you accept?</representativeMessage>
+    <representativeMessage>'Attention, We are the Chaos Insurgency. All you need to know is we want to help humanity, to build a brighter future for everyone. We extend our hand to you. Join us.' The Representative speaks.
+
+As a reward they will pay you for the SCP's.</representativeMessage>
     <acceptWorker>SCP.AcceptWorker_PayForSCP</acceptWorker>
     <acceptMessages>
       <li>The SCP have been removed from your location.</li>
@@ -107,10 +109,10 @@
         <!-- Normal fights, standard mix -->
         <kindDef>Combat</kindDef>
         <options>
-					<SCP_CISoldier_CQB>18</SCP_CISoldier_CQB>
+					<SCP_CISoldier_CQB>10</SCP_CISoldier_CQB>
 					<SCP_CISoldier_Assault>15</SCP_CISoldier_Assault>
-					<SCP_CISoldier_Sniper>5</SCP_CISoldier_Sniper>
-          <SCP_CISoldier_Gunner>8</SCP_CISoldier_Gunner>
+					<SCP_CISoldier_Sniper>3</SCP_CISoldier_Sniper>
+          <SCP_CISoldier_Gunner>4</SCP_CISoldier_Gunner>
         </options>
       </li>
       <li>
@@ -145,6 +147,7 @@
 					<SCP_CISoldier_Assault>15</SCP_CISoldier_Assault>
           <SCP_CISoldier_Gunner>7</SCP_CISoldier_Gunner>
           <SCP_CISoldier_Sniper>5</SCP_CISoldier_Sniper>
+          <SCP_CIDeltaCommander>1</SCP_CIDeltaCommander>		  
         </options>
       </li>
     </pawnGroupMakers>

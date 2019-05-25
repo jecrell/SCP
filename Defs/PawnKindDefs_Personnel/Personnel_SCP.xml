@@ -17,6 +17,7 @@
   <PawnKindDef ParentName="SCPPersonnelBase">
     <defName>SCP_Administrator</defName>
     <label>Foundation Administrator</label>
+    <factionLeader>true</factionLeader>	
     <labelPlural>Administrators</labelPlural>
     <combatPower>40</combatPower>
     <minGenerationAge>30</minGenerationAge>
@@ -148,9 +149,9 @@
   
           <!-- SCIENTIST -->
       <PawnKindDef ParentName="SCPPersonnelBase">
-    <defName>SCP_Scientest</defName>
-    <label>foundation scientest</label>
-    <labelPlural>scientest</labelPlural>
+    <defName>SCP_Scientist</defName>
+    <label>foundation scientist</label>
+    <labelPlural>scientists</labelPlural>
     <combatPower>40</combatPower>
     <minGenerationAge>30</minGenerationAge>
     <isFighter>false</isFighter>
@@ -261,7 +262,6 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RN_KRISSVector</li>
-	  <li>RN_Glock17HRT</li>
 	  <li>RN_Mossberg500</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
@@ -301,7 +301,6 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RN_M16A4_MilSpec</li>
-	  <li>RN_AUG_A2</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -394,7 +393,6 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RN_MP5A2HRT</li>
-	  <li>RN_UMP45HRT</li>
 	  <li>RN_Remington870HRT</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
@@ -462,7 +460,7 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RN_M4A1HRT</li>
-	  <li>RN_G36CHRT</li>
+	  <li>RN_M27IARSD</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
