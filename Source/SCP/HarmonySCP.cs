@@ -21,6 +21,11 @@ namespace SCP
         {
             var harmony = HarmonyInstance.Create("rimworld.scp");
             harmony.Patch(AccessTools.Method(typeof(GenSpawn), "Spawn", new Type[] { typeof(Thing), typeof(IntVec3), typeof(Map), typeof(Rot4), typeof(WipeMode), typeof(bool) }), new HarmonyMethod(typeof(HarmonyPatches), nameof(SCP_SpawnCheck)), null);
+            harmony.Patch(AccessTools.Method(typeof(PawnGenerator), "GeneratePawn", new Type[] { typeof(PawnGenerationRequest) }), new HarmonyMethod(typeof(HarmonyPatches), nameof(SCP_GeneratePawnCheck)), null);
+
+            //public static bool GeneratePawn(PawnGenerationRequest request, ref Pawn __result)
+            //{
+
             harmony.Patch(AccessTools.Method(typeof(FloatMenuMakerMap), "AddHumanlikeOrders"),
                 null, new HarmonyMethod(typeof(HarmonyPatches), nameof(AddHumanlikeOrders)));
             harmony.Patch(AccessTools.Method(typeof(PawnRenderer), "RenderPawnAt", new[] { typeof(Vector3), typeof(RotDrawMode), typeof(bool) }),
@@ -241,16 +246,32 @@ namespace SCP
             Graphics.DrawMesh(mesh, drawPos, Quaternion.identity, material, 0);
         }
 
-        public static bool SCP_SpawnCheck(Thing newThing, IntVec3 loc, Map map, Rot4 rot, WipeMode wipeMode, bool respawningAfterLoad)
+        public static bool SCP_GeneratePawnCheck(PawnGenerationRequest request, ref Pawn __result)
         {
-            if (newThing is Pawn newPawn && newPawn.kindDef is CustomPawnKindDef newPkd && newPkd.isUnique)
+            if (request.KindDef is CustomPawnKindDef newPkd && newPkd.isUnique)
             {
                 //SCPs should not be spawned as mechanoids in shrines.
                 //Spawn lancers instead.
-                if (Find.TickManager.TicksGame < 500)
+                if (Find.TickManager.TicksGame < (int)(DefDatabase<DevSettings>.AllDefs.First().daysUntilSCPArrival.min * GenDate.TicksPerDay))
+                {
+                    __result = PawnGenerator.GeneratePawn(CustomPawnKindDef.Named("Mech_Lancer"));
+                    Log.Message("Attempted to spawn unique pawn before SCP arrival in dev settings. Spawning mech lancer instead.");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool SCP_SpawnCheck(Thing newThing, IntVec3 loc, Map map, Rot4 rot, WipeMode wipeMode, bool respawningAfterLoad)
+        {
+            if (newThing is SCP newPawn && newPawn.kindDef is CustomPawnKindDef newPkd && newPkd.isUnique)
+            {
+                //SCPs should not be spawned as mechanoids in shrines.
+                //Spawn lancers instead.
+                if (Find.TickManager.TicksGame < 500) //(int)(DefDatabase<DevSettings>.AllDefs.First().daysUntilSCPArrival.min * GenDate.TicksPerDay))
                 {
                     newThing = PawnGenerator.GeneratePawn(CustomPawnKindDef.Named("Mech_Lancer"));
-                    //Log.Message(newPkd.label + " attempted to spawn before gamestart. Denied");
+                    Log.Message(newPkd.label + " attempted to spawn before arrival time in dev settings. Denied");
                     return true;
                 }
 
