@@ -45,6 +45,13 @@ namespace SCP
 
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch).FailOnSomeonePhysicallyInteracting(TargetIndex.A);
             yield return Toils_Construct.UninstallIfMinifiable(TargetIndex.A).FailOnSomeonePhysicallyInteracting(TargetIndex.A);
+            yield return new Toil
+            {
+                initAction = delegate
+                {
+                    Find.World.GetComponent<WorldComponent_UniqueTracker>().uniquePawns.RemoveAll(x => x == Takee);
+                }
+            };
             yield return Toils_Haul.StartCarryThing(TargetIndex.A);
             yield return Toils_Goto.GotoCell(TargetIndex.B, PathEndMode.ClosestTouch);
             Toil droppingTime = new Toil()
@@ -57,7 +64,6 @@ namespace SCP
             {
                 this.customString = "SCP_SCPDropping".Translate(this.Takee.LabelShort
                     );
-                Find.World.GetComponent<WorldComponent_UniqueTracker>().uniquePawns.RemoveAll(x => x == Takee);
             };
             yield return droppingTime;
             yield return new Toil
