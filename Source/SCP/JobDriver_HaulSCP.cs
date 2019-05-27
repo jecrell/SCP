@@ -57,6 +57,7 @@ namespace SCP
             {
                 this.customString = "SCP_SCPDropping".Translate(this.Takee.LabelShort
                     );
+                Find.World.GetComponent<WorldComponent_UniqueTracker>().uniquePawns.RemoveAll(x => x == Takee);
             };
             yield return droppingTime;
             yield return new Toil
