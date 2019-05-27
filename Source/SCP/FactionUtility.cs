@@ -75,6 +75,7 @@ namespace SCP
             }
             Faction faction = FactionGenerator.NewGeneratedFaction(newFaction);
             Find.FactionManager.Add(faction);
+            faction.GenerateNewLeader();
             return faction;
         }
 

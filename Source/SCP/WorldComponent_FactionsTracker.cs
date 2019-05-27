@@ -99,7 +99,7 @@ namespace SCP
                         s.AppendLine("SCP_Hostilities".Translate(hFac.Name, Faction.OfPlayer.Name));
                     }
                 }
-                Log.Message("7");
+                //Log.Message("7");
                 foreach (var f in facs)
                 {
                     //Log.Message("7a");
