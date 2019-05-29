@@ -109,10 +109,11 @@ As a reward they will pay you for the SCP's.</representativeMessage>
         <!-- Normal fights, standard mix -->
         <kindDef>Combat</kindDef>
         <options>
-					<SCP_CISoldier_CQB>10</SCP_CISoldier_CQB>
-					<SCP_CISoldier_Assault>15</SCP_CISoldier_Assault>
-					<SCP_CISoldier_Sniper>3</SCP_CISoldier_Sniper>
-          <SCP_CISoldier_Gunner>4</SCP_CISoldier_Gunner>
+					<SCP_CISoldier_CQB>1000</SCP_CISoldier_CQB>
+					<SCP_CISoldier_Assault>1500</SCP_CISoldier_Assault>
+					<SCP_CISoldier_Sniper>300</SCP_CISoldier_Sniper>
+          <SCP_CISoldier_Gunner>400</SCP_CISoldier_Gunner>
+          <SCP_CIDeltaCommander>1</SCP_CIDeltaCommander>
         </options>
       </li>
       <li>

@@ -103,10 +103,11 @@ As a reward they will help you finish whatever research you are working on in ex
         <!-- Normal fights, standard mix -->
         <kindDef>Combat</kindDef>
         <options>
-          <SCP_GOCSTSoldier_CQB>10</SCP_GOCSTSoldier_CQB>
-					<SCP_GOCSTSoldier_Assault>15</SCP_GOCSTSoldier_Assault>
-					<SCP_GOCSTSoldier_Gunner>5</SCP_GOCSTSoldier_Gunner>
-					<SCP_GOCSTSoldier_Sniper>1</SCP_GOCSTSoldier_Sniper>
+          <SCP_GOCSTSoldier_CQB>1000</SCP_GOCSTSoldier_CQB>
+					<SCP_GOCSTSoldier_Assault>1500</SCP_GOCSTSoldier_Assault>
+					<SCP_GOCSTSoldier_Gunner>500</SCP_GOCSTSoldier_Gunner>
+					<SCP_GOCSTSoldier_Sniper>100</SCP_GOCSTSoldier_Sniper>
+		  <SCP_GOCSecretaryGeneral>1</SCP_GOCSecretaryGeneral>		  
         </options>
       </li>
       <li>

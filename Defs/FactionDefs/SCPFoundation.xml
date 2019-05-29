@@ -102,10 +102,11 @@ As a reward they will let you keep the SCP's.</representativeMessage>
         <!-- Normal fights, standard mix -->
         <kindDef>Combat</kindDef>
         <options>
-					<SCP_MTFSoldier_CQB>10</SCP_MTFSoldier_CQB>
-					<SCP_MTFSoldier_Assault>15</SCP_MTFSoldier_Assault>
-					<SCP_MTFSoldier_Gunner>4</SCP_MTFSoldier_Gunner>
-					<SCP_MTFSoldier_Sniper>3</SCP_MTFSoldier_Sniper>
+					<SCP_MTFSoldier_CQB>1000</SCP_MTFSoldier_CQB>
+					<SCP_MTFSoldier_Assault>1500</SCP_MTFSoldier_Assault>
+					<SCP_MTFSoldier_Gunner>400</SCP_MTFSoldier_Gunner>
+					<SCP_MTFSoldier_Sniper>300</SCP_MTFSoldier_Sniper>
+          <SCP_Administrator>1</SCP_Administrator>	          
         </options>
       </li>
       <li>

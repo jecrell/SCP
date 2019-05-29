@@ -138,7 +138,7 @@ namespace SCP
             devSettings = DefDatabase<DevSettings>.AllDefs.First();        
             numOfSCPFactions = DefDatabase<CustomFactionDef>.AllDefsListForReading.Count();
             ticksUntilSCPArrival = Find.TickManager.TicksGame + GetInitialSCPArrivalTime;
-            Log.Message($"Ticks until SCP arrival: {ticksUntilSCPArrival}");
+            //Log.Message($"Ticks until SCP arrival: {ticksUntilSCPArrival}");
 
             //ticksUntilHostilities = Find.TickManager.TicksGame + GetTimeUntilHostilities;
 

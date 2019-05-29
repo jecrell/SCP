@@ -74,8 +74,16 @@ namespace SCP
                 return null;
             }
             Faction faction = FactionGenerator.NewGeneratedFaction(newFaction);
-            Find.FactionManager.Add(faction);
             faction.GenerateNewLeader();
+            if (faction.leader != null)
+            {
+                //Log.Message($"{faction.Name} {faction.def.leaderTitle}, {faction.leader.Name} now exists.");
+            }
+            else
+            {
+                Log.Error($"{faction.Name} {faction.def.leaderTitle} failed to generate.");
+            }
+            Find.FactionManager.Add(faction);
             return faction;
         }
 
