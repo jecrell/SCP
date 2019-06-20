@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Verse;
+using Verse.AI.Group;
 
 namespace SCP
 {
     public class Dialog_WithRepresentative : Dialog_MessageBox
     {
+        public void NotifyAllRepresentativesToLeave()
+        {
+            var representatives = Find.World.GetComponent<WorldComponent_FactionsTracker>().activeRepresentatives;
+            foreach (var representative in representatives)
+                LordUtility.GetLord(representative).ReceiveMemo("GetOutOfDodge");
+        }
+
         public Dialog_WithRepresentative(Pawn representative,
             CustomFactionDef factionDef) : base(factionDef.representativeMessage)
         {
@@ -24,12 +32,14 @@ namespace SCP
                     factionDef.AcceptWorker.PostAccept(representative);
 
                     var factionsTracker = Find.World.GetComponent<WorldComponent_FactionsTracker>();
+                    var faction = representative.Faction;
                     if (factionsTracker.activeRepresentatives.Contains(representative))
                     {
                         factionsTracker.activeRepresentatives.Clear();
                         factionsTracker.activeRepresentatives = new List<Pawn>();
                         factionsTracker.joinedFactionDef = (CustomFactionDef)representative.Faction.def;
                     }
+                    NotifyAllRepresentativesToLeave();
                 }
             });
             this.buttonCText = "No".Translate();
@@ -40,6 +50,7 @@ namespace SCP
                 var factionsTracker = Find.World.GetComponent<WorldComponent_FactionsTracker>();
                 if (factionsTracker.activeRepresentatives.Contains(representative))
                     factionsTracker.activeRepresentatives.Remove(representative);
+                NotifyAllRepresentativesToLeave();
             });
             this.title = "SCP_Proposal".Translate(factionDef.LabelCap);
 
@@ -50,6 +61,8 @@ namespace SCP
                 var factionsTracker = Find.World.GetComponent<WorldComponent_FactionsTracker>();
                 if (factionsTracker.activeRepresentatives.Contains(representative))
                         factionsTracker.activeRepresentatives.Remove(representative);
+
+                NotifyAllRepresentativesToLeave();
             });
             this.cancelAction = () => factionDef.AcceptWorker.PostIgnore(representative);
             if (buttonAText.NullOrEmpty())

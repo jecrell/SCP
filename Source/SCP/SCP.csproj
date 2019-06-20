@@ -62,6 +62,7 @@
     <Compile Include="JobDriver_TalkWithRepresentative.cs" />
     <Compile Include="CustomPawnKindDef.cs" />
     <Compile Include="DevSettings.cs" />
+    <Compile Include="LordJob_VisitColonyUntilConditionSatisfied.cs" />
     <Compile Include="MainTabWindow_SCPs.cs" />
     <Compile Include="PawnColumnWorker_ObjectClass.cs" />
     <Compile Include="PawnTable_SCPs.cs" />

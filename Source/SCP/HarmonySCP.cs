@@ -271,7 +271,7 @@ namespace SCP
                 if (Find.TickManager.TicksGame < 500) //(int)(DefDatabase<DevSettings>.AllDefs.First().daysUntilSCPArrival.min * GenDate.TicksPerDay))
                 {
                     newThing = PawnGenerator.GeneratePawn(CustomPawnKindDef.Named("Mech_Lancer"));
-                    //Log.Message(newPkd.label + " attempted to spawn before arrival time in dev settings. Denied");
+                    Log.Message(newPkd.label + " attempted to spawn before arrival time in dev settings. Denied");
                     return true;
                 }
 

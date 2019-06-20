@@ -50,7 +50,7 @@ namespace SCP
             GenSpawn.Spawn(pawn, result, map);
             IntVec3 chillSpot;
             RCellFinder.TryFindRandomSpotJustOutsideColony(pawn, out chillSpot);
-            LordJob_VisitColony lordJob = new LordJob_VisitColony(faction, chillSpot);
+            LordJob_VisitColonyUntilConditionSatisfied lordJob = new LordJob_VisitColonyUntilConditionSatisfied(faction, chillSpot);
             LordMaker.MakeNewLord(faction, lordJob, map, new List<Pawn>() {pawn });
 
             var ft = Find.World.GetComponent<WorldComponent_FactionsTracker>();
@@ -77,11 +77,11 @@ namespace SCP
             faction.GenerateNewLeader();
             if (faction.leader != null)
             {
-                //Log.Message($"{faction.Name} {faction.def.leaderTitle}, {faction.leader.Name} now exists.");
+                Log.Message($"{faction.Name} {faction.def.leaderTitle}, {faction.leader.Name} now exists.");
             }
             else
             {
-                Log.Error($"{faction.Name} {faction.def.leaderTitle} failed to generate.");
+                Log.Message($"{faction.Name} {faction.def.leaderTitle} failed to generate.");
             }
             Find.FactionManager.Add(faction);
             return faction;
