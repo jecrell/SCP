@@ -57,6 +57,7 @@
     <Compile Include="Dialog_WithRepresentative.cs" />
     <Compile Include="CustomFactionDef.cs" />
     <Compile Include="FactionUtility.cs" />
+    <Compile Include="GuardPost.cs" />
     <Compile Include="HarmonySCP.cs" />
     <Compile Include="JobDriver_HaulSCP.cs" />
     <Compile Include="JobDriver_TalkWithRepresentative.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="SCP.cs" />
     <Compile Include="SCPUtility.cs" />
     <Compile Include="StartingRelation.cs" />
+    <Compile Include="WorkGiver_ManGuardDutyPoint.cs" />
     <Compile Include="WorldComponent_FactionsTracker.cs" />
     <Compile Include="WorldComponent_UniqueTracker.cs" />
   </ItemGroup>

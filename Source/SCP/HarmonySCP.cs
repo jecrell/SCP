@@ -42,8 +42,36 @@ namespace SCP
             //Allow for trainable mechanoids (mechanoid SCPs that can move around)
             harmony.Patch(original: AccessTools.Method(type: typeof(WildManUtility), name: nameof(WildManUtility.AnimalOrWildMan)), prefix: null,
                 postfix: new HarmonyMethod(typeof(HarmonyPatches), name: nameof(AnimalOrWildMan_PostFix)));
+
+            //Mechanoids in Caravans
+            harmony.Patch(original: AccessTools.Method(type: typeof(TransferableUtility), name: nameof(TransferableUtility.CanStack)), prefix: new HarmonyMethod(typeof(HarmonyPatches), name: nameof(CanStack_PreFix)),
+                postfix: null);
+
         }
-        
+
+        // RimWorld.TransferableUtility
+        public static bool CanStack_PreFix(Thing thing, ref bool __result)
+        {
+            if (thing is Pawn p)
+            {
+                if (p?.kindDef is CustomPawnKindDef c)
+                {
+                    if (c.isUnique)
+                    {
+                        __result = false;
+                        return false;
+                    }
+                    if (c.isSCP)
+                    {
+                        __result = true;
+                        return false;
+                    }
+                }
+
+            }
+            return true;
+        }
+
         public static IEnumerable<Pawn> SCPGetter(Map map)
         {
 

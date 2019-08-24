@@ -70,65 +70,60 @@ namespace SCP
             }
             if (Find.TickManager.TicksGame > ticksUntilHostilities)
             {
-                ticksUntilHostilities = int.MaxValue;
+                if (joinedFactionDef == null)
+                {
+                    ticksUntilHostilities = Find.TickManager.TicksGame + GenDate.TicksPerDay;
+                }
+                else
+                {
 
-                //Log.Message("1");
-                var facDefs = new List<CustomFactionDef>(DefDatabase<CustomFactionDef>.AllDefsListForReading);
-                //Log.Message("2");
-                var facs = new List<Faction>(Find.FactionManager.AllFactions
-                    .Where(f => f.def is CustomFactionDef sDef && facDefs.Contains(sDef)));
-                //Log.Message("3");
-                var s = new StringBuilder();
-                //Log.Message("4");
-                if (facs == null || facs?.Count() == 0)
-                {
-                    Log.Error("SCP :: Failed to find SCP-related factions for declaring hostilities.");
-                    return;
-                }
-                //Log.Message("5");
-                var hostileFacs = facs.Where(x => x.def is CustomFactionDef sDef && sDef.hostileByDefault && sDef != joinedFactionDef);
-                //Log.Message("6");
-                if (hostileFacs != null && hostileFacs?.Count() > 0)
-                {
-                    //Log.Message("6a");
-                    foreach (var hFac in hostileFacs)
-                    {
-                        //Log.Message("6a-loop");
-                        hFac.TrySetNotAlly(Faction.OfPlayer, true);
-                        hFac.TrySetRelationKind(Faction.OfPlayer, FactionRelationKind.Hostile);
-                        s.AppendLine("SCP_Hostilities".Translate(hFac.Name, Faction.OfPlayer.Name));
-                    }
-                }
-                //Log.Message("7");
-                foreach (var f in facs)
-                {
-                    //Log.Message("7a");
-                    var fDef = f.def as CustomFactionDef;
-                    foreach (var hostileFactionName in fDef.hostileToFactions)
-                    {
-                        //Log.Message("7aloop");
-                        var hostileFaction = facs.First(ff => ff.def.defName == hostileFactionName);
-                        if (hostileFaction == f)
-                            continue;
+                    ticksUntilHostilities = int.MaxValue;
 
-                        f.TrySetNotAlly(hostileFaction, true);
-                        f.TrySetRelationKind(hostileFaction, FactionRelationKind.Hostile);
-                        s.AppendLine("SCP_Hostilities".Translate(f.Name, hostileFaction.Name));
+                    var facDefs = new List<CustomFactionDef>(DefDatabase<CustomFactionDef>.AllDefsListForReading);
+                    var facs = new List<Faction>(Find.FactionManager.AllFactions
+                        .Where(f => f.def is CustomFactionDef sDef && facDefs.Contains(sDef)));
+
+                    var s = new StringBuilder();
+
+                    if (facs == null || facs?.Count() == 0)
+                    {
+                        Log.Error("SCP :: Failed to find SCP-related factions for declaring hostilities.");
+                        return;
                     }
+                    var hostileFacs = facs.Where(x => x.def is CustomFactionDef sDef && sDef.hostileByDefault && sDef != joinedFactionDef);
+                    if (hostileFacs != null && hostileFacs?.Count() > 0)
+                    {
+                        foreach (var hFac in hostileFacs)
+                        {
+                            hFac.TrySetNotAlly(Faction.OfPlayer, true);
+                            hFac.TrySetRelationKind(Faction.OfPlayer, FactionRelationKind.Hostile);
+                            s.AppendLine("SCP_Hostilities".Translate(hFac.Name, Faction.OfPlayer.Name));
+                        }
+                    }
+                    foreach (var f in facs)
+                    {
+                        var fDef = f.def as CustomFactionDef;
+                        foreach (var hostileFactionName in fDef.hostileToFactions)
+                        {
+                            var hostileFaction = facs.First(ff => ff.def.defName == hostileFactionName);
+                            if (hostileFaction == f)
+                                continue;
+
+                            f.TrySetNotAlly(hostileFaction, true);
+                            f.TrySetRelationKind(hostileFaction, FactionRelationKind.Hostile);
+                            s.AppendLine("SCP_Hostilities".Translate(f.Name, hostileFaction.Name));
+                        }
+                    }
+                        var joinedFaction = facs.First(ff => ff.def == joinedFactionDef);
+                        joinedFaction.TrySetNotHostileTo(Faction.OfPlayer);
+                        Faction.OfPlayer.TryAffectGoodwillWith(joinedFaction, 100, false);
+                        joinedFaction.TryAffectGoodwillWith(Faction.OfPlayer, 100, false);
+                        s.AppendLine();
+                        s.AppendLine("SCP_Alliances".Translate(joinedFaction.Name, Faction.OfPlayer.HasName ? Faction.OfPlayer.Name : "Player".Translate()));
+
+                    Find.LetterStack.ReceiveLetter("SCP_HostilitiesDeclared".Translate(), "SCP_HostilitiesDeclaredDesc".Translate(s.ToString()), LetterDefOf.ThreatBig);
                 }
-                //Log.Message("8");
-                if (joinedFactionDef != null)
-                {
-                    //Log.Message("8a");
-                    var joinedFaction = facs.First(ff => ff.def == joinedFactionDef);
-                    joinedFaction.TrySetNotHostileTo(Faction.OfPlayer);
-                    Faction.OfPlayer.TryAffectGoodwillWith(joinedFaction, 100, false);
-                    joinedFaction.TryAffectGoodwillWith(Faction.OfPlayer, 100, false);
-                    s.AppendLine();
-                    s.AppendLine("SCP_Alliances".Translate(joinedFaction.Name, Faction.OfPlayer.HasName ? Faction.OfPlayer.Name : "Player".Translate()));
-                }
-                //Log.Message("9");
-                Find.LetterStack.ReceiveLetter("SCP_HostilitiesDeclared".Translate(), "SCP_HostilitiesDeclaredDesc".Translate(s.ToString()), LetterDefOf.ThreatBig);
+
             }
             base.WorldComponentTick();
         }

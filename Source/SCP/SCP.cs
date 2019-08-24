@@ -13,9 +13,7 @@ namespace SCP
     public class SCP : Pawn
     {
         public bool isMoving;
-
-
-
+        
         public static bool IsActorAvailable(Pawn preacher, bool downedAllowed = false)
         {
             if (preacher == null)

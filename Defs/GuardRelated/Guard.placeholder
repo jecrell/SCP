@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <WorkTypeDef>
+    <defName>Jec_Guard</defName>
+    <labelShort>Guard</labelShort>
+    <pawnLabel>Guard</pawnLabel>
+    <gerundLabel>guarding</gerundLabel>
+    <description>Mans guard points.</description>
+    <verb>guard</verb>
+    <naturalPriority>50</naturalPriority>
+    <relevantSkills>
+      <li>Shooting</li>
+      <li>Melee</li>
+    </relevantSkills>
+    <workTags>
+      <li>Violent</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Jec_GuardPoint</defName>
+    <label>guard point</label>
+    <description>A place for colonists to stand guard.</description>
+    <thingClass>SCP.GuardPost</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/CraftingSpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+    </statBases>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>false</useHitPoints>
+    <size>(1,1)</size>
+    <designationCategory>Misc</designationCategory>
+    <passability>Standable</passability>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <sowTag>SupportPlantsOnly</sowTag>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <designationHotKey>Misc1</designationHotKey>
+  </ThingDef>
+
+
+</Defs>
