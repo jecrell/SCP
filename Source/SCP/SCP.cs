@@ -185,7 +185,7 @@ namespace SCP
                 yield return current;
             }
 
-                if (!this.isMoving)
+                if (!this.isMoving && !(Find.World.GetComponent<WorldComponent_FactionsTracker>()?.joinedFactionDef != null))
                 {
                     Command_Action command_Action = new Command_Action()
                     {
