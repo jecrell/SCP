@@ -785,7 +785,7 @@
       </disallowedThingDefs>
     </fixedIngredientFilter>
 	    <products>
-      <Apparel_ScpRcfFrontCap>1</Apparel_ScpRcfFrontCap>
+      <Apparel_ScpRcfCap>1</Apparel_ScpRcfCap>
     </products>
     <workSkill>Crafting</workSkill>
   </RecipeDef>

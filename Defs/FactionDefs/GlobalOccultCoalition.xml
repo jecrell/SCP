@@ -113,9 +113,9 @@ As a reward they will help you finish whatever research you are working on in ex
       <li>
         <kindDef>Peaceful</kindDef>
         <options>
-          <SCP_GOCSecuritySoldier>20</SCP_GOCSecuritySoldier>
-          <SCP_GOCSTSoldier_Assault>10</SCP_GOCSTSoldier_Assault>
-          <SCP_GOCRepresentative>5</SCP_GOCRepresentative>
+          <SCP_GOCSecuritySoldier>10</SCP_GOCSecuritySoldier>
+          <SCP_GOCSTSoldier_Assault>20</SCP_GOCSTSoldier_Assault>
+          <SCP_GOCRepresentative>3</SCP_GOCRepresentative>
         </options>
       </li>
       <li>

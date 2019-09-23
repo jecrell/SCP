@@ -143,7 +143,7 @@
       <li>CI_Military</li>
     </apparelTags>
    <apparelRequired>
-	  <li>Apparel_CiHelmetGasmask</li>
+	  <li>Apparel_CiHelmetGoggles</li>
 	  <li>Apparel_CiMilitaryFatigues</li>
 	  <li>Apparel_CiBodyArmor</li>
     </apparelRequired>
@@ -183,7 +183,7 @@
       <li>CI_Military</li>
     </apparelTags>
    <apparelRequired>
-	  <li>Apparel_CiHelmet</li>
+	  <li>Apparel_CiHelmetGoggles</li>
 	  <li>Apparel_CiMilitaryFatigues</li>
 	  <li>Apparel_CiBodyArmor</li>
     </apparelRequired>
@@ -221,7 +221,7 @@
       <li>CI_Military</li>
     </apparelTags>
    <apparelRequired>
-	  <li>Apparel_CiHelmetGoggles</li>
+	  <li>Apparel_CiHelmet</li>
 	  <li>Apparel_CiMilitaryFatigues</li>
 	  <li>Apparel_CiBodyArmor</li>
     </apparelRequired>

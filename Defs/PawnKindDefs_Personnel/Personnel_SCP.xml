@@ -250,7 +250,6 @@
       <li>SCP_RCFUniforms</li>
     </apparelTags>
    <apparelRequired>
-      <!--<li>Apparel_SmokepopBelt</li>-->
 	  <li>Apparel_ScpRcfHelmet</li>
 	  <li>Apparel_ScpRcfJacket</li>
 	  <li>Apparel_ScpRcfBodyArmor</li>
@@ -289,7 +288,6 @@
       <li>SCP_RCFUniforms</li>
     </apparelTags>
    <apparelRequired>
-      <!--<li>Apparel_SmokepopBelt</li>-->
 	  <li>Apparel_ScpRcfHelmet</li>
 	  <li>Apparel_ScpRcfJacket</li>
 	  <li>Apparel_ScpRcfBodyArmor</li>
@@ -379,11 +377,9 @@
       <li>SCP_MTFHeadgear</li>
       <li>SCP_Armor</li>
       <li>SCP_MTFUniforms</li>
-      <!--<li>BeltDefensePop</li>-->
     </apparelTags>
    <apparelRequired>
-      <!--<li>Apparel_SmokepopBelt</li>-->
-	  <li>Apparel_ScpMtfHelmetGasmask</li>
+	  <li>Apparel_ScpMtfHelmetVisor</li>
 	  <li>Apparel_ScpMtfFatigues</li>
 	  <li>Apparel_ScpMtfBodyArmor</li>
     </apparelRequired>
@@ -446,10 +442,8 @@
       <li>SCP_MTFHeadgear</li>
       <li>SCP_Armor</li>
       <li>SCP_MTFUniforms</li>
-      <!--<li>BeltDefensePop</li>-->
     </apparelTags>
    <apparelRequired>
-      <!--<li>Apparel_SmokepopBelt</li>-->
 	  <li>Apparel_ScpMtfHelmet</li>
 	  <li>Apparel_ScpMtfFatigues</li>
 	  <li>Apparel_ScpMtfBodyArmor</li>
@@ -513,11 +507,9 @@
       <li>SCP_MTFHeadgear</li>
       <li>SCP_Armor</li>
       <li>SCP_MTFUniforms</li>
-      <!--<li>BeltDefensePop</li>-->
     </apparelTags>
    <apparelRequired>
-      <li>Apparel_SmokepopBelt</li>
-	  <li>Apparel_ScpMtfHelmetVisor</li>
+	  <li>Apparel_ScpMtfHelmet</li>
 	  <li>Apparel_ScpMtfFatigues</li>
 	  <li>Apparel_ScpMtfBodyArmor</li>
     </apparelRequired>
@@ -581,11 +573,10 @@
       <li>SCP_MTFHeadgear</li>
       <li>SCP_Armor</li>
       <li>SCP_MTFUniforms</li>
-      <!--<li>BeltDefensePop</li>-->
     </apparelTags>
    <apparelRequired>
       <li>Apparel_SmokepopBelt</li>
-	  <li>Apparel_ScpMTFSniperCap</li>
+	  <li>Apparel_ScpMtfHelmet</li>
 	  <li>Apparel_ScpMtfFatigues</li>
 	  <li>Apparel_ScpMtfBodyArmor</li>
     </apparelRequired>
@@ -595,7 +586,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_M107</li>
+	  <li>RN_M24A2HRT</li>	
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
