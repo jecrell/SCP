@@ -75,223 +75,6 @@ It is manufactured by Fabrique Nationale Manufacturing, Inc., a division of FN H
       </li>
     </tools>
   </ThingDef> 
-  
-        <!-- ================================= M249 ==================================== -->
-  
-	<ThingDef ParentName="RNBaseLMG">
-		<defName>RNGun_M249LMG</defName>
-		<label>M249</label>
-		<description>The M249 light machine gun (LMG), formerly designated the M249 Squad Automatic Weapon (SAW) and formally written as Light Machine Gun, 5.56 mm, M249, is the American adaptation of the Belgian FN Minimi, a light machine gun manufactured by the Belgian company FN Herstal (FN).</description>
-		<graphicData>
-			<texPath>Things/Item/Equipment/LMG/M249SAW</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Interact_Rifle</soundInteract>
-    <recipeMaker>
-      <researchPrerequisite>GasOperation</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>5</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-		<statBases>
-			<WorkToMake>33000</WorkToMake>
-			<Mass>7</Mass>
-			<AccuracyTouch>0.50</AccuracyTouch>
-			<AccuracyShort>0.61</AccuracyShort>
-			<AccuracyMedium>0.39</AccuracyMedium>
-			<AccuracyLong>0.27</AccuracyLong>
-			<RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
-		</statBases>
-		<costList>
-			<Steel>75</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
-		</costList>
-		
-				<equippedAngleOffset>40</equippedAngleOffset>
-		
-    <verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>RNBullet_556x45_Rifle</defaultProjectile>
-				<warmupTime>1.5</warmupTime>
-				<range>25.5</range>
-				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
-				<burstShotCount>8</burstShotCount>
-				<soundCast>RNShotL86LMG</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
-			</li>
-		</verbs>
-		<weaponTags>
-			<!--<li>IndustrialGunAdvanced</li>-->
-			<li>RNGun_M249</li>
-		</weaponTags>
-    <tools>
-      <li>
-        <label>stock</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-    </tools>
-  </ThingDef>
-  
-    		<!-- ================================= RPD ==================================== -->
-  
-	<ThingDef ParentName="RNBaseLMG">
-		<defName>RNGun_RPD</defName>
-		<label>RPD</label>
-		<description>The RPD (Russian: ручной пулемёт Дегтярёва Ruchnoy Pulemyot Degtyaryova, English: Degtyaryov hand-held machine gun) is a 7.62mm light machine gun developed in the Soviet Union by Vasily Degtyaryov for the 7.62×39mm M43 intermediate cartridge.</description>
-		<graphicData>
-			<texPath>Things/Item/Equipment/LMG/RPD</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Interact_Rifle</soundInteract>
-    <recipeMaker>
-      <researchPrerequisite>GasOperation</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>5</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-		<statBases>
-			<WorkToMake>29000</WorkToMake>
-			<Mass>7</Mass>
-			<AccuracyTouch>0.52</AccuracyTouch>
-			<AccuracyShort>0.61</AccuracyShort>
-			<AccuracyMedium>0.48</AccuracyMedium>
-			<AccuracyLong>0.38</AccuracyLong>
-			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
-		</statBases>
-		<costList>
-			<Steel>75</Steel>
-			<ComponentIndustrial>6</ComponentIndustrial>
-		</costList>
-		
-				<equippedAngleOffset>40</equippedAngleOffset>
-		
-    <verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>RNBullet_762x39_Rifle</defaultProjectile>
-				<warmupTime>1.8</warmupTime>
-				<range>26.9</range>
-				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
-				<burstShotCount>8</burstShotCount>
-				<soundCast>RNShotRPD</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
-			</li>
-		</verbs>
-		<weaponTags>
-			<li>IndustrialGunAdvanced</li>
-			<li>RNGun_RPD</li>
-		</weaponTags>
-    <tools>
-      <li>
-        <label>stock</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-    </tools>
-  </ThingDef>
-
-            <!-- ================================= PKM ==================================== -->
-  
-	<ThingDef ParentName="RNBaseLMG">
-		<defName>RNGun_PKMLMG</defName>
-		<label>PKM</label>
-		<description>The PK (Russian: Пулемёт Калашникова, or "Kalashnikov's Machinegun"), is a 7.62x54mmR general-purpose machine gun designed in the Soviet Union and currently in production in Russia.
-
-The original PK was a development of Kalashnikov's AKM assault rifle and the accompanying RPK light machine gun design that featured stamped receivers. The PK uses the 7.62x54mmR Eastern Bloc standard cartridge.</description>
-		<graphicData>
-			<texPath>Things/Item/Equipment/LMG/PKM</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Interact_Rifle</soundInteract>
-    <recipeMaker>
-      <researchPrerequisite>GasOperation</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>5</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-		<statBases>
-			<WorkToMake>33000</WorkToMake>
-			<Mass>9</Mass>
-			<AccuracyTouch>0.42</AccuracyTouch>
-			<AccuracyShort>0.56</AccuracyShort>
-			<AccuracyMedium>0.49</AccuracyMedium>
-			<AccuracyLong>0.38</AccuracyLong>
-		</statBases>
-		<costList>
-			<Steel>75</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
-		</costList>
-		
-				<equippedAngleOffset>40</equippedAngleOffset>
-		
-    <verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>RNBullet_762x54_LMG</defaultProjectile>
-				<warmupTime>1.8</warmupTime>
-				<range>28.2</range>
-				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-				<burstShotCount>8</burstShotCount>
-				<soundCast>RNShotM240B</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
-			</li>
-		</verbs>
-		<weaponTags>
-			<li>IndustrialGunAdvanced</li>
-			<li>RNGun_PKM</li>
-		</weaponTags>
-    <tools>
-      <li>
-        <label>stock</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2.25</cooldownTime>
-      </li>
-    </tools>
-  </ThingDef> 
  
        <!-- ================================= FN Minimi ==================================== -->
   
@@ -365,16 +148,14 @@ The original PK was a development of Kalashnikov's AKM assault rifle and the acc
     </tools>
   </ThingDef>
   
-          <!-- ================================= IWI Negev ==================================== -->
+        <!-- ================================= M249 ==================================== -->
   
 	<ThingDef ParentName="RNBaseLMG">
-		<defName>RNGun_NegevLMG</defName>
-		<label>IWI Negev</label>
-		<description>The IWI Negev is a gas-operated selective fire light machine gun that uses propellant gases from the barrel to cycle a short-stroke gas piston operating system under the barrel and a rotary bolt locking mechanism. The bolt itself features 4 radial locking lugs that engage the barrel extension and its rotation is controlled by a pin on the bolt body, which rides inside a camming guide machined into the bolt carrier. The bolt contains a spring-powered casing extractor unit, while a lever ejector is housed inside the receiver (it is rotated by the recoiling bolt carrier).
-
-The design was meant to be reliable, especially in adverse conditions. In 1997, it was officially adopted by the Israeli Defense Forces (IDF).</description>
+		<defName>RNGun_M249LMG</defName>
+		<label>M249</label>
+		<description>The M249 light machine gun (LMG), formerly designated the M249 Squad Automatic Weapon (SAW) and formally written as Light Machine Gun, 5.56 mm, M249, is the American adaptation of the Belgian FN Minimi, a light machine gun manufactured by the Belgian company FN Herstal (FN).</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/LMG/Negev</texPath>
+			<texPath>Things/Item/Equipment/LMG/M249SAW</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
@@ -416,7 +197,7 @@ The design was meant to be reliable, especially in adverse conditions. In 1997, 
 		</verbs>
 		<weaponTags>
 			<!--<li>IndustrialGunAdvanced</li>-->
-			<li>RNGun_Negev</li>
+			<li>RNGun_M249</li>
 		</weaponTags>
     <tools>
       <li>
@@ -439,4 +220,5 @@ The design was meant to be reliable, especially in adverse conditions. In 1997, 
     </tools>
   </ThingDef>  
   
+
 </Defs>

@@ -251,8 +251,8 @@
     </apparelTags>
    <apparelRequired>
       <!--<li>Apparel_SmokepopBelt</li>-->
-	  <li>Apparel_ScpRcfBackCap</li>
-	  <li>Apparel_ScpRcfTShirt</li>
+	  <li>Apparel_ScpRcfHelmet</li>
+	  <li>Apparel_ScpRcfJacket</li>
 	  <li>Apparel_ScpRcfBodyArmor</li>
     </apparelRequired>
     <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
@@ -261,8 +261,8 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_KRISSVector</li>
-	  <li>RN_Mossberg500</li>
+	  <li>RN_P90_Contractor</li>	
+	  <li>RN_Remington870HRT</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -300,7 +300,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_M16A4_MilSpec</li>
+	  <li>RN_M4A1HRT</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -328,8 +328,9 @@
     </apparelTags>
    <apparelRequired>
       <!--<li>Apparel_SmokepopBelt</li>-->
-	  <li>Apparel_ScpRcfFrontCap</li>
+	  <li>Apparel_ScpRcfCap</li>
 	  <li>Apparel_ScpRcfJacket</li>
+	  <li>Apparel_ScpRcfBodyArmor</li>	  
     </apparelRequired>
     <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
     <weaponMoney>
@@ -337,7 +338,7 @@
       <max>650</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_C14Timberwolf</li>
+	  <li>RN_AR10</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -382,7 +383,7 @@
     </apparelTags>
    <apparelRequired>
       <!--<li>Apparel_SmokepopBelt</li>-->
-	  <li>Apparel_ScpMtfHelmetVisorMasked</li>
+	  <li>Apparel_ScpMtfHelmetGasmask</li>
 	  <li>Apparel_ScpMtfFatigues</li>
 	  <li>Apparel_ScpMtfBodyArmor</li>
     </apparelRequired>
@@ -449,7 +450,7 @@
     </apparelTags>
    <apparelRequired>
       <!--<li>Apparel_SmokepopBelt</li>-->
-	  <li>Apparel_ScpMtfHelmetMasked</li>
+	  <li>Apparel_ScpMtfHelmet</li>
 	  <li>Apparel_ScpMtfFatigues</li>
 	  <li>Apparel_ScpMtfBodyArmor</li>
     </apparelRequired>
@@ -460,7 +461,6 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RN_M4A1HRT</li>
-	  <li>RN_M27IARSD</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -517,7 +517,7 @@
     </apparelTags>
    <apparelRequired>
       <li>Apparel_SmokepopBelt</li>
-	  <li>Apparel_ScpMtfHelmetGogglesMasked</li>
+	  <li>Apparel_ScpMtfHelmetVisor</li>
 	  <li>Apparel_ScpMtfFatigues</li>
 	  <li>Apparel_ScpMtfBodyArmor</li>
     </apparelRequired>
@@ -528,7 +528,6 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RNGun_MK48</li>
-	  <li>RNGun_M249</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -586,7 +585,7 @@
     </apparelTags>
    <apparelRequired>
       <li>Apparel_SmokepopBelt</li>
-	  <li>Apparel_ScpMtfHelmet</li>
+	  <li>Apparel_ScpMTFSniperCap</li>
 	  <li>Apparel_ScpMtfFatigues</li>
 	  <li>Apparel_ScpMtfBodyArmor</li>
     </apparelRequired>
@@ -596,8 +595,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_M24A2HRT</li>
-	  <li>RN_AR10</li>
+	  <li>RN_M107</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>

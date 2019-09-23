@@ -29,14 +29,15 @@
       <li>CI_RnD</li>
     </apparelTags>
     <apparelRequired>
-      <li>Apparel_CiOpperative</li>
+      <li>Apparel_CiMilitaryFatigues</li>
+	  <li>Apparel_CiBodyArmor</li>
     </apparelRequired>
 	    <weaponMoney>
       <min>570</min>
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_Glock17HRT</li>
+	  <li>RN_AA12</li>
     </weaponTags>
     <techHediffsTags>
       <li>Simple</li>
@@ -61,7 +62,8 @@
       <li>CI_RnD</li>
     </apparelTags>
     <apparelRequired>
-      <li>Apparel_CiOpperative</li>
+      <li>Apparel_CiMilitaryFatigues</li>
+	  <li>Apparel_CiCap</li>
     </apparelRequired>
 	    <weaponMoney>
       <min>570</min>
@@ -93,8 +95,8 @@
       <li>CI_RnD</li>
     </apparelTags>
     <apparelRequired>
-      <li>Apparel_CiMilitaryFatiguesOne</li>
-	  <li>Apparel_CiMilitaryCap</li>
+      <li>Apparel_CiMilitaryFatigues</li>
+	  <li>Apparel_CiCap</li>
     </apparelRequired>
 	    <weaponMoney>
       <min>570</min>
@@ -142,8 +144,8 @@
     </apparelTags>
    <apparelRequired>
 	  <li>Apparel_CiHelmetGasmask</li>
-	  <li>Apparel_CiMilitaryFatiguesTwo</li>
-	  <li>Apparel_CiBodyArmorTwo</li>
+	  <li>Apparel_CiMilitaryFatigues</li>
+	  <li>Apparel_CiBodyArmor</li>
     </apparelRequired>
     <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
     <weaponMoney>
@@ -153,7 +155,6 @@
     <weaponTags>
 	  <li>RN_MP5KPDW</li>
 	  <li>RN_AA12</li>
-	  <li>RN_SkorpionVz61</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -182,9 +183,9 @@
       <li>CI_Military</li>
     </apparelTags>
    <apparelRequired>
-	  <li>Apparel_CiCapMasked</li>
-	  <li>Apparel_CiMilitaryFatiguesOne</li>
-	  <li>Apparel_CiBodyArmorOne</li>
+	  <li>Apparel_CiHelmet</li>
+	  <li>Apparel_CiMilitaryFatigues</li>
+	  <li>Apparel_CiBodyArmor</li>
     </apparelRequired>
     <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
     <weaponMoney>
@@ -192,9 +193,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li></li>
-	  <li>RN_AK15</li>
-	  <li>RN_AK103</li>
+	  <li>RN_HK416Elite</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -222,9 +221,9 @@
       <li>CI_Military</li>
     </apparelTags>
    <apparelRequired>
-	  <li>Apparel_CiHelmet</li>
-	  <li>Apparel_CiMilitaryFatiguesTwo</li>
-	  <li>Apparel_CiBodyArmorTwo</li>
+	  <li>Apparel_CiHelmetGoggles</li>
+	  <li>Apparel_CiMilitaryFatigues</li>
+	  <li>Apparel_CiBodyArmor</li>
     </apparelRequired>
     <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
     <weaponMoney>
@@ -232,9 +231,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li></li>
-	  <li>RNGun_RPD</li>
-	  <li>RNGun_PKM</li>
+	  <li>RNGun_M249</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -261,9 +258,9 @@
       <li>CI_Military</li>
     </apparelTags>
    <apparelRequired>
-	  <li>Apparel_CiMaskedHeadset</li>
-	  <li>Apparel_CiMilitaryFatiguesTwo</li>
-	  <li>Apparel_CiBodyArmorOne</li>
+	  <li>Apparel_CiCap</li>
+	  <li>Apparel_CiMilitaryFatigues</li>
+	  <li>Apparel_CiBodyArmor</li>
     </apparelRequired>
     <apparelAllowHeadgearChance>2</apparelAllowHeadgearChance>
     <weaponMoney>
@@ -271,8 +268,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li></li>
-	  <li>RN_Dragunov</li>
+	  <li>RN_MK11</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>

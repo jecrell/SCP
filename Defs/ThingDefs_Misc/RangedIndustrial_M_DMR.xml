@@ -140,75 +140,6 @@ In 1957, the basic AR-10 design was rescaled and substantially modified by ArmaL
     </weaponTags>
   </ThingDef>
   
-      <!-- ================================= Dragunov SVD ==================================== -->
-
-  <ThingDef ParentName="RNBaseDMR">
-    <defName>RNGun_DragunovDMR</defName>
-    <label>Dragunov SVD</label>
-    <description>The Dragunov sniper rifle is a semi-automatic sniper/designated marksman rifle chambered in 7.62×54mmR and developed in the Soviet Union.
-
-The Dragunov was designed as a squad support weapon since, according to Soviet and Soviet-derived military doctrines, the long-range engagement ability was lost to ordinary troops when submachine guns and assault rifles (which are optimized for close-range and medium-range, rapid-fire combat) were adopted. For that reason, it was originally named "Self-Loading Rifle, System of Dragunov, Model of the Year 1963".</description>
-    <graphicData>
-      <texPath>Things/Item/Equipment/M_Semi_Auto/DragunovSVD</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>Interact_Rifle</soundInteract>
-	<equippedAngleOffset>40</equippedAngleOffset>
-    <statBases>
-      <WorkToMake>12000</WorkToMake>
-      <Mass>3.5</Mass>
-      <AccuracyTouch>0.61</AccuracyTouch>
-      <AccuracyShort>0.69</AccuracyShort>
-      <AccuracyMedium>0.87</AccuracyMedium>
-      <AccuracyLong>0.86</AccuracyLong>
-      <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
-    </statBases>
-    <costList>
-      <Steel>60</Steel>
-      <ComponentIndustrial>3</ComponentIndustrial>
-    </costList>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>5</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RNBullet_762x54_DMR</defaultProjectile>
-        <warmupTime>1.3</warmupTime>
-        <range>45.9</range>
-        <soundCast>RNShotDragunov</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-    <tools>
-      <li>
-        <label>stock</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-    </tools>
-    <weaponTags Inherit="False">
-      <li>SniperRifle</li>
-	  <li>RN_Dragunov</li>
-    </weaponTags>
-  </ThingDef>
-  
    <!-- ================================= AS50 ==================================== -->
 
   <ThingDef ParentName="RNBaseAMR">
@@ -278,5 +209,75 @@ The AS50 employs a gas operated semi-automatic action and muzzle brake, allowing
 	  <li>RN_AS50</li>
     </weaponTags>
   </ThingDef> 
+  
+  
+      	    <!-- ================================= SR25 ==================================== -->
+
+  <ThingDef ParentName="RNBaseDMR">
+    <defName>RNGun_MK11DMR</defName>
+    <label>MK11 Mod 0</label>
+    <description>The SR-25 (Stoner Rifle-25) is a designated marksman rifle and semi automatic sniper rifle designed by Eugene Stoner and manufactured by Knight's Armament Company.
+
+The SR-25 uses a rotating bolt and a direct impingement gas system. It is loosely based on Stoner's AR-10, rebuilt in its original 7.62×51mm NATO caliber. After some modifications, SOCOM adopted the SR-25 as the Mk 11 Mod 0 in May 2000.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/M_Semi_Auto/MK11</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+	<equippedAngleOffset>40</equippedAngleOffset>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.68</AccuracyShort>
+      <AccuracyMedium>0.91</AccuracyMedium>
+      <AccuracyLong>0.93</AccuracyLong>
+      <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNBullet_762x51mm_DMR</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>44.9</range>
+        <soundCast>RNShot_GenericDMR</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags Inherit="False">
+      <!--<li>SniperRifle</li>-->
+	  <li>RN_MK11</li>
+    </weaponTags>
+  </ThingDef>  
   
 </Defs>

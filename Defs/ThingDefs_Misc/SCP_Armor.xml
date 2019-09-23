@@ -328,11 +328,11 @@
   
     <!-- ======== CHAOS INSURGENCY ========= -->
 
-          <!-- ======================================= CI Body Armor1 =======================================-->
+          <!-- ======================================= CI Body Armor =======================================-->
   
  <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_CiBodyArmorOne</defName>
-    <label>Body Armor 1 (CI) </label>
+    <defName>Apparel_CiBodyArmor</defName>
+    <label>Body Armor (CI) </label>
     <description>An armored vest worn by the Military Wing of the Chaos Insurgency.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
@@ -343,7 +343,7 @@
       </skillRequirements>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Apparel/Display/CI/CI_Armor1</texPath>
+      <texPath>Things/Apparel/Display/CI/CI_Armor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
       <drawSize>0.90</drawSize>
@@ -378,7 +378,7 @@
         <li>Neck</li>
         <li>Shoulders</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Armor/CI/CI_Armor1</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Armor/CI/CI_Armor</wornGraphicPath>
       <layers>
         <li>Middle</li>
       </layers>
@@ -391,64 +391,5 @@
     </apparel>
   </ThingDef>
   
-            <!-- ======================================= CI Body Armor2 =======================================-->
-  
- <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_CiBodyArmorTwo</defName>
-    <label>Body Armor 2 (CI) </label>
-    <description>A light Armored Vest worn by the Military Wing of the Chaos Insurgency.</description>
-    <techLevel>Industrial</techLevel>
-    <recipeMaker>
-      <researchPrerequisite>FlakArmor</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-      <skillRequirements>
-        <Crafting>5</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <graphicData>
-      <texPath>Things/Apparel/Display/CI/CI_Armor2</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-      <drawSize>0.90</drawSize>
-    </graphicData>
-    <statBases>
-      <WorkToMake>6000</WorkToMake>
-      <MaxHitPoints>200</MaxHitPoints>
-      <Mass>1.0</Mass>
-      <Flammability>0.6</Flammability>
-      <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.9</ArmorRating_Heat>
-      <Insulation_Cold>1</Insulation_Cold>
-      <EquipDelay>2.0</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-    </equippedStatOffsets>
-    <thingCategories>
-      <li>SCP_Armor</li>
-    </thingCategories>
-    <costList>
-      <Cloth>20</Cloth>
-      <Steel>25</Steel>
-      <ComponentIndustrial>1</ComponentIndustrial>
-    </costList>
-    <apparel>
-	<careIfWornByCorpse>false</careIfWornByCorpse>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Shoulders</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Armor/CI/CI_Armor2</wornGraphicPath>
-      <layers>
-        <li>Middle</li>
-      </layers>
-      <tags>
-	    <li>CI_Military</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-    </apparel>
-  </ThingDef>
-  
+
   </Defs>

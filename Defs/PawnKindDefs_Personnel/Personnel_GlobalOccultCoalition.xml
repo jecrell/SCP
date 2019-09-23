@@ -118,7 +118,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_Glock17HRT</li>
+	  <li>RN_AUG_A2</li>
     </weaponTags>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
     <techHediffsTags>
@@ -287,8 +287,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_Uzi</li>
-	  <li>RN_MPX</li>
+	  <li>RN_KRISSVector</li>	
 	  <li>RN_KSG</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
@@ -356,7 +355,6 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_HK416Elite</li>
 	  <li>RN_G36CHRT</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
@@ -424,7 +422,6 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RNGun_FNMinimi</li>
-	  <li>RNGun_Negev</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>

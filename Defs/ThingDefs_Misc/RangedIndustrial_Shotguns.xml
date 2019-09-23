@@ -1,73 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-         <!-- ================================= !!!Mossberg 500 Tactical!!! ==================================== -->
-  <ThingDef ParentName="RNBaseShotgun">
-    <defName>RNGun_Mossberg500TacticalS</defName>
-    <label>Mossberg 500 Tactical</label>
-    <description>Mossberg 500 is a series of pump action shotguns manufactured by O.F. Mossberg and Sons. The 500 series comprises widely varying models of hammerless repeaters, all of which share the same basic receiver and action, but differ in bore size, barrel length, choke options, magazine capacity, stock and forearm materials.</description>
-    <graphicData>
-      <texPath>Things/Item/Equipment/Shotgun/Mossberg500_Tactical</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>Interact_Shotgun</soundInteract>
-	
-		 <weaponTags>
-			<li>Gun</li>
-			<li>RN_Mossberg500</li>
-		</weaponTags>
-		
-    <statBases>
-      <WorkToMake>12000</WorkToMake>
-      <Mass>3</Mass>
-      <AccuracyTouch>0.78</AccuracyTouch>
-      <AccuracyShort>0.85</AccuracyShort>
-      <AccuracyMedium>0.82</AccuracyMedium>
-      <AccuracyLong>0.65</AccuracyLong>
-      <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
-    </statBases>
-    <costList>
-      <Steel>60</Steel>
-      <ComponentIndustrial>3</ComponentIndustrial>
-    </costList>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>5</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RNBullet_12Gauge_Shotgun</defaultProjectile>
-        <warmupTime>0.9</warmupTime>
-        <range>17.9</range>
-        <soundCast>RN870Shot</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-    <tools>
-      <li>
-        <label>stock</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-    </tools>
-  </ThingDef>
-  
+
     <!-- ================================= AA-12 ==================================== -->
     <ThingDef ParentName="RNBaseShotgun">
     <defName>RNGun_AA12S</defName>

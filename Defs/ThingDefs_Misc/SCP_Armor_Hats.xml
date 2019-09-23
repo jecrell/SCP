@@ -149,7 +149,7 @@
     </recipeMaker>
 	
     <graphicData>
-      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmet_Normal</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmet</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -183,7 +183,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmet_Normal</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -196,70 +196,6 @@
     </apparel>
   </ThingDef>
   
-  
-        	<!-- ================================== SCP MTF Helmet Goggles ====================================-->
-  
- <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_ScpMtfHelmetGoggles</defName>
-    <label>MTF Helmet Goggles (SCP) </label>
-    <description>A Helmet with goggles used by the Foundations' Elite Mobile Task Force].</description>
-    <techLevel>Industrial</techLevel>
-	
-    <recipeMaker>
-      <researchPrerequisite>Smithing</researchPrerequisite>
-	  <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
-      <skillRequirements>
-        <Crafting>4</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-	
-    <graphicData>
-      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmetGoggles_Normal</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <statBases>
-      <WorkToMake>8000</WorkToMake>
-      <MaxHitPoints>120</MaxHitPoints>
-      <Mass>1.5</Mass>
-      <StuffEffectMultiplierArmor>0.68</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>2.5</EquipDelay>
-    </statBases>
-	
-		<equippedStatOffsets>
-		    <ShootingAccuracyPawn>0.06</ShootingAccuracyPawn>
-			<PsychicSensitivity>-0.50</PsychicSensitivity>
-			<GlobalLearningFactor>0.25</GlobalLearningFactor>
-		</equippedStatOffsets>
-			
-	
-		<stuffCategories>
-			<li>Metallic</li>
-		</stuffCategories>
-		<costStuffCount>40</costStuffCount>
-    <costList>
-      <!--<ComponentIndustrial>2</ComponentIndustrial>-->
-			<Steel>10</Steel>
-    </costList>
-    <apparel>
-	<careIfWornByCorpse>false</careIfWornByCorpse>
-      <bodyPartGroups>
-        <li>FullHead</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmetGoggles_Normal</wornGraphicPath>
-      <layers>
-        <li>Overhead</li>
-      </layers>
-      <tags>
-        <li>SCP_MTFHeadgear</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-    </apparel>
-  </ThingDef>
   
   
           	<!-- ================================== SCP MTF Helmet Visor ====================================-->
@@ -279,7 +215,7 @@
     </recipeMaker>
 	
     <graphicData>
-      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmetVisor_Normal</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmetVisor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -313,203 +249,7 @@
       <bodyPartGroups>
         <li>FullHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmetVisor_Normal</wornGraphicPath>
-      <layers>
-        <li>Overhead</li>
-      </layers>
-      <tags>
-        <li>SCP_MTFHeadgear</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-    </apparel>
-  </ThingDef>
-  
-  
-
-        	<!-- ================================== SCP MTF Helmet Masked ====================================-->
-  
- <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_ScpMtfHelmetMasked</defName>
-    <label>MTF Helmet Masked (SCP) </label>
-    <description>A Masked Helmet used by the Foundations' Elite Mobile Task Force.</description>
-    <techLevel>Industrial</techLevel>
-	
-    <recipeMaker>
-      <researchPrerequisite>Smithing</researchPrerequisite>
-	  <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
-      <skillRequirements>
-        <Crafting>4</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-	
-    <graphicData>
-      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmet_Masked</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <statBases>
-      <WorkToMake>8000</WorkToMake>
-      <MaxHitPoints>120</MaxHitPoints>
-      <Mass>1.5</Mass>
-      <StuffEffectMultiplierArmor>0.67</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>2.5</EquipDelay>
-    </statBases>
-	
-		<equippedStatOffsets>
-		    <ShootingAccuracyPawn>0.06</ShootingAccuracyPawn>
-			<PsychicSensitivity>-0.50</PsychicSensitivity>
-			<GlobalLearningFactor>0.25</GlobalLearningFactor>
-		</equippedStatOffsets>
-			
-	
-		<stuffCategories>
-			<li>Metallic</li>
-		</stuffCategories>
-		<costStuffCount>40</costStuffCount>
-    <costList>
-      <!--<ComponentIndustrial>2</ComponentIndustrial>-->
-			<Steel>10</Steel>
-    </costList>
-    <apparel>
-	<careIfWornByCorpse>false</careIfWornByCorpse>
-      <bodyPartGroups>
-        <li>UpperHead</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmet_Masked</wornGraphicPath>
-      <layers>
-        <li>Overhead</li>
-      </layers>
-      <tags>
-        <li>SCP_MTFHeadgear</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-    </apparel>
-  </ThingDef>
-  
-  
-         	<!-- ================================== SCP MTF Helmet Goggles Masked ====================================-->
-  
- <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_ScpMtfHelmetGogglesMasked</defName>
-    <label>MTF Helmet Goggles Masked (SCP) </label>
-    <description>A Masked Helmet with Goggles used by the Foundations' Elite Mobile Task Force.</description>
-    <techLevel>Industrial</techLevel>
-	
-    <recipeMaker>
-      <researchPrerequisite>Smithing</researchPrerequisite>
-	  <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
-      <skillRequirements>
-        <Crafting>4</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-	
-    <graphicData>
-      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmetGoggles_Masked</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <statBases>
-      <WorkToMake>8000</WorkToMake>
-      <MaxHitPoints>120</MaxHitPoints>
-      <Mass>1.5</Mass>
-      <StuffEffectMultiplierArmor>0.68</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>2.5</EquipDelay>
-    </statBases>
-	
-		<equippedStatOffsets>
-		    <ShootingAccuracyPawn>0.06</ShootingAccuracyPawn>
-			<PsychicSensitivity>-0.50</PsychicSensitivity>
-			<GlobalLearningFactor>0.25</GlobalLearningFactor>
-		</equippedStatOffsets>
-			
-	
-		<stuffCategories>
-			<li>Metallic</li>
-		</stuffCategories>
-		<costStuffCount>40</costStuffCount>
-    <costList>
-      <!--<ComponentIndustrial>2</ComponentIndustrial>-->
-			<Steel>10</Steel>
-    </costList>
-    <apparel>
-	<careIfWornByCorpse>false</careIfWornByCorpse>
-      <bodyPartGroups>
-        <li>FullHead</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmetGoggles_Masked</wornGraphicPath>
-      <layers>
-        <li>Overhead</li>
-      </layers>
-      <tags>
-        <li>SCP_MTFHeadgear</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-    </apparel>
-  </ThingDef>
-  
-  
-           	<!-- ================================== SCP MTF Helmet Visor Masked ====================================-->
-  
- <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_ScpMtfHelmetVisorMasked</defName>
-    <label>MTF Helmet Visor Masked (SCP) </label>
-    <description>A Masked Helmet with a Visor used by the Foundations' Elite Mobile Task Force.</description>
-    <techLevel>Industrial</techLevel>
-	
-    <recipeMaker>
-      <researchPrerequisite>Smithing</researchPrerequisite>
-	  <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
-      <skillRequirements>
-        <Crafting>4</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-	
-    <graphicData>
-      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmetVisor_Masked</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <statBases>
-      <WorkToMake>8000</WorkToMake>
-      <MaxHitPoints>120</MaxHitPoints>
-      <Mass>1.5</Mass>
-      <StuffEffectMultiplierArmor>0.69</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>2.5</EquipDelay>
-    </statBases>
-	
-		<equippedStatOffsets>
-		    <ShootingAccuracyPawn>0.06</ShootingAccuracyPawn>
-			<PsychicSensitivity>-0.50</PsychicSensitivity>
-			<GlobalLearningFactor>0.25</GlobalLearningFactor>
-		</equippedStatOffsets>
-			
-	
-		<stuffCategories>
-			<li>Metallic</li>
-		</stuffCategories>
-		<costStuffCount>40</costStuffCount>
-    <costList>
-      <!--<ComponentIndustrial>2</ComponentIndustrial>-->
-			<Steel>10</Steel>
-    </costList>
-    <apparel>
-	<careIfWornByCorpse>false</careIfWornByCorpse>
-      <bodyPartGroups>
-        <li>FullHead</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmetVisor_Masked</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmetVisor</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -528,7 +268,7 @@
  <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_ScpMtfHelmetGasmask</defName>
     <label>MTF Helmet Gasmask (SCP) </label>
-    <description>A Gasmask Helmet used by the Foundations' Elite Mobile Task Force.</description>
+    <description>A Gasmask paired with a Helmet, used by the Foundations' Elite Mobile Task Force.</description>
     <techLevel>Industrial</techLevel>
 	
     <recipeMaker>
@@ -588,71 +328,6 @@
     </apparel>
   </ThingDef>
   
-  
-            	<!-- ================================== SCP MTF Visor Helmet Gasmask ====================================-->
-  
- <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_ScpMtfHelmetVisorGasmask</defName>
-    <label>MTF Helmet Visor Gasmask (SCP) </label>
-    <description>A Gasmask Helmet with a Visor used by the Foundations' Elite Mobile Task Force.</description>
-    <techLevel>Industrial</techLevel>
-	
-    <recipeMaker>
-      <researchPrerequisite>Smithing</researchPrerequisite>
-	  <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
-      <skillRequirements>
-        <Crafting>4</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-	
-    <graphicData>
-      <texPath>Things/Apparel/Display/SCP/SCP_MTFHelmetVisor_Gasmask</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <statBases>
-      <WorkToMake>8000</WorkToMake>
-      <MaxHitPoints>120</MaxHitPoints>
-      <Mass>1.5</Mass>
-      <StuffEffectMultiplierArmor>0.69</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>2.5</EquipDelay>
-    </statBases>
-	
-		<equippedStatOffsets>
-		    <ShootingAccuracyPawn>0.06</ShootingAccuracyPawn>
-			<PsychicSensitivity>-0.50</PsychicSensitivity>
-			<GlobalLearningFactor>0.25</GlobalLearningFactor>
-			<ToxicSensitivity>-0.90</ToxicSensitivity>
-		</equippedStatOffsets>
-			
-	
-		<stuffCategories>
-			<li>Metallic</li>
-		</stuffCategories>
-		<costStuffCount>40</costStuffCount>
-    <costList>
-      <!--<ComponentIndustrial>2</ComponentIndustrial>-->
-			<Steel>10</Steel>
-    </costList>
-    <apparel>
-	<careIfWornByCorpse>false</careIfWornByCorpse>
-      <bodyPartGroups>
-        <li>FullHead</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFHelmetVisor_Gasmask</wornGraphicPath>
-      <layers>
-        <li>Overhead</li>
-      </layers>
-      <tags>
-        <li>SCP_MTFHeadgear</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-    </apparel>
-  </ThingDef>
   
   
   
@@ -991,12 +666,13 @@
     </apparel>
   </ThingDef>
   
-            	<!-- ================================== CI Helmet Gasmask ====================================-->
+  
+        	<!-- ================================== CI Helmet Goggles ====================================-->
   
  <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_CiHelmetGasmask</defName>
-    <label>Helmet Gasmask (CI) </label>
-    <description>A Gasmask Helmet worn by the Military Wing of the Chaos Insurgency.</description>
+    <defName>Apparel_CiHelmetGoggles</defName>
+    <label>Helmet Goggles (CI) </label>
+    <description>A Helmet paired with goggles, worn by the Military Wing of the Chaos Insurgency.</description>
     <techLevel>Industrial</techLevel>
 	
     <recipeMaker>
@@ -1008,7 +684,73 @@
     </recipeMaker>
 	
     <graphicData>
-      <texPath>Things/Apparel/Display/CI/CI_Helmet_Gasmask</texPath>
+      <texPath>Things/Apparel/Display/CI/CI_Helmet_Goggles</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>0.67</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+	
+		<equippedStatOffsets>
+		    <ShootingAccuracyPawn>0.06</ShootingAccuracyPawn>
+			<PsychicSensitivity>-0.50</PsychicSensitivity>
+			<GlobalLearningFactor>0.25</GlobalLearningFactor>
+		</equippedStatOffsets>
+			
+	
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+    <costList>
+      <!--<ComponentIndustrial>2</ComponentIndustrial>-->
+			<Steel>10</Steel>
+    </costList>
+    <apparel>
+	<careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Hats/CI/CI_Helmet_Goggles</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>CI_MilitaryHeadgear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>  
+  
+  
+  
+            	<!-- ================================== CI Helmet Gasmask ====================================-->
+  
+ <ThingDef ParentName="ApparelSCPBase">
+    <defName>Apparel_CiHelmetGasmask</defName>
+    <label>Helmet Gasmask (CI) </label>
+    <description>A Gasmask paired with a Helmet worn by the Military Wing of the Chaos Insurgency.</description>
+    <techLevel>Industrial</techLevel>
+	
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	
+    <graphicData>
+      <texPath>Things/Apparel/Display/CI/CI_GasmaskHelmet</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -1043,7 +785,7 @@
       <bodyPartGroups>
         <li>FullHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/CI/CI_Helmet_Gasmask</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/CI/CI_GasmaskHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>

@@ -6,12 +6,12 @@
 
       <daysUntilSCPArrival>
         <min>3</min> <!-- Default: 3 -->
-        <max>6</max> <!-- Default: 6 -->
+        <max>4</max> <!-- Default: 6 -->
       </daysUntilSCPArrival>
 
       <daysBetweenRepresentatives>
-        <min>0.2</min> <!-- Default: 0.2 -->
-        <max>0.6</max> <!-- Default: 0.6 -->
+        <min>0.1</min> <!-- Default: 0.2 -->
+        <max>0.2</max> <!-- Default: 0.6 -->
       </daysBetweenRepresentatives>
 
       <daysUntilHostilities>

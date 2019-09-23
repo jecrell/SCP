@@ -46,24 +46,18 @@
 	  <li>Make_ScpScientist</li>
 	  <li>Make_ScpBuisnessSuit</li>	  	  
 	  <li>Make_ScpSecurityFatigues</li>
-	  <li>Make_ScpRcfTShirt</li>
 	  <li>Make_ScpRcfJacket</li>
 	  <li>Make_ScpMtfFatigues</li>
 	  <li>Make_ScpSecurityArmor</li>
 	  <li>Make_ScpRcfBodyArmor</li>
 	  <li>Make_ScpMtfBodyArmor</li>
-	  <li>Make_ScpRcfFrontCap</li>
-	  <li>Make_ScpRcfBackCap</li>
+	  <li>Make_ScpRcfCap</li>
+	  <li>Make_ScpMTFSniperCap</li>	  
 	  <li>Make_ScpRcfHelmet</li>
 	  <li>Make_ScpSecurityHelmet</li>
 	  <li>Make_ScpMtfHelmet</li>
-	  <li>Make_ScpMtfHelmetGoggles</li>
 	  <li>Make_ScpMtfHelmetVisor</li>
-	  <li>Make_ScpMtfHelmetMasked</li>
-	  <li>Make_ScpMtfHelmetGogglesMasked</li>
-	  <li>Make_ScpMtfHelmetVisorMasked</li>
 	  <li>Make_ScpMtfHelmetGasmask</li>
-	  <li>Make_ScpMtfHelmetVisorGasmask</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -428,70 +422,6 @@
         <prioritizeSustains>true</prioritizeSustains>
     </WorkGiverDef>	
 	
- <!-- ==================================== SCP RCF T shirt =====================================-->
-  <RecipeDef>
-    <defName>Make_ScpRcfTShirt</defName>
-    <label>make RCF T-Shirt</label>
-    <description>A shirt and camo pants worn by on site Rapid Containment Force.</description>
-    <jobString>Making RCF T-Shirt.</jobString>
-    <workSpeedStat>TailoringSpeed</workSpeedStat>
-    <effectWorking>Tailor</effectWorking>
-    <soundWorking>Recipe_Tailor</soundWorking>
-    <workAmount>1500</workAmount>
-    <allowMixingIngredients>true</allowMixingIngredients>
-    <targetCountAdjustment>50</targetCountAdjustment>
-	    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Cloth</li>
-          </thingDefs>
-        </filter>
-        <count>10</count>
-      </li>
-      <li>
-        <filter>
-          <categories>
-            <li>Leathers</li>
-        <li>Textiles</li>					
-          </categories>
-          <disallowedThingDefs>
-            <li>Leather_Thrumbo</li>
-          </disallowedThingDefs>
-        </filter>
-        <count>75</count>
-      </li>
-    </ingredients>
-      <fixedIngredientFilter>
-      <categories>
-        <li>Leathers</li>
-        <li>Textiles</li>		
-      </categories>
-      <disallowedThingDefs>
-          <li>Leather_Thrumbo</li>
-      </disallowedThingDefs>
-    </fixedIngredientFilter>
-	    <products>
-      <Apparel_ScpRcfTShirt>1</Apparel_ScpRcfTShirt>
-    </products>
-    <workSkill>Crafting</workSkill>
-  </RecipeDef>
-  <WorkGiverDef>
-        <defName>DoBillsSCPBench</defName>
-        <label>making apparel</label>
-        <giverClass>WorkGiver_DoBill</giverClass>
-        <workType>Crafting</workType>
-        <priorityInType>90</priorityInType>
-        <fixedBillGiverDefs>
-            <li>SCP_TheFoundationBench</li>
-    </fixedBillGiverDefs>
-        <verb>make apparel at</verb>
-        <gerund>making apparel at</gerund>
-        <requiredCapacities>
-            <li>Manipulation</li>
-        </requiredCapacities>
-        <prioritizeSustains>true</prioritizeSustains>
-    </WorkGiverDef>		
 	
     <!-- ====================================== SCP RCF Jacket =========================================== -->
   <RecipeDef>
@@ -813,7 +743,7 @@
 	
               	<!-- ==================================== SCP RCF Cap =====================================-->
   <RecipeDef>
-    <defName>Make_ScpRcfFrontCap</defName>
+    <defName>Make_ScpRcfCap</defName>
     <label>make RCF Cap</label>
     <description>A multicam cap utilized by Rapid Containment Force opperatives.</description>
     <jobString>Making RCF Cap.</jobString>
@@ -875,17 +805,18 @@
         </requiredCapacities>
         <prioritizeSustains>true</prioritizeSustains>
     </WorkGiverDef>			
-
-               	<!-- ==================================== SCP RCF Backwards Cap =====================================-->
+	
+	
+              	<!-- ==================================== SCP MTF Sniper Cap =====================================-->
   <RecipeDef>
-    <defName>Make_ScpRcfBackCap</defName>
-    <label>make RCF Backwards Cap</label>
-    <description>A multicam cap utilized by Rapid Containment Force opperatives.</description>
-    <jobString>Making RCF Backwards Cap.</jobString>
+    <defName>Make_ScpMTFSniperCap</defName>
+    <label>make SCP Sniper Cap</label>
+    <description>A dark toque, mask and headset worn by MTF snipers.</description>
+    <jobString>Making SCP Sniper Cap.</jobString>
     <workSpeedStat>TailoringSpeed</workSpeedStat>
     <effectWorking>Tailor</effectWorking>
     <soundWorking>Recipe_Tailor</soundWorking>
-    <workAmount>8000</workAmount>
+    <workAmount>1200</workAmount>
     <allowMixingIngredients>true</allowMixingIngredients>
     <targetCountAdjustment>50</targetCountAdjustment>
 	    <ingredients>
@@ -920,7 +851,7 @@
       </disallowedThingDefs>
     </fixedIngredientFilter>
 	    <products>
-      <Apparel_ScpRcfBackCap>1</Apparel_ScpRcfBackCap>
+      <Apparel_ScpMTFSniperCap>1</Apparel_ScpMTFSniperCap>
     </products>
     <workSkill>Crafting</workSkill>
   </RecipeDef>
@@ -939,7 +870,8 @@
             <li>Manipulation</li>
         </requiredCapacities>
         <prioritizeSustains>true</prioritizeSustains>
-    </WorkGiverDef>		
+    </WorkGiverDef>				
+
 	
     <!-- ======== HELMET ========= -->	
 	
@@ -1099,58 +1031,7 @@
         <prioritizeSustains>true</prioritizeSustains>
     </WorkGiverDef>	
 	
-
-        	<!-- ================================== SCP MTF Helmet Goggles ====================================-->
-  <RecipeDef>
-    <defName>Make_ScpMtfHelmetGoggles</defName>
-    <label>make MTF Helmet Goggles</label>
-    <description>A Helmet with goggles used by the Foundations' Elite Mobile Task Force.</description>
-    <jobString>Making MTF Helmet Goggles.</jobString>
-    <workSpeedStat>TailoringSpeed</workSpeedStat>
-    <effectWorking>Tailor</effectWorking>
-    <soundWorking>Recipe_Tailor</soundWorking>
-    <workAmount>1200</workAmount>
-    <allowMixingIngredients>true</allowMixingIngredients>
-    <targetCountAdjustment>50</targetCountAdjustment>
-	    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ComponentIndustrial</li>
-          </thingDefs>
-        </filter>
-        <count>2</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Steel</li>
-          </thingDefs>
-        </filter>
-        <count>50</count>
-      </li>	  
-	    </ingredients>
-	    <products>
-      <Apparel_ScpMtfHelmetGoggles>1</Apparel_ScpMtfHelmetGoggles>
-    </products>
-    <workSkill>Crafting</workSkill>
-  </RecipeDef>
-  <WorkGiverDef>
-        <defName>DoBillsSCPBench</defName>
-        <label>making apparel</label>
-        <giverClass>WorkGiver_DoBill</giverClass>
-        <workType>Crafting</workType>
-        <priorityInType>90</priorityInType>
-        <fixedBillGiverDefs>
-            <li>SCP_TheFoundationBench</li>
-    </fixedBillGiverDefs>
-        <verb>make apparel at</verb>
-        <gerund>making apparel at</gerund>
-        <requiredCapacities>
-            <li>Manipulation</li>
-        </requiredCapacities>
-        <prioritizeSustains>true</prioritizeSustains>
-    </WorkGiverDef>		
+	
 	
           	<!-- ================================== SCP MTF Helmet Visor ====================================-->
   <RecipeDef>
@@ -1202,169 +1083,13 @@
             <li>Manipulation</li>
         </requiredCapacities>
         <prioritizeSustains>true</prioritizeSustains>
-    </WorkGiverDef>			
-	
-        	<!-- ================================== SCP MTF Helmet Masked ====================================-->
-  <RecipeDef>
-    <defName>Make_ScpMtfHelmetMasked</defName>
-    <label>make MTF Helmet Masked</label>
-    <description>A Masked Helmet used by the Foundations' Elite Mobile Task Force.</description>
-    <jobString>Making MTF Masked Helmet.</jobString>
-    <workSpeedStat>TailoringSpeed</workSpeedStat>
-    <effectWorking>Tailor</effectWorking>
-    <soundWorking>Recipe_Tailor</soundWorking>
-    <workAmount>1200</workAmount>
-    <allowMixingIngredients>true</allowMixingIngredients>
-    <targetCountAdjustment>50</targetCountAdjustment>
-	    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ComponentIndustrial</li>
-          </thingDefs>
-        </filter>
-        <count>2</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Steel</li>
-          </thingDefs>
-        </filter>
-        <count>50</count>
-      </li>	  
-	    </ingredients>
-	    <products>
-      <Apparel_ScpMtfHelmetMasked>1</Apparel_ScpMtfHelmetMasked>
-    </products>
-    <workSkill>Crafting</workSkill>
-  </RecipeDef>
-  <WorkGiverDef>
-        <defName>DoBillsSCPBench</defName>
-        <label>making apparel</label>
-        <giverClass>WorkGiver_DoBill</giverClass>
-        <workType>Crafting</workType>
-        <priorityInType>90</priorityInType>
-        <fixedBillGiverDefs>
-            <li>SCP_TheFoundationBench</li>
-    </fixedBillGiverDefs>
-        <verb>make apparel at</verb>
-        <gerund>making apparel at</gerund>
-        <requiredCapacities>
-            <li>Manipulation</li>
-        </requiredCapacities>
-        <prioritizeSustains>true</prioritizeSustains>
-    </WorkGiverDef>			
-
-         	<!-- ================================== SCP MTF Helmet Goggles Masked ====================================-->
-  <RecipeDef>
-    <defName>Make_ScpMtfHelmetGogglesMasked</defName>
-    <label>make MTF Helmet Goggles Masked</label>
-    <description>A Masked Helmet with Goggles used by the Foundations' Elite Mobile Task Force.</description>
-    <jobString>Making MTF Helmet Goggles Masked.</jobString>
-    <workSpeedStat>TailoringSpeed</workSpeedStat>
-    <effectWorking>Tailor</effectWorking>
-    <soundWorking>Recipe_Tailor</soundWorking>
-    <workAmount>1200</workAmount>
-    <allowMixingIngredients>true</allowMixingIngredients>
-    <targetCountAdjustment>50</targetCountAdjustment>
-	    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ComponentIndustrial</li>
-          </thingDefs>
-        </filter>
-        <count>2</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Steel</li>
-          </thingDefs>
-        </filter>
-        <count>50</count>
-      </li>	  
-	    </ingredients>
-	    <products>
-      <Apparel_ScpMtfHelmetGogglesMasked>1</Apparel_ScpMtfHelmetGogglesMasked>
-    </products>
-    <workSkill>Crafting</workSkill>
-  </RecipeDef>
-  <WorkGiverDef>
-        <defName>DoBillsSCPBench</defName>
-        <label>making apparel</label>
-        <giverClass>WorkGiver_DoBill</giverClass>
-        <workType>Crafting</workType>
-        <priorityInType>90</priorityInType>
-        <fixedBillGiverDefs>
-            <li>SCP_TheFoundationBench</li>
-    </fixedBillGiverDefs>
-        <verb>make apparel at</verb>
-        <gerund>making apparel at</gerund>
-        <requiredCapacities>
-            <li>Manipulation</li>
-        </requiredCapacities>
-        <prioritizeSustains>true</prioritizeSustains>
-    </WorkGiverDef>			
-
-           	<!-- ================================== SCP MTF Helmet Visor Masked ====================================-->
-  <RecipeDef>
-    <defName>Make_ScpMtfHelmetVisorMasked</defName>
-    <label>make MTF Helmet Visor Masked</label>
-    <description>A Masked Helmet with a Visor used by the Foundations' Elite Mobile Task Force.</description>
-    <jobString>Making MTF Helmet Visor Masked.</jobString>
-    <workSpeedStat>TailoringSpeed</workSpeedStat>
-    <effectWorking>Tailor</effectWorking>
-    <soundWorking>Recipe_Tailor</soundWorking>
-    <workAmount>1200</workAmount>
-    <allowMixingIngredients>true</allowMixingIngredients>
-    <targetCountAdjustment>50</targetCountAdjustment>
-	    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ComponentIndustrial</li>
-          </thingDefs>
-        </filter>
-        <count>2</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Steel</li>
-          </thingDefs>
-        </filter>
-        <count>50</count>
-      </li>	  
-	    </ingredients>
-	    <products>
-      <Apparel_ScpMtfHelmetVisorMasked>1</Apparel_ScpMtfHelmetVisorMasked>
-    </products>
-    <workSkill>Crafting</workSkill>
-  </RecipeDef>
-  <WorkGiverDef>
-        <defName>DoBillsSCPBench</defName>
-        <label>making apparel</label>
-        <giverClass>WorkGiver_DoBill</giverClass>
-        <workType>Crafting</workType>
-        <priorityInType>90</priorityInType>
-        <fixedBillGiverDefs>
-            <li>SCP_TheFoundationBench</li>
-    </fixedBillGiverDefs>
-        <verb>make apparel at</verb>
-        <gerund>making apparel at</gerund>
-        <requiredCapacities>
-            <li>Manipulation</li>
-        </requiredCapacities>
-        <prioritizeSustains>true</prioritizeSustains>
-    </WorkGiverDef>		
+    </WorkGiverDef>								
 	
           	<!-- ================================== SCP MTF Helmet Gasmask ====================================-->
   <RecipeDef>
     <defName>Make_ScpMtfHelmetGasmask</defName>
     <label>make MTF Helmet Gasmask</label>
-    <description>A Gasmask Helmet used by the Foundations' Elite Mobile Task Force.</description>
+    <description>A Gasmask paired with a Helmet, used by the Foundations' Elite Mobile Task Force.</description>
     <jobString>Making MTF Helmet Gasmask.</jobString>
     <workSpeedStat>TailoringSpeed</workSpeedStat>
     <effectWorking>Tailor</effectWorking>
@@ -1410,58 +1135,6 @@
             <li>Manipulation</li>
         </requiredCapacities>
         <prioritizeSustains>true</prioritizeSustains>
-    </WorkGiverDef>			
-	
-            	<!-- ================================== SCP MTF Visor Helmet Gasmask ====================================-->
-  <RecipeDef>
-    <defName>Make_ScpMtfHelmetVisorGasmask</defName>
-    <label>make MTF Helmet Visor Gasmask</label>
-    <description>A Gasmask Helmet with a Visor used by the Foundations' Elite Mobile Task Force.</description>
-    <jobString>Making MTF Helmet Visor Gasmask.</jobString>
-    <workSpeedStat>TailoringSpeed</workSpeedStat>
-    <effectWorking>Tailor</effectWorking>
-    <soundWorking>Recipe_Tailor</soundWorking>
-    <workAmount>1200</workAmount>
-    <allowMixingIngredients>true</allowMixingIngredients>
-    <targetCountAdjustment>50</targetCountAdjustment>
-	    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ComponentIndustrial</li>
-          </thingDefs>
-        </filter>
-        <count>2</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Steel</li>
-          </thingDefs>
-        </filter>
-        <count>50</count>
-      </li>	  
-	    </ingredients>
-	    <products>
-      <Apparel_ScpMtfHelmetVisorGasmask>1</Apparel_ScpMtfHelmetVisorGasmask>
-    </products>
-    <workSkill>Crafting</workSkill>
-  </RecipeDef>
-  <WorkGiverDef>
-        <defName>DoBillsSCPBench</defName>
-        <label>making apparel</label>
-        <giverClass>WorkGiver_DoBill</giverClass>
-        <workType>Crafting</workType>
-        <priorityInType>90</priorityInType>
-        <fixedBillGiverDefs>
-            <li>SCP_TheFoundationBench</li>
-    </fixedBillGiverDefs>
-        <verb>make apparel at</verb>
-        <gerund>making apparel at</gerund>
-        <requiredCapacities>
-            <li>Manipulation</li>
-        </requiredCapacities>
-        <prioritizeSustains>true</prioritizeSustains>
-    </WorkGiverDef>				
+    </WorkGiverDef>					
 	
 </Defs>

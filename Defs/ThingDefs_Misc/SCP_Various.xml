@@ -281,66 +281,6 @@
   </ThingDef>
   
   
- <!-- ==================================== SCP RCF T shirt =====================================-->
-			
- <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_ScpRcfTShirt</defName>
-    <description>A shirt and camo pants worn by on site Rapid Containment Force.</description>
-    <label>RCF T-Shirt (SCP) </label>
-    <recipeMaker>
-      <researchPrerequisite>ComplexClothing</researchPrerequisite>
-    </recipeMaker>
-    <graphicData>
-      <texPath>Things/Apparel/Display/SCP/SCP_RapidContainmentForceTShirt</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <costStuffCount>85</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
-    </stuffCategories>
-    <thingCategories>
-      <li>SCP_Clothing</li>
-    </thingCategories>
-    <statBases>
-			<MaxHitPoints>150</MaxHitPoints>
-			<WorkToMake>2200</WorkToMake>
-      <Mass>0.20</Mass>
-      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.12</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.12</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>1.0</EquipDelay>
-    </statBases>
-	
-	<equippedStatOffsets>
-	  <PainShockThreshold>0.02</PainShockThreshold>
-	  <ShootingAccuracyPawn>0.01</ShootingAccuracyPawn>
-	  <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
-	  <ForagedNutritionPerDay>0.20</ForagedNutritionPerDay>
-	  <SocialImpact>0.10</SocialImpact>
-    </equippedStatOffsets>
-	
-		<apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-		<li>Shoulders</li>
-		<li>Legs</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Clothing/SCP/SCP_RapidContainmentForceTShirt</wornGraphicPath>
-      <layers>
-        <li>OnSkin</li>
-      </layers>
-      <tags>
-        <li>SCP_RCFUniforms</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-    </apparel>
-  </ThingDef>
-  
-  
     <!-- ====================================== SCP RCF Jacket =========================================== -->
   
  <ThingDef ParentName="ApparelSCPBase">
@@ -752,70 +692,18 @@
   
       <!-- ======== CHAOS INSURGENCY ========= -->
   
-       <!-- ==================================== CI Opperative =====================================-->
- 
- <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_CiOpperative</defName>
-    <label>Opperative (CI) </label>
-    <description>A heavy coat with a dress shirt and tie underneath, used by the mysterious Chaos Insurgency Opperatives.</description>
-    <graphicData>
-      <texPath>Things/Apparel/Display/CI/CI_Opperative</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <costStuffCount>100</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>	  
-    </stuffCategories>
-    <thingCategories>
-      <li>SCP_Clothing</li>
-    </thingCategories>
-    <statBases>
-			<MaxHitPoints>150</MaxHitPoints>
-			<WorkToMake>2550</WorkToMake>
-      <Mass>0.35</Mass>
-      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.79</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>2.0</EquipDelay>
-    </statBases>
-	<equippedStatOffsets>
-	  <SocialImpact>0.90</SocialImpact>
-    </equippedStatOffsets>
-	
-    <apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Shoulders</li>
-		<li>Arms</li>
-		<li>Legs</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Clothing/CI/CI_Opperative</wornGraphicPath>
-      <layers>
-        <li>OnSkin</li>
-      </layers>
-      <tags>
-        <li>CI_RnD</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Worker</li>
-      </defaultOutfitTags>
-    </apparel>
-  </ThingDef>
   
-  
-      <!-- ====================================== CI Military Fatigues1 =========================================== -->
+      <!-- ====================================== CI Military Fatigues =========================================== -->
   
  <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_CiMilitaryFatiguesOne</defName>
-    <description>A Jacket worn by the Military Wing of the Chaos Insurgency.</description>
-    <label>Military Fatigues 1 (CI) </label>
+    <defName>Apparel_CiMilitaryFatigues</defName>
+    <description>Fatigues worn by the Military Wing of the Chaos Insurgency.</description>
+    <label>Military Fatigues (CI) </label>
     <recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Apparel/Display/CI/CI_MilitaryFatigues1</texPath>
+      <texPath>Things/Apparel/Display/CI/CI_MilitaryFatigues</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -853,7 +741,7 @@
         <li>Arms</li>
 		<li>Legs</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Clothing/CI/CI_MilitaryFatigues1</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Clothing/CI/CI_MilitaryFatigues</wornGraphicPath>
       <layers>
         <li>OnSkin</li>
       </layers>
@@ -865,69 +753,5 @@
       </defaultOutfitTags>
     </apparel>
   </ThingDef>
-  
-  
-           	<!-- ====================================== CI Military Fatigues2 =========================================== -->
-			
- <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_CiMilitaryFatiguesTwo</defName>
-    <description>Military fatigues used by the Military wing of the Chaos Insurgency.</description>
-    <label>Military Fatigues 2 (CI) </label>
-    <recipeMaker>
-      <researchPrerequisite>ComplexClothing</researchPrerequisite>
-    </recipeMaker>
-    <graphicData>
-      <texPath>Things/Apparel/Display/CI/CI_MilitaryFatigues2</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <costStuffCount>95</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
-    </stuffCategories>
-    <thingCategories>
-     <li>SCP_Clothing</li>
-    </thingCategories>
-    <statBases>
-			<MaxHitPoints>160</MaxHitPoints>
-			<WorkToMake>2500</WorkToMake>
-      <Mass>0.25</Mass>
-      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.26</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.12</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>1.5</EquipDelay>
-    </statBases>
-	
-	<equippedStatOffsets>
-	  <PainShockThreshold>0.04</PainShockThreshold>
-	  <ShootingAccuracyPawn>0.01</ShootingAccuracyPawn>
-	  <WorkSpeedGlobal>0.35</WorkSpeedGlobal>
-	  <ForagedNutritionPerDay>0.30</ForagedNutritionPerDay>
-	  <SocialImpact>0.30</SocialImpact>
-    </equippedStatOffsets>
-	
-		<apparel>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Neck</li>
-		<li>Shoulders</li>
-        <li>Arms</li>
-		<li>Legs</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Clothing/CI/CI_MilitaryFatigues2</wornGraphicPath>
-      <layers>
-        <li>OnSkin</li>
-      </layers>
-      <tags>
-       	 <li>CI_Military</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-    </apparel>
-  </ThingDef>
-  
-  
   
   </Defs>

@@ -6,11 +6,11 @@
 
               	<!-- ==================================== SCP RCF Cap =====================================-->
  <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_ScpRcfFrontCap</defName>
+    <defName>Apparel_ScpRcfCap</defName>
     <label>RCF Cap (SCP) </label>
     <description>A multicam cap utilized by Rapid Containment Force opperatives</description>
     <graphicData>
-      <texPath>Things/Apparel/Display/SCP/SCP_RCFcap_Frontwards</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_RCFcap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -37,7 +37,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_RCFcap_Frontwards</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_RCFcap</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -50,13 +50,14 @@
     </apparel>
   </ThingDef>
   
-               	<!-- ==================================== SCP RCF Backwards Cap =====================================-->
+  
+                	<!-- ==================================== SCP MTF Sniper Cap =====================================-->
  <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_ScpRcfBackCap</defName>
-    <label>RCF Backwards Cap (SCP) </label>
-    <description>A multicam cap utilized by Rapid Containment Force opperatives</description>
+    <defName>Apparel_ScpMTFSniperCap</defName>
+    <label>MTF Sniper Cap (SCP) </label>
+    <description>A dark toque, mask and headset worn by MTF snipers.</description>
     <graphicData>
-      <texPath>Things/Apparel/Display/SCP/SCP_RCFcap_Backwards</texPath>
+      <texPath>Things/Apparel/Display/SCP/SCP_MTFSniperCap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -83,7 +84,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_RCFcap_Backwards</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/SCP/SCP_MTFSniperCap</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -95,6 +96,7 @@
       </defaultOutfitTags>
     </apparel>
   </ThingDef>
+  
   
   
     <!-- ======== GLOBAL OCCULT COALITION ========= -->
@@ -194,104 +196,15 @@
   
   
     <!-- ======== CHAOS INSURGENCY =========-->
-  
-                    	<!-- ==================================== CI Toque =====================================-->
- <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_CiToque</defName>
-    <label>Toque (CI) </label>
-    <description>A Toque worn by the military wing of the Chaos Insurgency.</description>
-    <graphicData>
-      <texPath>Things/Apparel/Display/CI/CI_Toque</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <costStuffCount>25</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-	  <li>Leathery</li>
-    </stuffCategories>
-    <statBases>
-      <WorkToMake>1000</WorkToMake>
-      <Mass>0.05</Mass>
-      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.45</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>0.15</EquipDelay>
-    </statBases>
-	<equippedStatOffsets>
-	  <PainShockThreshold>0.05</PainShockThreshold>
-	  <ShootingAccuracyPawn>0.20</ShootingAccuracyPawn>
-    </equippedStatOffsets>
-    <apparel>
-      <bodyPartGroups>
-        <li>UpperHead</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/CI/CI_Toque</wornGraphicPath>
-      <layers>
-        <li>Overhead</li>
-      </layers>
-      <tags>
-        <li>CI_MilitaryHeadgear</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-    </apparel>
-  </ThingDef>
-  
-                    	<!-- ==================================== CI Masked Headset =====================================-->
- <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_CiMaskedHeadset</defName>
-    <label>Masked Headset (CI) </label>
-    <description>A mask and headset worn by the military wing of the Chaos Insurgency.</description>
-    <graphicData>
-      <texPath>Things/Apparel/Display/CI/CI_MaskedHeadset</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <costStuffCount>25</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-	  <li>Leathery</li>
-    </stuffCategories>
-    <statBases>
-      <WorkToMake>1200</WorkToMake>
-      <Mass>0.07</Mass>
-      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.25</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>0.30</EquipDelay>
-    </statBases>
-	<equippedStatOffsets>
-	  <PainShockThreshold>0.05</PainShockThreshold>
-	  <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
-	  <SocialImpact>0.09</SocialImpact>
-    </equippedStatOffsets>
-    <apparel>
-      <bodyPartGroups>
-        <li>UpperHead</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/CI/CI_MaskedHeadset</wornGraphicPath>
-      <layers>
-        <li>Overhead</li>
-      </layers>
-      <tags>
-        <li>CI_MilitaryHeadgear</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-    </apparel>
-  </ThingDef>
-  
+
   
                 	<!-- ==================================== CI Cap =====================================-->
  <ThingDef ParentName="ApparelSCPBase">
     <defName>Apparel_CiCap</defName>
     <label>Cap (CI) </label>
-    <description>A cap and headset worn by the military wing of the Chaos Insurgency.</description>
+    <description>A Black cap worn by the Chaos Insurgency.</description>
     <graphicData>
-      <texPath>Things/Apparel/Display/CI/CI_Cap_Normal</texPath>
+      <texPath>Things/Apparel/Display/CI/CI_Cap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -317,7 +230,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/CI/CI_Cap_Normal</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/Hats/CI/CI_Cap</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -329,97 +242,5 @@
       </defaultOutfitTags>
     </apparel>
   </ThingDef>
-  
-                  	<!-- ==================================== CI Cap Masked =====================================-->
- <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_CiCapMasked</defName>
-    <label>Masked Cap (CI) </label>
-    <description>A cap and headset paird with a Balaclava, worn by the military wing of the Chaos Insurgency.</description>
-    <graphicData>
-      <texPath>Things/Apparel/Display/CI/CI_Cap_Masked</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <costStuffCount>25</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-	  <li>Leathery</li>
-    </stuffCategories>
-    <statBases>
-      <WorkToMake>1200</WorkToMake>
-      <Mass>0.07</Mass>
-      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>0.20</EquipDelay>
-    </statBases>
-	<equippedStatOffsets>
-	  <PainShockThreshold>0.05</PainShockThreshold>
-	  <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
-	  <SocialImpact>0.05</SocialImpact>
-    </equippedStatOffsets>
-    <apparel>
-      <bodyPartGroups>
-        <li>UpperHead</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/CI/CI_Cap_Masked</wornGraphicPath>
-      <layers>
-        <li>Overhead</li>
-      </layers>
-      <tags>
-        <li>CI_MilitaryHeadgear</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-    </apparel>
-  </ThingDef>
-  
-                  	<!-- ==================================== CI Military Cap =====================================-->
- <ThingDef ParentName="ApparelSCPBase">
-    <defName>Apparel_CiMilitaryCap</defName>
-    <label>Military Cap (CI) </label>
-    <description>A Military Cap worn by the Military Wing of the Chaos Insurgency.</description>
-    <graphicData>
-      <texPath>Things/Apparel/Display/CI/CI_MilitaryCap</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <costStuffCount>25</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-	  <li>Leathery</li>
-    </stuffCategories>
-    <statBases>
-      <WorkToMake>1200</WorkToMake>
-      <Mass>0.07</Mass>
-      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.12</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.40</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>0.8</EquipDelay>
-    </statBases>
-	<equippedStatOffsets>
-	  <PainShockThreshold>0.05</PainShockThreshold>
-	  <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
-	  <SocialImpact>0.15</SocialImpact>
-    </equippedStatOffsets>
-    <apparel>
-      <bodyPartGroups>
-        <li>UpperHead</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Hats/CI/CI_MilitaryCap</wornGraphicPath>
-      <layers>
-        <li>Overhead</li>
-      </layers>
-      <tags>
-        <li>CI_MilitaryHeadgear</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-    </apparel>
-  </ThingDef>
-  
-  
   
   </Defs>
